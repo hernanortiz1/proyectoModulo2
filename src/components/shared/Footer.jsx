@@ -1,87 +1,71 @@
 import { Link } from "react-router";
-
 const Footer = () => {
-  
-    return (
-    <footer classNameName="bg-dark py-3">
-      <div classNameName="container">
-        <Link to={"/"}>
+  return (
+    <footer className="bg-dark py-3">
+      <div className="container">
+        <Link to={"/"} className="text-decoration-none">
           <h2 className="text-center text-lg-start text-light mb-4 orbitron">
-            NovaStore
+            GamerZone
           </h2>
         </Link>
         <div className="row text-center text-lg-start">
           <div className="col-12 col-lg-3 col-md-6">
-            <h4 className="text-light bebasneue mb-2">Productos</h4>
+            <h4 className="text-light mb-2 bebasneue">Juegos</h4>
             <ul className="list-unstyled">
               <li>
-                <a
-                  href="./pages/categoriaCelulares.html"
-                  className="link-light link-underline-opacity-0"
-                >
-                  Celulares
-                </a>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Minecraft
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
-                  Tablets
-                </a>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Terraria
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/pagCategoriaNotebooks.html"
-                  className="link-light link-underline-opacity-0"
-                >
-                  Notebooks
-                </a>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Sims 4
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
-                  Smart TVs
-                </a>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Cities
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
-                  Smartwatches
-                </a>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  The Legend of Zelda
+                </Link>
               </li>
             </ul>
           </div>
           <div className="col-12 col-lg-3 col-md-6">
-            <h4 className="text-light bebasneue">Shop</h4>
+            <h4 className="text-light bebasneue">Categorias</h4>
             <ul className="list-unstyled">
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
-                  Ofertas
-                </a>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Sandbox
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
-                  Experience Store
-                </a>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Simulación
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
-                  Sucursales
-                </a>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Fabricación
+                </Link>
+              </li>
+              <li>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Construcción
+                </Link>
+              </li>
+              <li>
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  Aventura
+                </Link>
               </li>
             </ul>
           </div>
@@ -89,28 +73,19 @@ const Footer = () => {
             <h4 className="text-light bebasneue">Soporte</h4>
             <ul className="list-unstyled">
               <li>
-                <a
-                  href="./pages/contacto.html"
-                  className="link-light link-underline-opacity-0"
-                >
+                <Link to={"#"} className="link-light link-underline-opacity-0">
                   Contacto
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
+                <Link to={"#"} className="link-light link-underline-opacity-0">
                   Chat online
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
+                <Link to={"#"} className="link-light link-underline-opacity-0">
                   Comunidad
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -118,67 +93,41 @@ const Footer = () => {
             <h4 className="text-light bebasneue">Quiénes Somos</h4>
             <ul className="list-unstyled">
               <li>
-                <a
-                  href="./pages/acercaDeNosotros.html"
-                  className="link-light link-underline-opacity-0"
-                >
+                <Link to={"#"} className="link-light link-underline-opacity-0">
                   Acerca de Nosotros
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
+                <Link to={"#"} className="link-light link-underline-opacity-0">
                   Preguntas Frecuentes
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="./pages/error404.html"
-                  className="link-light link-underline-opacity-0"
-                >
+                <Link to={"#"} className="link-light link-underline-opacity-0">
                   Trabaja con Nosotros
-                </a>
+                </Link>
               </li>
-              <br />
-              <li>
+
+              <li className="mt-5">
                 <p className="text-light">¡Mantente informado!</p>
               </li>
-              <div className="d-flex justify-content-center justify-content-lg-start gap-3">
-                <li>
-                  <a
-                    href="./pages/error404.html"
-                    className="link-light link-underline-opacity-0"
-                  >
-                    <i className="text-light bi bi-facebook fs-3"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="./pages/error404.html"
-                    className="link-light link-underline-opacity-0"
-                  >
-                    <i className="text-light bi bi-twitter-x fs-3"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="./pages/error404.html"
-                    className="link-light link-underline-opacity-0"
-                  >
-                    <i className="text-light bi bi-instagram fs-3"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="./pages/error404.html"
-                    className="link-light link-underline-opacity-0"
-                  >
-                    <i className="text-light bi bi-tiktok fs-3"></i>
-                  </a>
-                </li>
-              </div>
+              <li className="d-flex justify-content-center justify-content-lg-start gap-3">
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  <i className="text-light bi bi-facebook fs-3"></i>
+                </Link>
+
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  <i className="text-light bi bi-twitter-x fs-3"></i>
+                </Link>
+
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  <i className="text-light bi bi-instagram fs-3"></i>
+                </Link>
+
+                <Link to={"#"} className="link-light link-underline-opacity-0">
+                  <i className="text-light bi bi-tiktok fs-3"></i>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
