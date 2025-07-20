@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 const Footer = () => {
   return (
-    <footer className="bg-dark py-3">
+    <footer className="py-3 sombraNavbarFooter">
       <div className="container">
         <Link to={"/"} className="text-decoration-none">
           <h2 className="text-center text-lg-start text-light mb-4 orbitron">
@@ -10,7 +10,7 @@ const Footer = () => {
         </Link>
         <div className="row text-center text-lg-start">
           <div className="col-12 col-lg-3 col-md-6">
-            <h4 className="text-light mb-2 bebasneue">Juegos</h4>
+            <h4 className="mb-2 bebasneue">Juegos</h4>
             <ul className="list-unstyled">
               <li>
                 <Link to={"#"} className="link-light link-underline-opacity-0">
@@ -40,7 +40,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-12 col-lg-3 col-md-6">
-            <h4 className="text-light bebasneue">Categorias</h4>
+            <h4 className="bebasneue">Categorias</h4>
             <ul className="list-unstyled">
               <li>
                 <Link to={"#"} className="link-light link-underline-opacity-0">
@@ -70,7 +70,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-12 col-lg-3 col-md-6">
-            <h4 className="text-light bebasneue">Soporte</h4>
+            <h4 className="bebasneue">Soporte</h4>
             <ul className="list-unstyled">
               <li>
                 <Link to={"#"} className="link-light link-underline-opacity-0">
@@ -90,7 +90,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-12 col-lg-3 col-md-6">
-            <h4 className="text-light bebasneue">Quiénes Somos</h4>
+            <h4 className="bebasneue">Quiénes Somos</h4>
             <ul className="list-unstyled">
               <li>
                 <Link to={"#"} className="link-light link-underline-opacity-0">
