@@ -21,7 +21,7 @@ const Error404 = () => {
           <p className="display-4">
             <b>(Error 404)</b>
           </p>
-          <Link to="/" className="btn btn-dark fs-5 mt-4">
+          <Link to="/" className="btn btn-primary fs-5 mt-4">
             Volver al inicio
           </Link>
         </Col>
