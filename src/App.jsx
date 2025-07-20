@@ -4,14 +4,15 @@ import Footer from "./components/shared/Footer";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/shared/Header";
 import Error404 from "./components/pages/Error404";
-
+import Login from "./components/pages/Login";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Header></Header>
         <main>
-          <Routes>
+          <Routes> 
+            <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
             {/* falta ruta de inicio, protector de rutas y ruta a Administrador */}
             <Route path="*" element={<Error404></Error404>}></Route>
           </Routes>
