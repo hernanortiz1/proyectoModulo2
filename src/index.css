@@ -16,3 +16,13 @@ main {
 .bebasneue {
   font-family: "Bebas Neue", sans-serif;
 }
+
+.sombraNavbarFooter {
+  box-shadow: 0 0px 50px 10px rgba(128, 0, 255, 0.4);
+}
+
+.sombraADMIN {
+  color: rgb(255, 0, 64); /* rojo fuerte */
+  text-shadow: 0 0 3px rgba(128, 0, 255, 0.4), 0 0 6px rgba(128, 0, 255, 0.6),
+    0 0 12px rgba(128, 0, 255, 0.8), 0 0 20px rgba(128, 0, 255, 1);
+}
