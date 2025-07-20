@@ -4,6 +4,7 @@ import Footer from "./components/shared/Footer";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/shared/Header";
 import Error404 from "./components/pages/Error404";
+import ProtectorAdmin from "./components/routes/ProtectorAdmin"
 
 function App() {
   return (
