@@ -1,4 +1,4 @@
-import error from "../../assets/error404img.png";
+import error from "../../assets/imgError404/error404img.png";
 import { Link } from "react-router";
 import { Container, Row, Col } from "react-bootstrap";
 
