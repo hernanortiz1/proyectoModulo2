@@ -19,16 +19,22 @@ const Login = () => {
             className="text-center text-white rounded-3 fondoContenedorDerechoLogin"
           >
             <div className="shadow-lg rounded-3 text-center py-md-5">
-              <h2 className="fs-1">Bienvenido a <br /><span className="orbitron">GamerZone</span></h2>
+              <h2 className="fs-1">
+                Bienvenido a <br />
+                <span className="orbitron">GamerZone</span>
+              </h2>
               <p className="fs-4 mt-4 mx-5">
                 Gestiona fácilmente los productos de GamerZone desde un solo
                 lugar y mantén la tienda al día.
               </p>
-              
             </div>
           </Col>
 
-          <Col md={4} sm={12} className="fondoContenedorIzquierdoLogin rounded-3 h-100 ">
+          <Col
+            md={4}
+            sm={12}
+            className="fondoContenedorIzquierdoLogin rounded-3 h-100 "
+          >
             <Form
               /*falta funcion */ className="border border-1 border-primary rounded-4 shadow p-4 my-5"
             >
