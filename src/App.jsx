@@ -5,17 +5,20 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./components/shared/Header";
 import Error404 from "./components/pages/Error404";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin"
-
+import DetalleProducto from "./components/pages/detalleProducto";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Header></Header>
         <main>
-          <Routes>
-            {/* falta ruta de inicio, protector de rutas y ruta a Administrador */}
+          <DetalleProducto></DetalleProducto>
+          {
+            /*<Routes>
+            {/* falta ruta de inicio, protector de rutas y ruta a Administrador }
             <Route path="*" element={<Error404></Error404>}></Route>
-          </Routes>
+          </Routes>*/
+          }
         </main>
         <Footer></Footer>
       </BrowserRouter>
