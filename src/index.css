@@ -54,3 +54,20 @@ main {
     width: 20%;
   }
 }
+
+.banner {
+  object-fit: cover;
+  height: 395px;
+  width: 100%;
+}
+
+.img-cover {
+  height: 300px;
+  object-fit: cover;
+}
+
+.custom-card {
+  height: 100%;
+  min-height: 200px;
+  overflow: hidden;
+}
