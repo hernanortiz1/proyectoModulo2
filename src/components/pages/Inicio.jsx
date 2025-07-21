@@ -10,6 +10,7 @@ const Inicio = () => {
             <Container className="mt-5">
             <h1 className="display-4">Juegos destacados</h1>
             <hr />
+            
                 <CardProductos></CardProductos>
             </Container>
         </section>
