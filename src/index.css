@@ -27,3 +27,21 @@ main {
     0 0 12px rgba(128, 0, 255, 0.8), 0 0 20px rgba(128, 0, 255, 1);
 }
 
+.fondoLogin {
+/* background: linear-gradient(135deg, #3859e9, #add8e6); */
+background: linear-gradient(135deg, #2a5298, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.fondoContenedorDerechoLogin {
+  background: linear-gradient(135deg, #2a5298, #66a6ff);
+
+}
+
+.fondoContenedorIzquierdoLogin {
+   background: rgba(109, 162, 248, 0.8); 
+}
