@@ -1,7 +1,7 @@
 import { Row, Col, Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
-import imgLogin from "../../assets/imgLogin/vectoresAzules.jpg"
+
 const Login = () => {
   const {
     register,
@@ -11,28 +11,27 @@ const Login = () => {
 
   return (
     <section className="fondoLogin">
-      <Container className="shadow-lg rounded-3 border border-3 fondoContenedorDerechoLogin">
-        <Row className="align-items-center">
+      <section className="container shadow-lg ">
+        <Row className="align-items-center fondoContenedorIzquierdoLogin rounded-3">
           <Col
             md={8}
             sm={12}
-            className="fondoImagenLogin d-flex align-items-center justify-content-center text-center text-white rounded-3"
+            className="text-center text-white rounded-3 fondoContenedorDerechoLogin"
           >
-             <div className="bg-overlay p-4"> 
-              <h2 className="fs-1">Bienvenido a GamerZone</h2>
-              <p className="fs-5 mt-5 mx-5">
+            <div className="shadow-lg rounded-3 text-center py-md-5">
+              <h2 className="fs-1">Bienvenido a <br /><span className="orbitron">GamerZone</span></h2>
+              <p className="fs-4 mt-4 mx-5">
                 Gestiona fácilmente los productos de GamerZone desde un solo
                 lugar y mantén la tienda al día.
               </p>
+              
             </div>
           </Col>
-          
-          <Col
-            md={4}
-            sm={12}
-            className="fondoContenedorIzquierdoLogin"
-          >
-            <Form /*falta funcion */ className="border border-1 border-primary rounded-4 shadow p-4 my-5">
+
+          <Col md={4} sm={12} className="fondoContenedorIzquierdoLogin rounded-3 h-100 ">
+            <Form
+              /*falta funcion */ className="border border-1 border-primary rounded-4 shadow p-4 my-5"
+            >
               <Form.Group className="mb-3" controlId="email">
                 <Form.Label>Email</Form.Label>
                 <Form.Control
@@ -77,7 +76,7 @@ const Login = () => {
             </Form>
           </Col>
         </Row>
-      </Container>
+      </section>
     </section>
   );
 };

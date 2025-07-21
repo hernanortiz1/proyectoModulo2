@@ -28,20 +28,29 @@ main {
 }
 
 .fondoLogin {
-/* background: linear-gradient(135deg, #3859e9, #add8e6); */
-background: linear-gradient(135deg, #2a5298, #66a6ff);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 0;
+  background: linear-gradient(135deg, #cdb4db, #d9eefe);
 }
 
 .fondoContenedorDerechoLogin {
-  background: linear-gradient(135deg, #2a5298, #66a6ff);
-
+  background: linear-gradient(135deg, #1465f0, #8fb9f3);
+  min-height: 60vh; 
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fondoContenedorIzquierdoLogin {
-   background: rgba(109, 162, 248, 0.8); 
+   background: rgb(12, 19, 50); 
+}
+
+@media (max-width: 767px) {
+  .fondoContenedorDerechoLogin {
+    min-height: 40vh; 
+    width: 20%;
+  }
 }
