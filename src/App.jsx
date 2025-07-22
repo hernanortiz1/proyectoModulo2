@@ -7,7 +7,7 @@ import Error404 from "./components/pages/Error404";
 import Login from "./components/pages/Login";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin";
 import Inicio from "./components/pages/Inicio";
-// import DetalleProducto from "./components/pages/DetalleProducto";
+import FormularioProducto from "./components/pages/Productos/FormularioProducto";
 
 function App() {
   return (
@@ -28,13 +28,14 @@ function App() {
                       {falta props }
                   </Administrador>}>
                   </Route>
-                    <Route path="/crear" element={<Formulario Falta props ></Formulario>}>
+                    <Route path="/crear" element={<FormularioProducto> Falta props ></FormularioProducto>>
                     </Route>
-                    <Route path="/editar/:id" element={<Formulario Falta props></Formulario>}>
+                    <Route path="/editar/:id" element={<FormularioProducto> Falta props></FormularioProducto>}>
 
                     </Route>  
 
                 </Route> */}
+            {/* falta ruta de inicio, protector de rutas y ruta a Administrador */}
             <Route path="*" element={<Error404></Error404>}></Route>
           </Routes>
         </main>
