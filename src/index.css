@@ -23,8 +23,7 @@ main {
 
 .sombraADMIN {
   color: rgb(255, 0, 64); /* rojo fuerte */
-  text-shadow: 0 0 3px rgba(128, 0, 255, 0.4), 0 0 6px rgba(128, 0, 255, 0.6),
-    0 0 12px rgba(128, 0, 255, 0.8), 0 0 20px rgba(128, 0, 255, 1);
+  text-shadow: 0 0 3px rgba(128, 0, 255, 0.4), 0 0 6px rgba(128, 0, 255, 0.6), 0 0 12px rgba(128, 0, 255, 0.8), 0 0 20px rgba(128, 0, 255, 1);
 }
 
 .fondoLogin {
@@ -70,4 +69,11 @@ main {
   height: 100%;
   min-height: 200px;
   overflow: hidden;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background: linear-gradient(90deg, #28a745, #9b00ff) !important; /* verde a morado */
+  color: rgb(251, 255, 0) !important;
+  box-shadow: 0 0 8px 2px #9b00ff; /* resplandor morado */
 }
