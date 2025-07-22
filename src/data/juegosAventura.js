@@ -1,0 +1,22 @@
+export const productosData = [
+  {
+    id: "",
+    nombreJuego: "",
+    precio: 10000,
+    imagen: "",
+    categoria: "",
+    plataforma: "",
+    reqRecomendadoRam: "",
+    reqRecomendadoSistemaOperativo: "",
+    reqRecomendadoDirectX: "",
+    reqRecomendadoProcesador: "",
+    reqRecomendadoAlmacenamiento: "",
+    reqRecomendadoTarjetaVideo: "",
+    reqMinimoRam: "",
+    reqMinimoSistemaOperativo: "",
+    reqMinimoDirectX: "",
+    reqMinimoProcesador: "",
+    reqMinimoAlmacenamiento: "",
+    reqMinimoTarjetaVideo: "",
+  },
+];
