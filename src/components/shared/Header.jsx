@@ -6,16 +6,20 @@ const Header = () => {
       <Navbar expand="lg" className="bg-body-tertary">
         <Container>
           <Navbar.Brand href="#home" className="orbitron">
-            Gamer Zone
+            GamerZone
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home">Inicio</Nav.Link>
               <NavDropdown title="Categorias" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Categ-1</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Categ-2</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Categ-3</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1">Shooter</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Simulación
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Aventura</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Sandbox</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">RPG</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link">¿Sobre nosotros?</Nav.Link>
             </Nav>
