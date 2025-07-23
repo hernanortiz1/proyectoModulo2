@@ -45,23 +45,6 @@ function App() {
             <Route path="/sandbox" element={<Sandbox></Sandbox>}></Route>
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
 
-            {/* 
-             rutas de Administrador con protector Admin
-
-                <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
-                  <Route index element={
-                    <Administrador>
-                      {falta props }
-                    </Administrador>}>
-                    </Route>
-                      <Route path="/crear" element={<FormularioProducto> Falta props ></FormularioProducto>>
-                      </Route>
-                      <Route path="/editar/:id" element={<FormularioProducto> Falta props></FormularioProducto>}>
-
-                    </Route>  
-                </Route> 
-            */}
-
             <Route path="*" element={<Error404></Error404>}></Route>
           </Routes>
         </main>
