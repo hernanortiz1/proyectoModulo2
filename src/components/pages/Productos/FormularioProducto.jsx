@@ -2,7 +2,7 @@ import { Row, Col, Form } from "react-bootstrap";
 
 const FormularioProducto = () => {
   return (
-    <section className="container my-3">
+    <section className="container my-3">a
       <h1>Nuevo juego</h1>
       <Form className="py-3">
         <Form.Group className="mb-3" controlId="nombreJuego">
