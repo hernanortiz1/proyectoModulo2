@@ -6,7 +6,7 @@ import Header from "./components/shared/Header";
 import Error404 from "./components/pages/Error404";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin"
 import Inicio from "./components/pages/Inicio";
-import FormularioProducto from "./components/pages/Productos/FormularioProducto";
+import FormularioProducto from "./components/pages/Juegos/FormularioJuego";
 
 function App() {
   return (

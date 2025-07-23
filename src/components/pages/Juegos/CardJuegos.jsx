@@ -12,7 +12,7 @@ import uncharted from "../../../assets/juegos/uncharted.jpg";
 import horizon from "../../../assets/juegos/horizon.jpg";
 import RD2 from "../../../assets/juegos/RD2.jpg";
 import raider from "../../../assets/juegos/raider.jpg";
-const CardProductos = () => {
+const CardJuegos = () => {
   return (
     <>
       <Row className="mb-3 d-flex justify-content-center">
@@ -665,4 +665,4 @@ const CardProductos = () => {
   );
 };
 
-export default CardProductos;
+export default CardJuegos;
