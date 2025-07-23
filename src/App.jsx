@@ -22,7 +22,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
-            {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route> */}
+            {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>  luego de hacer clic en ver mas*/}
             <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
             {/* 
                 <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
@@ -44,23 +44,6 @@ function App() {
             <Route path="/aventura" element={<Aventura></Aventura>}></Route>
             <Route path="/sandbox" element={<Sandbox></Sandbox>}></Route>
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
-
-            {/* 
-             rutas de Administrador con protector Admin
-
-                <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
-                  <Route index element={
-                    <Administrador>
-                      {falta props }
-                    </Administrador>}>
-                    </Route>
-                      <Route path="/crear" element={<FormularioProducto> Falta props ></FormularioProducto>>
-                      </Route>
-                      <Route path="/editar/:id" element={<FormularioProducto> Falta props></FormularioProducto>}>
-
-                    </Route>  
-                </Route> 
-            */}
 
             <Route path="*" element={<Error404></Error404>}></Route>
           </Routes>
