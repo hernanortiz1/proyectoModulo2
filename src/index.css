@@ -23,8 +23,8 @@ main {
 
 .sombraADMIN {
   color: rgb(255, 0, 64); /* rojo fuerte */
-  text-shadow: 0 0 3px rgba(128, 0, 255, 0.4), 0 0 6px rgba(128, 0, 255, 0.6),
-    0 0 12px rgba(128, 0, 255, 0.8), 0 0 20px rgba(128, 0, 255, 1);
+  text-shadow: 0 0 3px rgba(128, 0, 255, 0.4), 0 0 6px rgba(128, 0, 255, 0.6), 0 0 12px rgba(128, 0, 255, 0.8),
+    0 0 20px rgba(128, 0, 255, 1);
 }
 
 .fondoLogin {
@@ -70,4 +70,64 @@ main {
   height: 100%;
   min-height: 200px;
   overflow: hidden;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background: linear-gradient(90deg, #28a745, #9b00ff) !important; /* verde a morado */
+  color: rgb(251, 255, 0) !important;
+  box-shadow: 0 0 8px 2px #9b00ff; /* resplandor morado */
+}
+
+.alturaImg {
+  height: 250px; /* o 300px según prefieras */
+  object-fit: cover;
+  width: 100%;
+}
+
+.sombraTituloShooter {
+  text-shadow: 0 0 10px rgb(255, 255, 255), 2px 2px 25px rgba(255, 0, 0, 0.8), 0 0 50px rgba(255, 0, 0, 0.6),
+    0 0 75px rgba(128, 0, 255, 0.4);
+}
+
+.letras-espaciadas {
+  letter-spacing: 0.1em;
+}
+
+.sombraSection {
+  box-shadow: 0 0 30px 15px rgb(255, 255, 255);
+}
+
+@media (max-width: 576px) {
+  .carousel-caption {
+    font-size: 0.85rem;
+    padding: 0.5rem !important;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 576px) {
+  .alturaImg {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .alturaImg {
+    height: 450px;
+  }
+}
+
+@media (min-width: 992px) {
+  .alturaImg {
+    height: 550px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .alturaImg {
+    height: 750px;
+  }
 }
