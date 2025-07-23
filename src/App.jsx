@@ -8,6 +8,7 @@ import Login from "./components/pages/Login";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin";
 import Inicio from "./components/pages/Inicio";
 import FormularioJuego from "./components/pages/Juegos/FormularioJuego";
+import Administrador from "./components/pages/Administrador";
 import Shooter from "./components/pages/Categorias/Shooter";
 import Simulacion from "./components/pages/Categorias/Simulacion";
 import Aventura from "./components/pages/Categorias/Aventura";
@@ -24,12 +25,10 @@ function App() {
             <Route path="/" element={<Inicio></Inicio>}></Route>
             {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route> */}
             <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
+            <Route path="/administrador" element={<Administrador></Administrador>}></Route>
             {/*
-                <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
-                  <Route index element={<Administrador>
-                      {falta props }
-                  </Administrador>}>
-                  </Route>
+            <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
+
                     </Route>
                     <Route path="/editar/:id" element={<FormularioProducto> Falta props></FormularioProducto>}>
 
