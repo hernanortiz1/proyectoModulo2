@@ -1,10 +1,9 @@
-export const juegosAventura = [
+export const juegosShooter = [
   {
     id: "Sh001",
     nombreJuego: "Call of Duty: Modern Warfare II",
     precio: 55000,
-    imagen:
-      "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/09/15/16632546928236.jpg",
+    imagen: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/09/15/16632546928236.jpg",
     categoria: "Shooter",
     plataforma: "PC",
     reqRecomendadoRam: "16gb",
@@ -25,8 +24,7 @@ export const juegosAventura = [
     id: "Sh002",
     nombreJuego: "Counter-Strike 2",
     precio: 0,
-    imagen:
-      "https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg",
+    imagen: "https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg",
     categoria: "Shooter",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -46,8 +44,7 @@ export const juegosAventura = [
     id: "Sh003",
     nombreJuego: "DOOM Eternal",
     precio: 35000,
-    imagen:
-      "https://gameplusblog.es/wp-content/uploads/2022/10/DOOM-ETERNAL-portada-REVIEW.jpg",
+    imagen: "https://gameplusblog.es/wp-content/uploads/2022/10/DOOM-ETERNAL-portada-REVIEW.jpg",
     categoria: "Shooter",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -67,8 +64,7 @@ export const juegosAventura = [
     id: "Sh004",
     nombreJuego: "Tom Clancy's Rainbow Six Siege",
     precio: 15000,
-    imagen:
-      "https://www.irrompibles.net/irrwp/wp-content/uploads/2025/06/Rainbow-Six-Siege-X-Key-Art-scaled-1.jpg",
+    imagen: "https://www.irrompibles.net/irrwp/wp-content/uploads/2025/06/Rainbow-Six-Siege-X-Key-Art-scaled-1.jpg",
     categoria: "Shooter",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -109,8 +105,7 @@ export const juegosAventura = [
     id: "Sh006",
     nombreJuego: "Apex Legends",
     precio: 0,
-    imagen:
-      "https://www.zonammorpg.com/wp-content/uploads/2021/02/apex-legends-1620x800.jpg",
+    imagen: "https://www.zonammorpg.com/wp-content/uploads/2021/02/apex-legends-1620x800.jpg",
     categoria: "Shooter",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",

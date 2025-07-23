@@ -1,10 +1,9 @@
-export const juegosAventura = [
+export const juegosSandbox = [
   {
     id: "Sb001",
     nombreJuego: "Minecraft",
     precio: 15000,
-    imagen:
-      "https://www.somosxbox.com/wp-content/uploads/2023/02/Minecraft-portada.jpg",
+    imagen: "https://www.somosxbox.com/wp-content/uploads/2023/02/Minecraft-portada.jpg",
     categoria: "SandBox",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -106,8 +105,7 @@ export const juegosAventura = [
     id: "Sb006",
     nombreJuego: "No Man's Sky",
     precio: 27000,
-    imagen:
-      "https://static.bandainamcoent.eu/high/no-mans-sky/no-mans-sky/page-setup/NMS_header_mobile.jpg",
+    imagen: "https://static.bandainamcoent.eu/high/no-mans-sky/no-mans-sky/page-setup/NMS_header_mobile.jpg",
     categoria: "SandBox",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",

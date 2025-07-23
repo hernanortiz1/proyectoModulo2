@@ -1,10 +1,9 @@
-export const juegosAventura = [
+export const juegosSimulacion = [
   {
     id: "Sm001",
     nombreJuego: "Microsoft Flight Simulator",
     precio: 50000,
-    imagen:
-      "https://areajugones.sport.es/wp-content/uploads/2024/09/microsoft-flight-simulator-reserva.jpg",
+    imagen: "https://areajugones.sport.es/wp-content/uploads/2024/09/microsoft-flight-simulator-reserva.jpg",
     categoria: "Simulacion",
     plataforma: "PC",
     reqRecomendadoRam: "16gb",
@@ -45,8 +44,7 @@ export const juegosAventura = [
     id: "Sm003",
     nombreJuego: "Farming Simulator 22",
     precio: 28000,
-    imagen:
-      "https://portal.33bits.net/wp-content/uploads/2021/11/Farming-Simulator-22_20211118234258.jpg",
+    imagen: "https://portal.33bits.net/wp-content/uploads/2021/11/Farming-Simulator-22_20211118234258.jpg",
     categoria: "Simulacion",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",

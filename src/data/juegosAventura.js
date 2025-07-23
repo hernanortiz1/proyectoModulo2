@@ -24,8 +24,7 @@ export const juegosAventura = [
     id: "Av002",
     nombreJuego: "Tomb Raider",
     precio: 15000,
-    imagen:
-      "https://fanatical.imgix.net/product/original/414446ae-bebb-43d0-a244-1a4ddbc2d728.jpeg",
+    imagen: "https://fanatical.imgix.net/product/original/414446ae-bebb-43d0-a244-1a4ddbc2d728.jpeg",
     categoria: "Aventura",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -45,8 +44,7 @@ export const juegosAventura = [
     id: "Av003",
     nombreJuego: "Assassin's Creed Valhalla",
     precio: 55000,
-    imagen:
-      "https://image.api.playstation.com/vulcan/ap/rnd/202008/0723/i2ICFMr0Ius6qtYYD9GNrY68.jpg",
+    imagen: "https://image.api.playstation.com/vulcan/ap/rnd/202008/0723/i2ICFMr0Ius6qtYYD9GNrY68.jpg",
     categoria: "Aventura",
     plataforma: "PlayStation 4/5",
     reqRecomendadoRam: "8gb",
@@ -66,8 +64,7 @@ export const juegosAventura = [
     id: "Av004",
     nombreJuego: "Horizon Zero Dawn",
     precio: 40000,
-    imagen:
-      "https://d30gl8nkrjm6kp.cloudfront.net/articulos/articulos-566060.jpg",
+    imagen: "https://d30gl8nkrjm6kp.cloudfront.net/articulos/articulos-566060.jpg",
     categoria: "Aventura",
     plataforma: "PC",
     reqRecomendadoRam: "16gb",
@@ -108,8 +105,7 @@ export const juegosAventura = [
     id: "Av006",
     nombreJuego: "Life is Strange",
     precio: 12000,
-    imagen:
-      "https://fyre.cdn.sewest.net/life-is-strange-hub/662b9f9237d4a15412a99fba/social-share-3--KN8cKx5lK.png",
+    imagen: "https://fyre.cdn.sewest.net/life-is-strange-hub/662b9f9237d4a15412a99fba/social-share-3--KN8cKx5lK.png",
     categoria: "Aventura",
     plataforma: "PC",
     reqRecomendadoRam: "4gb",
