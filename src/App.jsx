@@ -24,6 +24,20 @@ function App() {
             <Route path="/" element={<Inicio></Inicio>}></Route>
             {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route> */}
             <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
+            {/* 
+                <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
+                  <Route index element={<Administrador>
+                      {falta props }
+                  </Administrador>}>
+                  </Route>
+                    <Route path="/crear" element={<FormularioProducto> Falta props ></FormularioProducto>>
+                    </Route>
+                    <Route path="/editar/:id" element={<FormularioProducto> Falta props></FormularioProducto>}>
+
+                    </Route>  
+
+                </Route> */}
+            <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
 
             <Route path="/shooter" element={<Shooter></Shooter>}></Route>
             <Route path="/simulacion" element={<Simulacion></Simulacion>}></Route>
