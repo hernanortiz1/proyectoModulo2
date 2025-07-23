@@ -1,9 +1,10 @@
 export const juegosAventura = [
-{
+  {
     id: "Sb001",
     nombreJuego: "Minecraft",
     precio: 15000,
-    imagen: "https://www.somosxbox.com/wp-content/uploads/2023/02/Minecraft-portada.jpg",
+    imagen:
+      "https://www.somosxbox.com/wp-content/uploads/2023/02/Minecraft-portada.jpg",
     categoria: "SandBox",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -17,13 +18,14 @@ export const juegosAventura = [
     reqMinimoDirectX: "9",
     reqMinimoProcesador: "Intel Core i3-3210",
     reqMinimoAlmacenamiento: "4 GB HDD",
-    reqMinimoTarjetaVideo: "Intel HD Graphics 4000"
+    reqMinimoTarjetaVideo: "Intel HD Graphics 4000",
   },
- {
+  {
     id: "Sb002",
     nombreJuego: "Terraria",
     precio: 7000,
-    imagen: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_3DS_Terraria_image1600w.jpg",
+    imagen:
+      "https://www.nintendo.com/eu/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_3DS_Terraria_image1600w.jpg",
     categoria: "SandBox",
     plataforma: "PC",
     reqRecomendadoRam: "4gb",
@@ -37,9 +39,9 @@ export const juegosAventura = [
     reqMinimoDirectX: "10",
     reqMinimoProcesador: "Intel Core 2 Duo",
     reqMinimoAlmacenamiento: "1 GB HDD",
-    reqMinimoTarjetaVideo: "Intel HD Graphics"
+    reqMinimoTarjetaVideo: "Intel HD Graphics",
   },
- {
+  {
     id: "Sb003",
     nombreJuego: "ARK: Survival Evolved",
     precio: 25000,
@@ -57,13 +59,14 @@ export const juegosAventura = [
     reqMinimoDirectX: "10",
     reqMinimoProcesador: "Intel Core i5-2400",
     reqMinimoAlmacenamiento: "60 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GTX 670"
+    reqMinimoTarjetaVideo: "NVIDIA GTX 670",
   },
-{
+  {
     id: "Sb004",
     nombreJuego: "Grand Theft Auto V",
     precio: 30000,
-    imagen: "https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2018/03/22/214242C7-0A58-4B9D-AA24-7E92E1C31C94/98.jpg",
+    imagen:
+      "https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2018/03/22/214242C7-0A58-4B9D-AA24-7E92E1C31C94/98.jpg",
     categoria: "SandBox",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -77,7 +80,7 @@ export const juegosAventura = [
     reqMinimoDirectX: "10",
     reqMinimoProcesador: "Intel Core 2 Quad Q6600",
     reqMinimoAlmacenamiento: "72 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA 9800 GT"
+    reqMinimoTarjetaVideo: "NVIDIA 9800 GT",
   },
   {
     id: "Sb005",
@@ -97,13 +100,14 @@ export const juegosAventura = [
     reqMinimoDirectX: "11",
     reqMinimoProcesador: "Intel Core i7-3770",
     reqMinimoAlmacenamiento: "20 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GTX 670"
+    reqMinimoTarjetaVideo: "NVIDIA GTX 670",
   },
-   {
+  {
     id: "Sb006",
     nombreJuego: "No Man's Sky",
     precio: 27000,
-    imagen: "https://static.bandainamcoent.eu/high/no-mans-sky/no-mans-sky/page-setup/NMS_header_mobile.jpg",
+    imagen:
+      "https://static.bandainamcoent.eu/high/no-mans-sky/no-mans-sky/page-setup/NMS_header_mobile.jpg",
     categoria: "SandBox",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -117,6 +121,6 @@ export const juegosAventura = [
     reqMinimoDirectX: "11",
     reqMinimoProcesador: "Intel Core i3",
     reqMinimoAlmacenamiento: "10 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GTX 480"
-  }
-]
+    reqMinimoTarjetaVideo: "NVIDIA GTX 480",
+  },
+];
