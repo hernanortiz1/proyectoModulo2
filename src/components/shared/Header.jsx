@@ -1,33 +1,43 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { NavLink } from "react-router";
 
 const Header = () => {
   return (
     <header className="sombraNavbarFooter">
       <Navbar expand="lg" className="bg-body-tertary">
         <Container>
-          <Navbar.Brand href="#home" className="orbitron">
+          <NavLink to="/" className="navbar-brand orbitron">
             GamerZone
-          </Navbar.Brand>
+          </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Inicio</Nav.Link>
+              <NavLink className="nav-link" to={"/"}>
+                Inicio
+              </NavLink>
               <NavDropdown title="Categorias" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Shooter</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item as={NavLink} to="/shooter">
+                  Shooter
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/simulacion">
                   Simulación
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Aventura</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Sandbox</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">RPG</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/aventura">
+                  Aventura
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/sandbox">
+                  Sandbox
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/rpg">
+                  RPG
+                </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link">¿Sobre nosotros?</Nav.Link>
             </Nav>
             <Nav className="ms-auto">
               <Nav className="align-items-center">
                 <div className="nav-link disabled">
-                  <span className="sombraADMIN">ADMIN</span> (
-                  <small className="text-success">activo</small>)
+                  <span className="sombraADMIN">ADMIN</span> (<small className="text-success">activo</small>)
                 </div>
               </Nav>
               <Nav.Link href="#link">Administración</Nav.Link>
