@@ -14,7 +14,7 @@ import Simulacion from "./components/pages/Categorias/Simulacion";
 import Aventura from "./components/pages/Categorias/Aventura";
 import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
-
+import DetalleProducto from "./components/pages/detalleProducto";
 function App() {
   return (
     <>
@@ -57,6 +57,7 @@ function App() {
       </BrowserRouter>
     </>
   );
+  
 }
 
 export default App;
