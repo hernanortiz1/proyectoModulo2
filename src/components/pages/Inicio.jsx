@@ -1,7 +1,8 @@
 import Banner from "../../assets/Banner/Banner.avif"
 import { Container} from "react-bootstrap";
-import CardProductos from "./Productos/CardProductos";
+import CardJuegos from "./Juegos/CardJuegos";
 const Inicio = () => {
+   
     return (
         <section className="mainSection">
             <img src={Banner} alt="banner gamer"
@@ -10,8 +11,8 @@ const Inicio = () => {
             <Container className="mt-5">
             <h1 className="display-4">Juegos destacados</h1>
             <hr />
-            
-                <CardProductos></CardProductos>
+
+                <CardJuegos></CardJuegos>
             </Container>
         </section>
     );
