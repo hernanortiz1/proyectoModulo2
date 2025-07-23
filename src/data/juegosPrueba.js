@@ -1,4 +1,4 @@
-export const juegosAventura = [
+export const juegosPrueba = [
   {
     id: "Av001",
     nombreJuego: "The Legend of Zelda: Breath of the Wild",
