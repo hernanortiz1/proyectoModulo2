@@ -6,7 +6,7 @@ import Header from "./components/shared/Header";
 import Error404 from "./components/pages/Error404";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin"
 import Inicio from "./components/pages/Inicio";
-import FormularioProducto from "./components/pages/Juegos/FormularioJuego";
+import FormularioJuegos from "./components/pages/Juegos/FormularioJuego";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Routes>
             {/* falta ruta de inicio, protector de rutas y ruta a Administrador */}
             <Route path="/" element={<Inicio></Inicio>}></Route>
-            <Route path="/crear" element={<FormularioProducto></FormularioProducto>}></Route>
+            <Route path="/crear" element={<FormularioJuegos></FormularioJuegos>}></Route>
             <Route path="*" element={<Error404></Error404>}></Route>
           </Routes>
         </main>
