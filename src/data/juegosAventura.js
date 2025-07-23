@@ -1,9 +1,10 @@
 export const juegosAventura = [
-   {
+  {
     id: "Av001",
     nombreJuego: "The Legend of Zelda: Breath of the Wild",
     precio: 45000,
-    imagen: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_TheLegendOfZeldaBreathOfTheWild_image1600w.jpg",
+    imagen:
+      "https://www.nintendo.com/eu/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_TheLegendOfZeldaBreathOfTheWild_image1600w.jpg",
     categoria: "Aventura",
     plataforma: "Nintendo Switch",
     reqRecomendadoRam: "8gb",
@@ -17,13 +18,14 @@ export const juegosAventura = [
     reqMinimoDirectX: "11",
     reqMinimoProcesador: "Intel Core i3-6100",
     reqMinimoAlmacenamiento: "16 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GTX 750 Ti"
+    reqMinimoTarjetaVideo: "NVIDIA GTX 750 Ti",
   },
- {
+  {
     id: "Av002",
     nombreJuego: "Tomb Raider",
     precio: 15000,
-    imagen: "https://fanatical.imgix.net/product/original/414446ae-bebb-43d0-a244-1a4ddbc2d728.jpeg",
+    imagen:
+      "https://fanatical.imgix.net/product/original/414446ae-bebb-43d0-a244-1a4ddbc2d728.jpeg",
     categoria: "Aventura",
     plataforma: "PC",
     reqRecomendadoRam: "8gb",
@@ -37,13 +39,14 @@ export const juegosAventura = [
     reqMinimoDirectX: "10",
     reqMinimoProcesador: "Intel Core i3-2100",
     reqMinimoAlmacenamiento: "25 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GTX 650"
+    reqMinimoTarjetaVideo: "NVIDIA GTX 650",
   },
   {
     id: "Av003",
     nombreJuego: "Assassin's Creed Valhalla",
     precio: 55000,
-    imagen: "https://image.api.playstation.com/vulcan/ap/rnd/202008/0723/i2ICFMr0Ius6qtYYD9GNrY68.jpg",
+    imagen:
+      "https://image.api.playstation.com/vulcan/ap/rnd/202008/0723/i2ICFMr0Ius6qtYYD9GNrY68.jpg",
     categoria: "Aventura",
     plataforma: "PlayStation 4/5",
     reqRecomendadoRam: "8gb",
@@ -57,13 +60,14 @@ export const juegosAventura = [
     reqMinimoDirectX: "11",
     reqMinimoProcesador: "Intel Core i5-4460",
     reqMinimoAlmacenamiento: "50 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GTX 960"
+    reqMinimoTarjetaVideo: "NVIDIA GTX 960",
   },
-{
+  {
     id: "Av004",
     nombreJuego: "Horizon Zero Dawn",
     precio: 40000,
-    imagen: "https://d30gl8nkrjm6kp.cloudfront.net/articulos/articulos-566060.jpg",
+    imagen:
+      "https://d30gl8nkrjm6kp.cloudfront.net/articulos/articulos-566060.jpg",
     categoria: "Aventura",
     plataforma: "PC",
     reqRecomendadoRam: "16gb",
@@ -77,13 +81,14 @@ export const juegosAventura = [
     reqMinimoDirectX: "11",
     reqMinimoProcesador: "Intel Core i5-2500K",
     reqMinimoAlmacenamiento: "100 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GTX 780"
+    reqMinimoTarjetaVideo: "NVIDIA GTX 780",
   },
-{
+  {
     id: "Av005",
     nombreJuego: "Uncharted 4: A Thief's End",
     precio: 48000,
-    imagen: "https://www.lascosasquenoshacenfelices.com/wp-content/uploads/2016/08/Uncharted-4-Portada-Las-cosas-que-nos-hacen-felices.jpg",
+    imagen:
+      "https://www.lascosasquenoshacenfelices.com/wp-content/uploads/2016/08/Uncharted-4-Portada-Las-cosas-que-nos-hacen-felices.jpg",
     categoria: "Aventura",
     plataforma: "PlayStation 4/5",
     reqRecomendadoRam: "8gb",
@@ -97,13 +102,14 @@ export const juegosAventura = [
     reqMinimoDirectX: "11",
     reqMinimoProcesador: "Intel Core i5-4430",
     reqMinimoAlmacenamiento: "50 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GTX 960"
+    reqMinimoTarjetaVideo: "NVIDIA GTX 960",
   },
- {
+  {
     id: "Av006",
     nombreJuego: "Life is Strange",
     precio: 12000,
-    imagen: "https://fyre.cdn.sewest.net/life-is-strange-hub/662b9f9237d4a15412a99fba/social-share-3--KN8cKx5lK.png",
+    imagen:
+      "https://fyre.cdn.sewest.net/life-is-strange-hub/662b9f9237d4a15412a99fba/social-share-3--KN8cKx5lK.png",
     categoria: "Aventura",
     plataforma: "PC",
     reqRecomendadoRam: "4gb",
@@ -117,6 +123,6 @@ export const juegosAventura = [
     reqMinimoDirectX: "10",
     reqMinimoProcesador: "Intel Core 2 Duo",
     reqMinimoAlmacenamiento: "15 GB HDD",
-    reqMinimoTarjetaVideo: "NVIDIA GeForce 8800 GT"
+    reqMinimoTarjetaVideo: "NVIDIA GeForce 8800 GT",
   },
 ];
