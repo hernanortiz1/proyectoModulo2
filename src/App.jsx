@@ -25,7 +25,13 @@ function App() {
             <Route path="/" element={<Inicio></Inicio>}></Route>
             {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>  luego de hacer clic en ver mas*/}
             <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
-            <Route path="/administrador" element={<Administrador></Administrador>}></Route>
+            
+            <Route path="/administrador" element={<ProtectorAdmin>
+
+                
+            </ProtectorAdmin>}>
+            
+            </Route>
             {/*
             <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
 
