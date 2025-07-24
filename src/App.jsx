@@ -31,7 +31,8 @@ function App() {
             <Route path="/aventura" element={<Aventura></Aventura>}></Route>
             <Route path="/sandbox" element={<Sandbox></Sandbox>}></Route>
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
-           
+            {/*<Route path="/sobre_nosotros" element={<Sobrenosotros></Sobrenosotros>}></Route>*/}
+
             <Route path="/administrador" element={<ProtectorAdmin> </ProtectorAdmin>}>
               <Route index element={<Administrador></Administrador>} />
               <Route path="crear" element={<FormularioJuego></FormularioJuego>} />
