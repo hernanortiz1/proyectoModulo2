@@ -23,7 +23,7 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
               <NavLink className="nav-link" to={"/"}>
                 Inicio
               </NavLink>
-              <NavDropdown title="Categorias" id="basic-nav-dropdown">
+              <NavDropdown title="Categorias">
                 <NavDropdown.Item as={NavLink} to="/shooter">
                   Shooter
                 </NavDropdown.Item>
@@ -40,7 +40,14 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
                   RPG
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#link">¿Sobre nosotros?</Nav.Link>
+              <NavDropdown title="Acerca de">
+                <NavDropdown.Item as={NavLink} to={"/sobreNosotros"}>
+                  ¿Sobre nosotros?
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to={"/preguntasFrecuentes"}>
+                  Preguntas Frecuentes
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav>
             <Nav className="ms-auto">
               {usuarioAdmin ? (
