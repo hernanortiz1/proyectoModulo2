@@ -13,6 +13,7 @@ import Simulacion from "./components/pages/Categorias/Simulacion";
 import Aventura from "./components/pages/Categorias/Aventura";
 import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
+import { useEffect, useState } from "react";
 
 function App() {
  const usuarioLogueado =
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header></Header>
+        <Header usuarioAdmin={usuarioAdmin} setUsuarioAdmin={setUsuarioAdmin}></Header>
         <main>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
