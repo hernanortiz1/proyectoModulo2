@@ -7,19 +7,22 @@ import Error404 from "./components/pages/Error404";
 import Login from "./components/pages/Login";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin";
 import Inicio from "./components/pages/Inicio";
-import FormularioProducto from "./components/pages/Productos/FormularioProducto";
+import FormularioJuego from "./components/pages/Juegos/FormularioJuego";
+import Administrador from "./components/pages/Administrador";
 import Shooter from "./components/pages/Categorias/Shooter";
 import Simulacion from "./components/pages/Categorias/Simulacion";
 import Aventura from "./components/pages/Categorias/Aventura";
 import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
 import { useEffect, useState } from "react";
+import DetalleProducto from "./components/pages/detalleProducto";
 
 function App() {
- const usuarioLogueado =
-    JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
-    /* falta array para guardar productos */
-   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
+  const [juegos, setJuegos] = useState([]);
+  const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
+  /* falta array para guardar productos */
+  const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
+
   return (
     <>
       <BrowserRouter>
@@ -27,45 +30,23 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
-            {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route> */}
+            <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
             <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
-            {/* 
-                <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
-                  <Route index element={<Administrador>
-                      {falta props }
-                  </Administrador>}>
-                  </Route>
-                    <Route path="/crear" element={<FormularioProducto> Falta props ></FormularioProducto>>
-                    </Route>
-                    <Route path="/editar/:id" element={<FormularioProducto> Falta props></FormularioProducto>}>
 
-                    </Route>  
-
-                </Route> */}
+            <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
             <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
-
             <Route path="/shooter" element={<Shooter></Shooter>}></Route>
             <Route path="/simulacion" element={<Simulacion></Simulacion>}></Route>
             <Route path="/aventura" element={<Aventura></Aventura>}></Route>
             <Route path="/sandbox" element={<Sandbox></Sandbox>}></Route>
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
+            {/*<Route path="/sobre_nosotros" element={<Sobrenosotros></Sobrenosotros>}></Route>*/}
 
-            {/* 
-             rutas de Administrador con protector Admin
-
-                <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
-                  <Route index element={
-                    <Administrador>
-                      {falta props }
-                    </Administrador>}>
-                    </Route>
-                      <Route path="/crear" element={<FormularioProducto> Falta props ></FormularioProducto>>
-                      </Route>
-                      <Route path="/editar/:id" element={<FormularioProducto> Falta props></FormularioProducto>}>
-
-                    </Route>  
-                </Route> 
-            */}
+            <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
+              <Route index element={<Administrador juegos={juegos} setJuegos={setJuegos}></Administrador>}></Route>
+              <Route path="crear" element={<FormularioJuego></FormularioJuego>}></Route>
+              <Route path="editar/:id" element={<FormularioJuego></FormularioJuego>}></Route>
+            </Route>
 
             <Route path="*" element={<Error404></Error404>}></Route>
           </Routes>
