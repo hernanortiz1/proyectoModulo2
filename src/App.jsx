@@ -33,6 +33,8 @@ function App() {
             <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
             <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
 
+            <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
+            <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
             <Route path="/shooter" element={<Shooter></Shooter>}></Route>
             <Route path="/simulacion" element={<Simulacion></Simulacion>}></Route>
             <Route path="/aventura" element={<Aventura></Aventura>}></Route>
