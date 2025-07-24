@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Header = () => {
   return (
@@ -40,7 +40,9 @@ const Header = () => {
                   <span className="sombraADMIN">ADMIN</span> <small className="text-success">(activo)</small>
                 </div>
               </Nav>
-              <Nav.Link href="#link">Administración</Nav.Link>
+              <NavLink className="nav-link" to={"/administrador"}>
+                Administración
+              </NavLink>
               <NavLink className="nav-link" to={"/login"}>
                 Iniciar sesión
               </NavLink>

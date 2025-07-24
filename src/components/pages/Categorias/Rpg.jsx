@@ -8,14 +8,10 @@ const Rpg = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloSimulacion text-dark letras-espaciadas">RPG</h1>
+        <h1 className="text-center my-4 sombraTituloRpg text-dark letras-espaciadas">RPG</h1>
         <Carousel>
           <Carousel.Item>
-            <img
-              className="d-block w-100 alturaImg object-position-top"
-              src={witcher}
-              alt="The Witcher 3: Wild Hunt"
-            />
+            <img className="d-block w-100 alturaImg object-position-top" src={witcher} alt="The Witcher 3: Wild Hunt" />
             <Carousel.Caption className="bg-dark bg-opacity-50 p-2 rounded text-white text-center">
               <h5 className="fs-5 fw-bold">The Witcher 3: Wild Hunt</h5>
               <p className="fs-6 mb-1">
@@ -30,7 +26,11 @@ const Rpg = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100 alturaImg object-position-top" src={eldenRIng} alt="Elden Ring: Tarnished Edition" />
+            <img
+              className="d-block w-100 alturaImg object-position-top"
+              src={eldenRIng}
+              alt="Elden Ring: Tarnished Edition"
+            />
             <Carousel.Caption className="bg-dark bg-opacity-50 p-2 rounded text-white text-center">
               <h3>Elden Ring: Tarnished Edition</h3>
               <p>
@@ -45,11 +45,7 @@ const Rpg = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              className="d-block w-100 alturaImg"
-              src={divinity2}
-              alt="Divinity: Original Sin 2"
-            />
+            <img className="d-block w-100 alturaImg" src={divinity2} alt="Divinity: Original Sin 2" />
             <Carousel.Caption className="bg-dark bg-opacity-50 p-2 rounded text-white text-center">
               <h3>Divinity: Original Sin 2</h3>
               <p>
