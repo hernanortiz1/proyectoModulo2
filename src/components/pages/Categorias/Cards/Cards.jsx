@@ -1,4 +1,5 @@
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { NavLink } from "react-router";
 import cs2 from "../../../img/imgCarouselShooter/cs2.jpg";
 
 const Cards = () => {
@@ -15,8 +16,10 @@ const Cards = () => {
             <span className="fw-bold text-success sombraADMIN">FREE</span>
           </Card.Text>
         </Card.Body>
-        <Card.Footer className="text-center">
-          <Button variant="primary">Ver Detalle...</Button>
+        <Card.Footer className="text-end">
+          <NavLink className="btn btn-success" to="/detalle">
+            Ver más
+          </NavLink>
         </Card.Footer>
       </Card>
     </div>

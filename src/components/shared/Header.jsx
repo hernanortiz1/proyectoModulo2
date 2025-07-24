@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { NavLink, Link, useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
   const navegacion = useNavigate();
@@ -46,10 +46,12 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
             <Nav className="ms-auto">
               <Nav className="align-items-center">
                 <div className="nav-link disabled">
-                  <span className="sombraADMIN">ADMIN</span> (<small className="text-success">activo</small>)
+                  <span className="sombraADMIN">ADMIN</span> <small className="text-success">(activo)</small>
                 </div>
               </Nav>
-              <Nav.Link href="#link">Administración</Nav.Link>
+              <NavLink className="nav-link" to={"/administrador"}>
+                Administración
+              </NavLink>
               <NavLink className="nav-link" to={"/login"}>
                 Iniciar sesión
               </NavLink>
