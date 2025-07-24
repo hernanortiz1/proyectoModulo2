@@ -14,9 +14,11 @@ import Simulacion from "./components/pages/Categorias/Simulacion";
 import Aventura from "./components/pages/Categorias/Aventura";
 import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
+import { useState } from "react";
 
 
 function App() {
+  const [juegos, setJuegos]= useState([])
   return (
     <>
       <BrowserRouter>
@@ -26,7 +28,7 @@ function App() {
             <Route path="/" element={<Inicio></Inicio>}></Route>
             {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route> */}
             <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
-            <Route path="administrador" element={<Administrador></Administrador>}></Route>
+            <Route path="administrador" element={<Administrador setJuegos={setJuegos} juegos={juegos}></Administrador>}></Route>
 
             {/*
                 <

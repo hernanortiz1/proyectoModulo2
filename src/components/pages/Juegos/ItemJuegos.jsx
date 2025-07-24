@@ -1,22 +1,24 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router";
 
-const ItemJuegos = () => {
+const ItemJuegos = ({fila, juego}) => {
   return (
 
       <tr>
-        <td className="text-center"></td>
+        <td className="text-center">{fila}</td>
 
-        <td></td>
+        <td>{juego. nombreJuego}</td>
 
-        <td className="text-end"></td>
+        <td className="text-center">{juego.categoria}</td>
 
         <td className="text-center">
-          <img src="" className="" alt="" />
+         {juego.precio}
         </td>
 
-        <td></td>
-        <td></td>
+        <td>{juego.plataforma}</td>
+        <td>
+            <img src="" alt={juego.nombreJuego} />
+        </td>
 
         <td className="text-center">
           <Link className="me-lg-2 btn btn-warning">

@@ -1,8 +1,11 @@
 import { Table, Container, Button } from "react-bootstrap";
 import ItemJuegos from "./Juegos/ItemJuegos";
 import { Link } from "react-router";
-
-const Administrador = () => {
+import {juegosPrueba} from "../../data/juegosPrueba"
+const Administrador = ({setJuegos, juegos}) => {
+    const cargarJuegos=()=>{
+        setJuegos(juegosPrueba)
+    }
   return (
     <>
       <Container className="my-2">
@@ -12,18 +15,20 @@ const Administrador = () => {
             <Link className="btn btn-primary" to={"/crear"}>
               <i className="bi bi-file-earmark-plus"></i>
             </Link>
-            <Button className="ms-2 btn btn-info text-light">
+            <Button className="ms-2 btn btn-info text-light"
+            onClick={cargarJuegos}
+            >
               <i className="bg bi bi-database-fill-add"></i>
             </Button>
           </div>
         </div>
         <hr />
-        <Table responsive>
+        <Table responsive bordered>
           <thead>
             <tr>
               <th>Fila</th>
               <th>Nombre del Juego</th>
-              <th>Categoria </th>
+              <th className="text-center">Categoria </th>
               <th>Precio</th>
               <th>Plataforma</th>
               <th>URL</th>
@@ -31,7 +36,13 @@ const Administrador = () => {
             </tr>
           </thead>
           <tbody>
-            <ItemJuegos></ItemJuegos>
+            {juegos.map((juego, indice)=> (
+                <ItemJuegos key={juego.id}
+                fila={indice+1}
+                juego={juego}
+                ></ItemJuegos>
+
+            ))}
           </tbody>
         </Table>
       </Container>
