@@ -85,9 +85,18 @@ main {
   width: 100%;
 }
 
+.object-position-top {
+  object-position: top;
+}
+
 .sombraTituloShooter {
   text-shadow: 0 0 10px rgb(255, 255, 255), 2px 2px 25px rgba(255, 0, 0, 0.8), 0 0 50px rgba(255, 0, 0, 0.6),
     0 0 75px rgba(128, 0, 255, 0.4);
+}
+
+.sombraTituloSimulacion {
+  text-shadow: 0 0 10px rgb(0, 255, 0), 2px 2px 25px rgba(255, 251, 0, 0.8), 0 0 50px rgba(251, 255, 0, 0.6),
+    0 0 75px rgba(30, 255, 0, 0.4);
 }
 
 .letras-espaciadas {
@@ -132,17 +141,17 @@ main {
   }
 }
 .imgDetalle {
-   width: 100%;   
-   height: 400px;       
-   object-fit: cover;     
-   border-radius: 20px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
-.cardsDetalle{
-    border-radius: 10px;
-    box-shadow: 0 0px 20px 10px rgba(128, 0, 255, 0.4);
+.cardsDetalle {
+  border-radius: 10px;
+  box-shadow: 0 0px 20px 10px rgba(128, 0, 255, 0.4);
 }
-.bordeDetalle{
+.bordeDetalle {
   border-top: 5px solid rgba(0, 0, 0, 0.555);
   border-bottom: 5px solid rgba(0, 0, 0, 0.486);
 }
