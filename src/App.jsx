@@ -15,6 +15,10 @@ import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
 
 function App() {
+ const usuarioLogueado =
+    JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
+    /* falta array para guardar productos */
+   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
   return (
     <>
       <BrowserRouter>
@@ -23,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
             {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route> */}
-            <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
+            <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
             {/* 
                 <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
                   <Route index element={<Administrador>

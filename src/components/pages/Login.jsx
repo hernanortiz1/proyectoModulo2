@@ -8,6 +8,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navegacion = useNavigate()
 
   return (
     <section className="fondoLogin">
