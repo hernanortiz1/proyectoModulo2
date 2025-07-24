@@ -8,12 +8,13 @@ import Login from "./components/pages/Login";
 import ProtectorAdmin from "./components/routes/ProtectorAdmin";
 import Inicio from "./components/pages/Inicio";
 import FormularioJuego from "./components/pages/Juegos/FormularioJuego";
+import Administrador from "./components/pages/Administrador";
 import Shooter from "./components/pages/Categorias/Shooter";
 import Simulacion from "./components/pages/Categorias/Simulacion";
 import Aventura from "./components/pages/Categorias/Aventura";
 import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
-import Administrador from "./components/pages/Administrador";
+
 
 function App() {
   return (
