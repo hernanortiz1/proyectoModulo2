@@ -1,7 +1,16 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { NavLink } from "react-router";
+import { NavLink, Link, useNavigate } from "react-router";
 
-const Header = () => {
+const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
+  const navegacion = useNavigate();
+  const logout = () => {
+    setUsuarioAdmin(false);
+
+    sessionStorage.removeItem("userKeyJuego");
+
+    navegacion("/");
+  };
+
   return (
     <header className="sombraNavbarFooter">
       <Navbar expand="lg" className="bg-body-tertary">
@@ -41,7 +50,9 @@ const Header = () => {
                 </div>
               </Nav>
               <Nav.Link href="#link">Administración</Nav.Link>
-              <Nav.Link href="#link">Iniciar sesión</Nav.Link>
+              <NavLink className="nav-link" to={"/login"}>
+                Iniciar sesión
+              </NavLink>
               <Nav.Link href="#link">Cerrar sesión</Nav.Link>
             </Nav>
           </Navbar.Collapse>
