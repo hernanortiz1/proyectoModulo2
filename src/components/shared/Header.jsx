@@ -1,7 +1,16 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
-const Header = () => {
+const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
+  const navegacion = useNavigate();
+  const logout = () => {
+    setUsuarioAdmin(false);
+
+    sessionStorage.removeItem("userKeyJuego");
+
+    navegacion("/");
+  };
+
   return (
     <header className="sombraNavbarFooter">
       <Navbar expand="lg" className="bg-body-tertary">

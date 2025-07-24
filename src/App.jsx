@@ -14,21 +14,25 @@ import Simulacion from "./components/pages/Categorias/Simulacion";
 import Aventura from "./components/pages/Categorias/Aventura";
 import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 import DetalleProducto from "./components/pages/detalleProducto";
 
 function App() {
   const [juegos, setJuegos] = useState([]);
+  const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
+  /* falta array para guardar productos */
+  const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
+
   return (
     <>
       <BrowserRouter>
-        <Header></Header>
+        <Header usuarioAdmin={usuarioAdmin} setUsuarioAdmin={setUsuarioAdmin}></Header>
         <main>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
             <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
-            <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
+            <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
+
             <Route path="/shooter" element={<Shooter></Shooter>}></Route>
             <Route path="/simulacion" element={<Simulacion></Simulacion>}></Route>
             <Route path="/aventura" element={<Aventura></Aventura>}></Route>
@@ -36,10 +40,10 @@ function App() {
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
             {/*<Route path="/sobre_nosotros" element={<Sobrenosotros></Sobrenosotros>}></Route>*/}
 
-            <Route path="/administrador" element={<ProtectorAdmin> </ProtectorAdmin>}>
-              <Route index element={<Administrador juegos={juegos} setJuegos={setJuegos}></Administrador>} />
-              <Route path="crear" element={<FormularioJuego></FormularioJuego>} />
-              <Route path="editar/:id" element={<FormularioJuego></FormularioJuego>} />
+            <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
+              <Route index element={<Administrador juegos={juegos} setJuegos={setJuegos}></Administrador>}></Route>
+              <Route path="crear" element={<FormularioJuego></FormularioJuego>}></Route>
+              <Route path="editar/:id" element={<FormularioJuego></FormularioJuego>}></Route>
             </Route>
 
             <Route path="*" element={<Error404></Error404>}></Route>
