@@ -13,6 +13,7 @@ import Simulacion from "./components/pages/Categorias/Simulacion";
 import Aventura from "./components/pages/Categorias/Aventura";
 import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
+import Administrador from "./components/pages/Administrador";
 
 function App() {
   return (
@@ -24,12 +25,10 @@ function App() {
             <Route path="/" element={<Inicio></Inicio>}></Route>
             {/* <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route> */}
             <Route path="/login" element={<Login /*falta funcion de Administrador*/></Login>}></Route>
+            <Route path="administrador" element={<Administrador></Administrador>}></Route>
+
             {/*
-                <Route path="/Administrador" element={<ProtectorAdmin Falta props ></ProtectorAdmin>}>
-                  <Route index element={<Administrador>
-                      {falta props }
-                  </Administrador>}>
-                  </Route>
+                <
                     </Route>
                     <Route path="/editar/:id" element={<FormularioProducto> Falta props></FormularioProducto>}>
 
