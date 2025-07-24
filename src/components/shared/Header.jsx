@@ -37,7 +37,7 @@ const Header = () => {
             <Nav className="ms-auto">
               <Nav className="align-items-center">
                 <div className="nav-link disabled">
-                  <span className="sombraADMIN">ADMIN</span> (<small className="text-success">activo</small>)
+                  <span className="sombraADMIN">ADMIN</span> <small className="text-success">(activo)</small>
                 </div>
               </Nav>
               <Nav.Link href="#link">Administración</Nav.Link>
