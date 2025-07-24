@@ -11,7 +11,6 @@ const Login = ({ setUsuarioAdmin }) => {
   const navegacion = useNavigate();
 
   const iniciarSesion = (usuario) => {
-    console.log(usuario);
     if (usuario.email === import.meta.env.VITE_API_EMAIL && usuario.password === import.meta.env.VITE_API_PASSWORD) {
       setUsuarioAdmin(true);
       sessionStorage.setItem("userKeyJuego", true);

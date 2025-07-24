@@ -1,13 +1,12 @@
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router";
 
 const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
   const navegacion = useNavigate();
+
   const logout = () => {
     setUsuarioAdmin(false);
-
     sessionStorage.removeItem("userKeyJuego");
-
     navegacion("/");
   };
 
@@ -24,7 +23,7 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
               <NavLink className="nav-link" to={"/"}>
                 Inicio
               </NavLink>
-              <NavDropdown title="Categorias" id="basic-nav-dropdown">
+              <NavDropdown title="Categorias">
                 <NavDropdown.Item as={NavLink} to="/shooter">
                   Shooter
                 </NavDropdown.Item>
@@ -41,21 +40,35 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
                   RPG
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#link">¿Sobre nosotros?</Nav.Link>
+              <NavDropdown title="Acerca de">
+                <NavDropdown.Item as={NavLink} to={"/sobreNosotros"}>
+                  ¿Sobre nosotros?
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to={"/preguntasFrecuentes"}>
+                  Preguntas Frecuentes
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav>
             <Nav className="ms-auto">
-              <Nav className="align-items-center">
-                <div className="nav-link disabled">
-                  <span className="sombraADMIN">ADMIN</span> <small className="text-success">(activo)</small>
-                </div>
-              </Nav>
-              <NavLink className="nav-link" to={"/administrador"}>
-                Administración
-              </NavLink>
-              <NavLink className="nav-link" to={"/login"}>
-                Iniciar sesión
-              </NavLink>
-              <Nav.Link href="#link">Cerrar sesión</Nav.Link>
+              {usuarioAdmin ? (
+                <>
+                  <Nav className="align-items-center">
+                    <div className="nav-link disabled">
+                      <span className="sombraADMIN">ADMIN</span> <small className="text-success">(activo)</small>
+                    </div>
+                  </Nav>
+                  <NavLink className="nav-link" to={"/administrador"}>
+                    Administración
+                  </NavLink>
+                  <Button className="nav-link" onClick={logout}>
+                    Cerrar sesión
+                  </Button>
+                </>
+              ) : (
+                <NavLink className="nav-link" to={"/login"}>
+                  Iniciar sesión
+                </NavLink>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
