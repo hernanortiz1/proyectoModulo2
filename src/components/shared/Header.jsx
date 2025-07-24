@@ -41,7 +41,9 @@ const Header = () => {
                 </div>
               </Nav>
               <Nav.Link href="#link">Administración</Nav.Link>
-              <Nav.Link href="#link">Iniciar sesión</Nav.Link>
+              <NavLink className="nav-link" to={"/login"}>
+                Iniciar sesión
+              </NavLink>
               <Nav.Link href="#link">Cerrar sesión</Nav.Link>
             </Nav>
           </Navbar.Collapse>
