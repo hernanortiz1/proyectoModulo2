@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import htmlologo from "../img/imgSobreNosotros/html.png";
 import csslogo from "../img/imgSobreNosotros/css.png";
 import javascriptlogo from "../img/imgSobreNosotros/javascript.png";
@@ -27,7 +29,7 @@ const SobreNosotros = () => {
         {/* Fin presentacion */}
         {/* Inicio galeria del equipo */}
         <div className="container my-5">
-          <h2 className="bebasneue display-6 text-center">Conoce a nuestro equipo</h2>
+          <h2 className="bebasneue display-6 text-center mb-4">Conoce a nuestro equipo</h2>
           <div class="row justify-content-center row-gap-3">
             {/* Pimer miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
@@ -41,7 +43,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -59,7 +61,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -77,7 +79,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -95,7 +97,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -113,7 +115,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -124,8 +126,8 @@ const SobreNosotros = () => {
         {/* Fin galeria del equipo */}
         {/* Inicio Tecnologia que dominamos */}
         <div className="container my-5">
-          <h2 className="text-center mb-4">Tecnologías que dominamos</h2>
-          <div className="card shadow rounded p-4">
+          <h2 className="bebasneue text-center mb-4">Tecnologías que dominamos</h2>
+          <div className="card border-0 shadow p-4">
             <div className="row text-center justify-content-center align-items-center">
               {/* HTML */}
               <div className="col-6 col-md-2 mb-0">
