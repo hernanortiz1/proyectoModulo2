@@ -36,7 +36,7 @@ const SobreNosotros = () => {
               <div class="card border-0 shadow h-100">
                 <img src={avatar1} alt="Avatar del primer miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
-                  <h5 className="card-title bebasneue text-center fs-4 mt-3">Hernan Ortiz</h5>
+                  <h5 className="card-title bebasneue text-center fs-4 mt-3">Hernán Ortiz</h5>
                   <p className="text-center lead card-text">Especialista en React</p>
                   <p className="roboto mx-3 text-center">
                     4 años de experiencia desarrollando interfaces de usuario responsivas y accesibles.
