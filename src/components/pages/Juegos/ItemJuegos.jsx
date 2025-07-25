@@ -17,7 +17,7 @@ const ItemJuegos = ({fila, juego}) => {
 
         <td>{juego.plataforma}</td>
         <td>
-            <img src="" alt={juego.nombreJuego} />
+            <img src={juego.imagen} alt={juego.nombreJuego} className="img-admin"/>
         </td>
 
         <td className="text-center">

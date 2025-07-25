@@ -117,7 +117,7 @@ const FormularioJuego = ({ crearJuego }) => {
         <Form.Group className="mt-2" controlId="destacados">
           <Form.Label>Destacados *</Form.Label>
           <Form.Select
-            {...register("destacado", {
+            {...register("destacados", {
               required: "Indique si el juego es destacado",
             })}
           >

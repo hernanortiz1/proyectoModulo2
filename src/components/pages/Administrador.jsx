@@ -23,7 +23,7 @@ const Administrador = ({setJuegos, juegos}) => {
           </div>
         </div>
         <hr />
-        <Table responsive bordered>
+        <Table responsive>
           <thead>
             <tr>
               <th>Fila</th>
