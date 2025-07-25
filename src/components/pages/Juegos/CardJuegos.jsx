@@ -25,7 +25,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -37,7 +37,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC, PS5 y XBX1/XBXS
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -56,7 +56,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -68,7 +68,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC, PS5 y XBX1/XBXS
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -87,7 +87,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -99,7 +99,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC, PS5 y XBX1/XBXS
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -118,7 +118,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 ">
+              <section className="flex-grow-1 ">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -131,7 +131,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> Nintendo Switch
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -154,7 +154,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong>{" "}
@@ -168,7 +168,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -186,7 +186,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li>
                     <strong>Precio:</strong> $10.000
@@ -199,7 +199,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC, PS4/5 y XBX1/XBXS
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -217,7 +217,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -230,7 +230,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC (Windows, Linux, macOS)
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -248,7 +248,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -261,7 +261,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC , PS5, XBXox Series X/S
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -283,7 +283,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong>
@@ -297,7 +297,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -315,7 +315,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li>
                     <strong>Precio:</strong> $10.000
@@ -328,7 +328,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC, PS4/5 y XBX1/XBXS
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -346,7 +346,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -359,7 +359,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> Nintendo Switch
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -377,7 +377,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -391,7 +391,7 @@ const CardJuegos = () => {
 
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -413,7 +413,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong>
@@ -427,7 +427,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -445,7 +445,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li>
                     <strong>Precio:</strong> $10.000
@@ -458,7 +458,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC y XBX1/XBXS
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -476,7 +476,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -489,7 +489,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC  PlayStation 4, 5 y XBXox One, Series X/S
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -507,7 +507,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -521,7 +521,7 @@ const CardJuegos = () => {
 
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -543,7 +543,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong>
@@ -557,7 +557,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC y PS4/5
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -575,7 +575,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li>
                     <strong>Precio:</strong> $10.000
@@ -588,7 +588,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC y PS4/5
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -606,7 +606,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -619,7 +619,7 @@ const CardJuegos = () => {
                     <strong>Plataforma:</strong> PC , PS4/5 y XBX1/XS
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
@@ -637,7 +637,7 @@ const CardJuegos = () => {
               style={{ height: "200px", objectFit: "cover" }}
             />
             <Card.Body className="flex-grow-1 d-flex flex-column justify-content-between h-100">
-              <Card.Text className="flex-grow-1 p-0">
+              <section className="flex-grow-1 p-0">
                 <ul className="list-unstyled">
                   <li className="mb-1">
                     <strong>Precio:</strong> $10.000
@@ -651,7 +651,7 @@ const CardJuegos = () => {
 
                   </li>
                 </ul>
-              </Card.Text>
+              </section>
             </Card.Body>
             <Card.Footer className="text-end">
               <Button variant="success" className="me-2">
