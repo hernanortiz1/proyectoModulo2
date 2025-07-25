@@ -94,7 +94,7 @@ const SobreNosotros = () => {
                 {/* <img src="#Link" className="card-img-top equipoFoto col-6" alt=""> */}
                 <div className="card-main bg-white text-dark h-100 my-2">
                   <h5 className="card-title bebasneue text-center fs-4">Luis Martin Diaz</h5>
-                  <p className="text-center lead card-text">Arquitecto Fronend</p>
+                  <p className="text-center lead card-text">Arquitecto Frontend</p>
                   <p className="roboto mx-3 text-center">
                     Lider técnico con experiencia en proyectos complejos de JavaScript.
                   </p>
