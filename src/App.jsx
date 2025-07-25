@@ -42,7 +42,7 @@ function App() {
         <Header usuarioAdmin={usuarioAdmin} setUsuarioAdmin={setUsuarioAdmin}></Header>
         <main>
           <Routes>
-            <Route path="/" element={<Inicio></Inicio>}></Route>
+            <Route path="/" element={<Inicio juegos={juegos}></Inicio>}></Route>
             <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
             <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
             <Route path="/shooter" element={<Shooter></Shooter>}></Route>
