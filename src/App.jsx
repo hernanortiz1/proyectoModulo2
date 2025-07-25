@@ -19,10 +19,14 @@ import DetalleProducto from "./components/pages/detalleProducto";
 import PreguntasFrecuentes from "./components/pages/PreguntasFrecuentes";
 
 function App() {
-  const [juegos, setJuegos] = useState([]);
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
-  /* falta array para guardar productos */
+  const juegosLocalstorage = JSON.parse(localStorage.getItem("listaJuegos")) || [];
+  const [juegos, setJuegos] = useState(juegosLocalstorage);
   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
+
+  useEffect(() => {
+    localStorage.setItem("listaJuegos", JSON.stringify(juegos));
+  }, [juegos]);
 
   return (
     <>
