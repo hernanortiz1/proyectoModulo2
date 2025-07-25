@@ -47,6 +47,12 @@ main {
   background: rgb(12, 19, 50);
 }
 
+/* Inicio SobreNosotros */
+.animate-float{
+  animation: float 6s ease-in-out infinite;
+}
+/* Fin SobreNosotros */
+
 @media (max-width: 767px) {
   .fondoContenedorDerechoLogin {
     min-height: 40vh;

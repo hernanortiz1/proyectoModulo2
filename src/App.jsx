@@ -17,12 +17,24 @@ import Rpg from "./components/pages/Categorias/Rpg";
 import { useEffect, useState } from "react";
 import DetalleProducto from "./components/pages/detalleProducto";
 import PreguntasFrecuentes from "./components/pages/PreguntasFrecuentes";
+import SobreNosotros from "./components/pages/SobreNosotros";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  const [juegos, setJuegos] = useState([]);
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
-  /* falta array para guardar productos */
+  const juegosLocalstorage = JSON.parse(localStorage.getItem("listaJuegos")) || [];
+  const [juegos, setJuegos] = useState(juegosLocalstorage);
   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
+
+  useEffect(() => {
+    localStorage.setItem("listaJuegos", JSON.stringify(juegos));
+  }, [juegos]);
+
+  const crearJuego = (juegoNuevo) => {
+    juegoNuevo.id = uuidv4();
+    setJuegos([...juegos, juegoNuevo]);
+    return true;
+  };
 
   return (
     <>
@@ -30,7 +42,7 @@ function App() {
         <Header usuarioAdmin={usuarioAdmin} setUsuarioAdmin={setUsuarioAdmin}></Header>
         <main>
           <Routes>
-            <Route path="/" element={<Inicio></Inicio>}></Route>
+            <Route path="/" element={<Inicio juegos={juegos}></Inicio>}></Route>
             <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
             <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
             <Route path="/shooter" element={<Shooter></Shooter>}></Route>
@@ -38,12 +50,12 @@ function App() {
             <Route path="/aventura" element={<Aventura></Aventura>}></Route>
             <Route path="/sandbox" element={<Sandbox></Sandbox>}></Route>
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
-            {/*<Route path="/sobre_nosotros" element={<Sobrenosotros></Sobrenosotros>}></Route>*/}
+            <Route path="/sobreNosotros" element={<SobreNosotros></SobreNosotros>}></Route>
             <Route path="/preguntasFrecuentes" element={<PreguntasFrecuentes></PreguntasFrecuentes>}></Route>
 
             <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
               <Route index element={<Administrador juegos={juegos} setJuegos={setJuegos}></Administrador>}></Route>
-              <Route path="crear" element={<FormularioJuego></FormularioJuego>}></Route>
+              <Route path="crear" element={<FormularioJuego crearJuego={crearJuego}></FormularioJuego>}></Route>
               <Route path="editar/:id" element={<FormularioJuego></FormularioJuego>}></Route>
             </Route>
 
