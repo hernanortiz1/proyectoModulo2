@@ -48,7 +48,9 @@ main {
 }
 
 /* Inicio SobreNosotros */
-
+.animate-float{
+  animation: float 6s ease-in-out infinite;
+}
 /* Fin SobreNosotros */
 
 @media (max-width: 767px) {
