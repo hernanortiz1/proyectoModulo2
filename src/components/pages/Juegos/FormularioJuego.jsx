@@ -1,23 +1,28 @@
 import { Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const FormularioJuego = ({ crearJuego }) => {
-  const mostrarDatos = (data) => {
-    console.log("Todo ok:", data);
-  };
-  const mostrarErrores = (errores) => {
-    console.log("Errores:", errores);
-  };
-  const {
+   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const onSubmit = (juego) => {
+    if (crearJuego(juego)) {
+      Swal.fire({
+        title: "Juego creado!",
+        text: `El juego ${juego.nombreJuego} fue creado correctamente.`,
+        icon: "success",
+      });
+    }
+  };
+
   return (
     <section className="container my-3">
       <h1>Nuevo juego</h1>
-      <Form className="py-3" onSubmit={handleSubmit(mostrarDatos, mostrarErrores)}>
+      <Form className="py-3" onSubmit={handleSubmit(onSubmit)}>
         <Form.Text className="text-info">Los campos con un (*) son obligatorios.</Form.Text>
         <Form.Group className="mt-2" controlId="nombreJuego">
           <Form.Label>Nombre del juego*</Form.Label>
