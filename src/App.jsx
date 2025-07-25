@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import DetalleProducto from "./components/pages/detalleProducto";
 import PreguntasFrecuentes from "./components/pages/PreguntasFrecuentes";
 import SobreNosotros from "./components/pages/SobreNosotros";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
@@ -28,6 +29,12 @@ function App() {
   useEffect(() => {
     localStorage.setItem("listaJuegos", JSON.stringify(juegos));
   }, [juegos]);
+
+  const crearJuego = (juegoNuevo) => {
+    juegoNuevo.id = uuidv4();
+    setJuegos([...juegos, juegoNuevo]);
+    return true;
+  };
 
   return (
     <>
@@ -48,7 +55,7 @@ function App() {
 
             <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
               <Route index element={<Administrador juegos={juegos} setJuegos={setJuegos}></Administrador>}></Route>
-              <Route path="crear" element={<FormularioJuego></FormularioJuego>}></Route>
+              <Route path="crear" element={<FormularioJuego crearJuego={crearJuego}></FormularioJuego>}></Route>
               <Route path="editar/:id" element={<FormularioJuego></FormularioJuego>}></Route>
             </Route>
 
