@@ -1,3 +1,10 @@
+import htmlologo from '../img/imgSobreNosotros/html.png'
+import csslogo from '../img/imgSobreNosotros/css.png'
+import javascriptlogo from '../img/imgSobreNosotros/javascript.png'
+import reactlogo from '../img/imgSobreNosotros/react.png'
+import boostraplogo from '../img/imgSobreNosotros/bootstrap.png'
+
+
 const SobreNosotros = () => {
   return (
     <>
@@ -108,7 +115,6 @@ const SobreNosotros = () => {
             </article>
           </div>
         </div>
-
         {/* Fin galeria del equipo */}
         {/* Inicio Tecnologia que dominamos */}
         <div className="container my-5">
@@ -117,31 +123,32 @@ const SobreNosotros = () => {
             <div className="row text-center justify-content-center align-items-center">
               {/* HTML */}
               <div className="col-6 col-md-2 mb-4">
-                <img src="" alt="" className="img-fluid mb-2" />
+                <img src={htmlologo} alt="" className="img-fluid mb-2" />
+                <i></i>
                 <p>HTML5</p>
               </div>
 
               {/*CSS3 */}
               <div className="col-6 col-md-2 mb-4">
-                <img src="" alt="" className="img-fluid mb-2" />
+                <img src={csslogo} alt="" className="img-fluid mb-2" />
                 <p>CSS3</p>
               </div>
 
               {/* JavaScript */}
               <div className="col-6 col-md-2 mb-4">
-                <img src="" alt="" className="img-fluid mb-2" />
+                <img src={javascriptlogo} alt="" className="img-fluid mb-2" />
                 <p>JavaScript</p>
               </div>
 
               {/* React */}
-              <div className="col-6 col-md-2 mb-4">
-                <img src="" alt="" className="img-fluid mb-2" />
-                <p>React</p>
+              <div className="col-6 col-md-2 mb-4 w-16 h-16 mb-3 animate-float">
+                <img src={reactlogo} alt="" className="img-fluid mb-2" />
+                <span className="font-medium">React</span>
               </div>
 
               {/* Bootstrap */}
               <div className="col-6 col-md-2 mb-4">
-                <img src="" alt="" className="img-fluid mb-2" />
+                <img src={boostraplogo} alt="" className="img-fluid mb-2" />
                 <p>Bootstrap</p>
               </div>
             </div>

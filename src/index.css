@@ -47,6 +47,10 @@ main {
   background: rgb(12, 19, 50);
 }
 
+/* Inicio SobreNosotros */
+
+/* Fin SobreNosotros */
+
 @media (max-width: 767px) {
   .fondoContenedorDerechoLogin {
     min-height: 40vh;
