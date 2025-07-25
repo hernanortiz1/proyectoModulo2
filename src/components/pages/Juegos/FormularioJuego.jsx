@@ -3,9 +3,10 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
 const FormularioJuego = ({ crearJuego }) => {
-   const {
+  const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -16,6 +17,7 @@ const FormularioJuego = ({ crearJuego }) => {
         text: `El juego ${juego.nombreJuego} fue creado correctamente.`,
         icon: "success",
       });
+      reset();
     }
   };
 
