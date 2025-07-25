@@ -117,6 +117,14 @@ const FormularioJuego = () => {
         <Form.Text className="text-danger mb-3">
           {errors.categoriaPlataforma?.message}
         </Form.Text>
+        <Form.Group className="mb-3" controlId="destacados">
+          <Form.Label>Destacados</Form.Label>
+          <Form.Select>
+            <option value="">Seleccione una opcion</option>
+            <option value="Juego destacado">Juego destacado</option>
+            <option value="Juego no destacado">Juego no destacado</option>
+          </Form.Select>
+        </Form.Group>
         <h3>Requisitos recomendados del sistema</h3>
 
         <Row className="mb-3">

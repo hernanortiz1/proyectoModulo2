@@ -12,7 +12,7 @@ const Administrador = ({setJuegos, juegos}) => {
         <div className="d-flex justify-content-between align-items-center mt-5">
           <h1 className="display-4 ">Juegos disponibles</h1>
           <div>
-            <Link className="btn btn-primary" to={"/crear"}>
+            <Link className="btn btn-primary" to={"/administrador/crear"}>
               <i className="bi bi-file-earmark-plus"></i>
             </Link>
             <Button className="ms-2 btn btn-info text-light"
