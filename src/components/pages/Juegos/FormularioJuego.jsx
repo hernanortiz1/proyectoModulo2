@@ -94,6 +94,7 @@ const FormularioJuego = ({ crearJuego }) => {
             <option value="SandBox">SandBox</option>
             <option value="Aventura">Aventura</option>
             <option value="Simulacion">Simulacion</option>
+            <option value="RPG">RPG</option>
           </Form.Select>
         </Form.Group>
         <Form.Text className="text-danger mb-3">{errors.categoria?.message}</Form.Text>

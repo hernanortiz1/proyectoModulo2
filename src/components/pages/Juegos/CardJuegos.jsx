@@ -6,7 +6,7 @@ const CardJuegos = ({juegos}) => {
           <Card className="h-100 d-flex flex-column p-0">
             <Card.Img
               variant="top"
-              src={juegos.imagen}
+              src={juegos.url}
               alt={juegos.nombreJuego}
               className="img-fluid w-100"
               style={{ height: "200px", objectFit: "cover" }}
@@ -21,7 +21,7 @@ const CardJuegos = ({juegos}) => {
                     <strong>Categoria:</strong> {juegos.categoria}
                   </li>
                   <li className="mb-1">
-                    <strong>Plataforma:</strong> {juegos.plataforma}
+                    <strong>Plataforma:</strong> {juegos.categoriaPlataforma}
                   </li>
                 </ul>
               </div>
