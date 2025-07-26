@@ -48,7 +48,7 @@ const ItemJuegos = ({ fila, juego, borrarJuego }) => {
       </td>
 
       <td className="text-center">
-        <Link className="me-lg-2 btn btn-warning">
+        <Link className="me-lg-2 btn btn-warning" to={"/administrador/editar/" + juego.id}>
           <i className="bi bi-pencil-square"></i>
         </Link>
 

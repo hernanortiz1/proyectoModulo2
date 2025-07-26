@@ -1,13 +1,16 @@
+import { useEffect } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router";
 import Swal from "sweetalert2";
 
-const FormularioJuego = ({ crearJuego }) => {
+const FormularioJuego = ({ crearJuego, buscarJuego, titulo }) => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
+    setValue,
   } = useForm();
 
   const onSubmit = (juego) => {
@@ -21,9 +24,20 @@ const FormularioJuego = ({ crearJuego }) => {
     }
   };
 
+  const { id } = useParams();
+  const juego = id ? buscarJuego(id) : null;
+  const tituloFinal = id ? titulo + (juego?.nombreJuego || "...") : titulo;
+
+  useEffect(() => {
+    if (titulo === "Editando el juego: ") {
+      const juegoBuscado = buscarJuego(id);
+      setValue()
+    }
+  }, []);
+
   return (
     <section className="container my-3">
-      <h1>Nuevo juego</h1>
+      <h1>{tituloFinal}</h1>
       <Form className="py-3" onSubmit={handleSubmit(onSubmit)}>
         <Form.Text className="text-info">Los campos con un (*) son obligatorios.</Form.Text>
         <Form.Group className="mt-2" controlId="nombreJuego">
