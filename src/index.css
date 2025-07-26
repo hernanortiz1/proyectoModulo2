@@ -174,3 +174,8 @@ main {
   border-top: 5px solid rgba(0, 0, 0, 0.555);
   border-bottom: 5px solid rgba(0, 0, 0, 0.486);
 }
+
+.img-admin{
+  width: 300px;
+  height: 150px;
+}

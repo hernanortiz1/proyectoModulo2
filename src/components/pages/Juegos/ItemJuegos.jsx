@@ -41,17 +41,14 @@ const ItemJuegos = ({ fila, juego, borrarJuego }) => {
       <td className="text-center">{juego.categoria}</td>
 
       <td className="text-center">{juego.precio}</td>
-
-      <td>{juego.plataforma}</td>
+      <td>{juego.categoriaPlataforma}</td>
       <td>
-        <img src="" alt={juego.nombreJuego} />
+        <img src={juego.url} alt={juego.nombreJuego} className="img-admin" />
       </td>
-
-      <td className="text-center">
-        <Link className="me-lg-2 btn btn-warning">
+      <td>
+        <Link className="me-lg-2 btn btn-warning" to={"/administrador/editar/"}>
           <i className="bi bi-pencil-square"></i>
         </Link>
-
         <Button variant="danger" onClick={eliminarJuego}>
           <i className="bi bi-trash"></i>
         </Button>
