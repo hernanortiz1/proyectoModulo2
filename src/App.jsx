@@ -36,6 +36,14 @@ function App() {
     return true;
   };
 
+  const borrarJuego = (idJuego) => {
+    const juegosFiltrados = productos.filter(
+      (itemJuego) => itemJuego.id !== idJuego
+    );
+    setJuegos(juegosFiltrados);
+    return true;
+  };
+
   return (
     <>
       <BrowserRouter>
