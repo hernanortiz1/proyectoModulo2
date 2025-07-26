@@ -2,7 +2,6 @@ import Carousel from "react-bootstrap/Carousel";
 import citiesSkyLines from "../../img/imgCarouselSimulacion/citiesSkyLines.jpg";
 import farmingSimulator22 from "../../img/imgCarouselSimulacion/farmingSimulator22.jpg";
 import planetZoo from "../../img/imgCarouselSimulacion/planetZoo.jpg";
-import Mapper from "./Cards/Mapper";
 
 const Simulacion = () => {
   return (
@@ -52,7 +51,7 @@ const Simulacion = () => {
       </section>
       <section className="my-5 container sombraSection rounded py-3">
         {/* Aqui va el mapeador */}
-        <Mapper></Mapper>
+
       </section>
     </>
   );

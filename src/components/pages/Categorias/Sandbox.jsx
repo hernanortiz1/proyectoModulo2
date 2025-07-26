@@ -2,7 +2,6 @@ import Carousel from "react-bootstrap/Carousel";
 import minecraft from "../../img/imgCarouselSandbox/minecraft.webp";
 import garrysMod from "../../img/imgCarouselSandbox/garrysMod.jpg";
 import terraria from "../../img/imgCarouselSandbox/terraria.jpg";
-import Mapper from "./Cards/Mapper";
 
 const Sandbox = () => {
   return (
@@ -59,7 +58,7 @@ const Sandbox = () => {
       </section>
       <section className="my-5 container sombraSection rounded py-3">
         {/* Aqui va el mapeador */}
-        <Mapper></Mapper>
+
       </section>
     </>
   );
