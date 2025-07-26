@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router";
 
-const ItemJuegos = ({fila, juego}) => {
+const ItemJuegos = ({fila, juego, borrarJuego}) => {
   return (
 
       <tr>
