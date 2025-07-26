@@ -37,9 +37,7 @@ function App() {
   };
 
   const borrarJuego = (idJuego) => {
-    const juegosFiltrados = productos.filter(
-      (itemJuego) => itemJuego.id !== idJuego
-    );
+    const juegosFiltrados = juegos.filter((itemJuego) => itemJuego.id !== idJuego);
     setJuegos(juegosFiltrados);
     return true;
   };
@@ -62,7 +60,12 @@ function App() {
             <Route path="/preguntasFrecuentes" element={<PreguntasFrecuentes></PreguntasFrecuentes>}></Route>
 
             <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
-              <Route index element={<Administrador juegos={juegos} setJuegos={setJuegos} borrarJuego={borrarJuego}></Administrador>}></Route>
+              <Route
+                index
+                element={
+                  <Administrador juegos={juegos} setJuegos={setJuegos} borrarJuego={borrarJuego}></Administrador>
+                }
+              ></Route>
               <Route path="crear" element={<FormularioJuego crearJuego={crearJuego}></FormularioJuego>}></Route>
               <Route path="editar/:id" element={<FormularioJuego></FormularioJuego>}></Route>
             </Route>
