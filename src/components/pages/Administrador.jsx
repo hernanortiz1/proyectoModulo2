@@ -36,7 +36,6 @@ const Administrador = ({ setJuegos, juegos, borrarJuego }) => {
           </thead>
           <tbody>
             {juegos.map((juego, indice) => (
-
               <ItemJuegos key={juego.id} fila={indice + 1} juego={juego} borrarJuego={borrarJuego}></ItemJuegos>
             ))}
           </tbody>
