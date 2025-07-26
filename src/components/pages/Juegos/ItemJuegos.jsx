@@ -1,35 +1,62 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router";
+import Swal from "sweetalert2";
 
-const ItemJuegos = ({fila, juego}) => {
+const ItemJuegos = ({ fila, juego, borrarJuego }) => {
+  const eliminarJuego = () => {
+    Swal.fire({
+      title: "Eliminar juego",
+      text: "no puede revertir este paso",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#146c43",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        if (borrarJuego(juego.id)) {
+          Swal.fire({
+            title: "Juego eliminado",
+            text: `el juego ${juego.nombreJuego} fue eliminado`,
+            icon: "success",
+          });
+        } else {
+          Swal.fire({
+            title: "ocurrio un error",
+            text: `el juego ${juego.nombreJuego} NO fue eliminado`,
+            icon: "success",
+          });
+        }
+      }
+    });
+  };
+
   return (
+    <tr>
+      <td className="text-center">{fila}</td>
 
-      <tr>
-        <td className="text-center">{fila}</td>
+      <td>{juego.nombreJuego}</td>
 
-        <td>{juego. nombreJuego}</td>
+      <td className="text-center">{juego.categoria}</td>
 
-        <td className="text-center">{juego.categoria}</td>
+      <td className="text-center">{juego.precio}</td>
 
-        <td className="text-center">
-         {juego.precio}
-        </td>
+      <td>{juego.plataforma}</td>
+      <td>
+        <img src="" alt={juego.nombreJuego} />
+      </td>
 
-        <td>{juego.plataforma}</td>
-        <td>
-            <img src="" alt={juego.nombreJuego} />
-        </td>
+      <td className="text-center">
+        <Link className="me-lg-2 btn btn-warning">
+          <i className="bi bi-pencil-square"></i>
+        </Link>
 
-        <td className="text-center">
-          <Link className="me-lg-2 btn btn-warning">
-            <i className="bi bi-pencil-square"></i>
-          </Link>
-
-          <Button variant="danger ">
-            <i className="bi bi-trash"></i>
-          </Button>
-        </td>
-      </tr>
+        <Button variant="danger" onClick={eliminarJuego}>
+          <i className="bi bi-trash"></i>
+        </Button>
+      </td>
+    </tr>
   );
 };
 

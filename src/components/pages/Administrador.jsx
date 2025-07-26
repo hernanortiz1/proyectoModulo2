@@ -2,7 +2,7 @@ import { Table, Container, Button } from "react-bootstrap";
 import ItemJuegos from "./Juegos/ItemJuegos";
 import { Link } from "react-router";
 import {juegosPrueba} from "../../data/juegosPrueba"
-const Administrador = ({setJuegos, juegos}) => {
+const Administrador = ({setJuegos, juegos, borrarJuego}) => {
     const cargarJuegos=()=>{
         setJuegos(juegosPrueba)
     }
@@ -40,6 +40,7 @@ const Administrador = ({setJuegos, juegos}) => {
                 <ItemJuegos key={juego.id}
                 fila={indice+1}
                 juego={juego}
+                borrarJuego={borrarJuego}
                 ></ItemJuegos>
 
             ))}
