@@ -71,7 +71,7 @@ const FormularioJuego = ({ crearJuego }) => {
           <Form.Control
             type="text"
             placeholder="https://w.wallhaven.cc/full/1k/wallhaven-1k99z3.jpg"
-            {...register("url", {
+            {...register("imagen", {
               required: "El link de la imagen es obligatorio",
               pattern: {
                 value: /^https?:\/\/.+\.(jpg|jpeg|png|webp)$/i,
@@ -80,7 +80,7 @@ const FormularioJuego = ({ crearJuego }) => {
             })}
           />
         </Form.Group>
-        <Form.Text className="text-danger mb-3">{errors.url?.message}</Form.Text>
+        <Form.Text className="text-danger mb-3">{errors.imagen?.message}</Form.Text>
 
         <Form.Group className="mt-2" controlId="categoria">
           <Form.Label>Categoria *</Form.Label>
@@ -102,7 +102,7 @@ const FormularioJuego = ({ crearJuego }) => {
         <Form.Group className="mt-2" controlId="plataforma">
           <Form.Label>Plataformas *</Form.Label>
           <Form.Select
-            {...register("categoriaPlataforma", {
+            {...register("plataforma", {
               required: "Seleccione una plataforma",
             })}
           >
@@ -113,7 +113,7 @@ const FormularioJuego = ({ crearJuego }) => {
             <option value="Nintendo Switch">Nintendo Switch</option>
           </Form.Select>
         </Form.Group>
-        <Form.Text className="text-danger mb-3">{errors.categoriaPlataforma?.message}</Form.Text>
+        <Form.Text className="text-danger mb-3">{errors.plataforma?.message}</Form.Text>
 
         <Form.Group className="mt-2" controlId="destacados">
           <Form.Label>Destacados *</Form.Label>
@@ -136,7 +136,7 @@ const FormularioJuego = ({ crearJuego }) => {
             <Form.Group controlId="ram">
               <Form.Label>RAM*</Form.Label>
               <Form.Select
-                {...register("ram", {
+                {...register("reqRecomendadoRam", {
                   required: "La cantidad de RAM es obligatoria",
                 })}
               >
@@ -150,13 +150,13 @@ const FormularioJuego = ({ crearJuego }) => {
                 <option value="32gb">32 GB o más</option>
               </Form.Select>
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.ram?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqRecomendadoRam?.message}</Form.Text>
           </Col>
           <Col xs={12} md={4}>
             <Form.Group controlId="so">
               <Form.Label>Sistema operativo*</Form.Label>
               <Form.Select
-                {...register("so", {
+                {...register("reqRecomendadoSistemaOperativo", {
                   required: "Seleccione un sistema operativo",
                 })}
               >
@@ -165,14 +165,14 @@ const FormularioJuego = ({ crearJuego }) => {
                 <option value="windows 11">Windows 11</option>
               </Form.Select>
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.so?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqRecomendadoSistemaOperativo?.message}</Form.Text>
           </Col>
 
           <Col xs={12} md={4}>
             <Form.Group controlId="directx">
               <Form.Label>DirectX*</Form.Label>
               <Form.Select
-                {...register("directx", {
+                {...register("reqRecomendadoDirectX", {
                   required: "Selecciona una version de DirectX",
                 })}
               >
@@ -185,7 +185,7 @@ const FormularioJuego = ({ crearJuego }) => {
                 <option value="14">14</option>
               </Form.Select>
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.directx?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqRecomendadoDirectX?.message}</Form.Text>
           </Col>
         </Row>
 
@@ -196,7 +196,7 @@ const FormularioJuego = ({ crearJuego }) => {
               <Form.Control
                 type="text"
                 placeholder="Intel Core i3"
-                {...register("procesador", {
+                {...register("reqRecomendadoProcesador", {
                   required: "El procesador es un dato obligatorio",
                   minLength: {
                     value: 4,
@@ -209,7 +209,7 @@ const FormularioJuego = ({ crearJuego }) => {
                 })}
               />
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.procesador?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqRecomendadoProcesador?.message}</Form.Text>
           </Col>
 
           <Col xs={12} md={4}>
@@ -218,7 +218,7 @@ const FormularioJuego = ({ crearJuego }) => {
               <Form.Control
                 type="text"
                 placeholder="256 GB SSD o 1 TB HDD"
-                {...register("espacio", {
+                {...register("reqRecomendadoAlmacenamiento", {
                   required: "El espacio es un dato obligatorio",
                   minLength: {
                     value: 3,
@@ -235,7 +235,7 @@ const FormularioJuego = ({ crearJuego }) => {
                 })}
               />
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.espacio?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqRecomendadoAlmacenamiento?.message}</Form.Text>
           </Col>
 
           <Col xs={12} md={4}>
@@ -244,7 +244,7 @@ const FormularioJuego = ({ crearJuego }) => {
               <Form.Control
                 type="text"
                 placeholder="Ej: NVIDIA GTX 1060 / Radeon RX 580"
-                {...register("gpu", {
+                {...register("reqRecomendadoTarjetaVideo", {
                   required: "El GPU es obligatorio",
                   minLength: {
                     value: 4,
@@ -257,7 +257,7 @@ const FormularioJuego = ({ crearJuego }) => {
                 })}
               />
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.gpu?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqRecomendadoTarjetaVideo?.message}</Form.Text>
           </Col>
         </Row>
         <h3>Requisitos mínimos del sistema</h3>
@@ -267,7 +267,7 @@ const FormularioJuego = ({ crearJuego }) => {
             <Form.Group controlId="ram2">
               <Form.Label>RAM*</Form.Label>
               <Form.Select
-                {...register("ramMini", {
+                {...register("reqMinimoRam", {
                   required: "La cantidad de RAM minima es obligatoria",
                 })}
               >
@@ -281,14 +281,14 @@ const FormularioJuego = ({ crearJuego }) => {
                 <option value="32gb">32 GB o más</option>
               </Form.Select>
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.ramMini?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqMinimoRam?.message}</Form.Text>
           </Col>
 
           <Col xs={12} md={4}>
             <Form.Group controlId="so2">
               <Form.Label>Sistema operativo*</Form.Label>
               <Form.Select
-                {...register("soMini", {
+                {...register("reqMinimoSistemaOperativo", {
                   required: "Seleccione un sistema operativo minimo",
                 })}
               >
@@ -297,14 +297,14 @@ const FormularioJuego = ({ crearJuego }) => {
                 <option value="windows 11">Windows 11</option>
               </Form.Select>
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.soMini?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqMinimoSistemaOperativo?.message}</Form.Text>
           </Col>
 
           <Col xs={12} md={4}>
             <Form.Group controlId="directx2">
               <Form.Label>DirectX*</Form.Label>
               <Form.Select
-                {...register("directxMini", {
+                {...register("reqMinimoDirectX", {
                   required: "Selecciona una version de DirectX minima",
                 })}
               >
@@ -317,7 +317,7 @@ const FormularioJuego = ({ crearJuego }) => {
                 <option value="14">14</option>
               </Form.Select>
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.directxMini?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqMinimoDirectX?.message}</Form.Text>
           </Col>
         </Row>
 
@@ -328,7 +328,7 @@ const FormularioJuego = ({ crearJuego }) => {
               <Form.Control
                 type="text"
                 placeholder="Intel Core i3-2100 (2 núcleos, 3.1 GHz) o AMD Ryzen 3 1200 (4 núcleos, 3.1 GHz)"
-                {...register("procesadorMini", {
+                {...register("reqMinimoProcesador", {
                   required: "El procesador minimo es un dato obligatorio",
                   minLength: {
                     value: 4,
@@ -341,7 +341,7 @@ const FormularioJuego = ({ crearJuego }) => {
                 })}
               />
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.procesadorMini?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqMinimoProcesador?.message}</Form.Text>
           </Col>
 
           <Col xs={12} md={4}>
@@ -350,7 +350,7 @@ const FormularioJuego = ({ crearJuego }) => {
               <Form.Control
                 type="text"
                 placeholder="20 GB HDD (disco duro mecánico)"
-                {...register("espacioMini", {
+                {...register("reqMinimoAlmacenamiento", {
                   required: "El espacio minimo es un dato obligatorio",
                   minLength: {
                     value: 3,
@@ -367,7 +367,7 @@ const FormularioJuego = ({ crearJuego }) => {
                 })}
               />
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.espacioMini?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqMinimoAlmacenamiento?.message}</Form.Text>
           </Col>
 
           <Col xs={12} md={4}>
@@ -375,7 +375,7 @@ const FormularioJuego = ({ crearJuego }) => {
               <Form.Label>Tarjeta de video*</Form.Label>
               <Form.Control
                 placeholder="Ej: NVIDIA GT 1030 / Intel HD 520"
-                {...register("gpuMini", {
+                {...register("reqMinimoTarjetaVideo", {
                   required: "El GPU minimo es obligatorio",
                   minLength: {
                     value: 4,
@@ -388,7 +388,7 @@ const FormularioJuego = ({ crearJuego }) => {
                 })}
               />
             </Form.Group>
-            <Form.Text className="text-danger mb-3">{errors.gpuMini?.message}</Form.Text>
+            <Form.Text className="text-danger mb-3">{errors.reqMinimoTarjetaVideo?.message}</Form.Text>
           </Col>
         </Row>
         <Button variant="success" type="submit">
