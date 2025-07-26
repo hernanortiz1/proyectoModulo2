@@ -35,14 +35,11 @@ const Administrador = ({ setJuegos, juegos, borrarJuego }) => {
             </tr>
           </thead>
           <tbody>
-            {juegos.map((juego, indice)=> (
-                <ItemJuegos key={juego.id}
-                fila={indice+1}
-                juego={juego}
-                borrarJuego={borrarJuego}
-                ></ItemJuegos>
-
-            ))}
+            {juegos
+              .filter((juego) => juego !== null && juego !== undefined)
+              .map((juego, indice) => (
+                <ItemJuegos key={juego.id} fila={indice + 1} juego={juego} borrarJuego={borrarJuego}></ItemJuegos>
+              ))}
           </tbody>
         </Table>
       </Container>

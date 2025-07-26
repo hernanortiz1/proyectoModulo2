@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import Swal from "sweetalert2";
 
-const FormularioJuego = ({ crearJuego, buscarJuego, titulo }) => {
+const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
   const {
     register,
     handleSubmit,
@@ -12,24 +12,10 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo }) => {
     formState: { errors },
     setValue,
   } = useForm();
-
-  const onSubmit = (juego) => {
-    if (crearJuego(juego)) {
-      Swal.fire({
-        title: "Juego creado!",
-        text: `El juego ${juego.nombreJuego} fue creado correctamente.`,
-        icon: "success",
-      });
-      reset();
-    }
-  };
-
   const { id } = useParams();
-  const juego = id ? buscarJuego(id) : null;
-  const tituloFinal = id ? titulo + (juego?.nombreJuego || "...") : titulo;
 
   useEffect(() => {
-    if (titulo === "Editando el juego: ") {
+    if (titulo === "Editar juego") {
       const juegoBuscado = buscarJuego(id);
       setValue("nombreJuego", juegoBuscado.nombreJuego);
       setValue("precio", juegoBuscado.precio);
@@ -52,9 +38,30 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo }) => {
     }
   }, []);
 
+  const onSubmit = (juego) => {
+    if (titulo === "Crear juegos") {
+      if (crearJuego(juego)) {
+        Swal.fire({
+          title: "Juego creado!",
+          text: `El juego ${juego.nombreJuego} fue creado correctamente.`,
+          icon: "success",
+        });
+        reset();
+      }
+    } else {
+      if (editarJuego(id, juego)) {
+        Swal.fire({
+          title: "Juego editado!",
+          text: `El juego ${juego.nombreJuego} fue editado correctamente.`,
+          icon: "success",
+        });
+      }
+    }
+  };
+
   return (
     <section className="container my-3">
-      <h1>{tituloFinal}</h1>
+      <h1>{titulo}</h1>
       <Form className="py-3" onSubmit={handleSubmit(onSubmit)}>
         <Form.Text className="text-info">Los campos con un (*) son obligatorios.</Form.Text>
         <Form.Group className="mt-2" controlId="nombreJuego">

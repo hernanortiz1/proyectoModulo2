@@ -47,6 +47,21 @@ function App() {
     return juegoBuscado;
   };
 
+  const editarJuego = (idJuego, juegoActualizado) => {
+    const juegoEditados = juegos.map((itemJuego) => {
+      if (itemJuego.id === idJuego) {
+        return {
+          ...itemJuego,
+          ...juegoActualizado,
+        };
+      } else {
+        return itemJuego;
+      }
+    });
+    setJuegos(juegoEditados);
+    return true;
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -77,7 +92,13 @@ function App() {
               ></Route>
               <Route
                 path="editar/:id"
-                element={<FormularioJuego titulo={"Editando el juego: "} buscarJuego={buscarJuego}></FormularioJuego>}
+                element={
+                  <FormularioJuego
+                    titulo={"Editar juego"}
+                    buscarJuego={buscarJuego}
+                    editarJuego={editarJuego}
+                  ></FormularioJuego>
+                }
               ></Route>
             </Route>
 
