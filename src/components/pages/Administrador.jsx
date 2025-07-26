@@ -11,7 +11,7 @@ const Administrador = ({ setJuegos, juegos, borrarJuego }) => {
       <Container className="my-2">
         <div className="d-flex justify-content-between align-items-center mt-5">
           <h1 className="display-4 ">Juegos disponibles</h1>
-          
+
           <div>
             <Link className="btn btn-primary" to={"/administrador/crear"}>
               <i className="bi bi-file-earmark-plus"></i>
