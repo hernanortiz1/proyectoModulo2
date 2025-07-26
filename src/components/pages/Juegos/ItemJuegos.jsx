@@ -1,7 +1,37 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router";
+import Swal from "sweetalert2";
 
 const ItemJuegos = ({fila, juego, borrarJuego}) => {
+   const eliminarJuego = () => {
+     Swal.fire({
+       title: "Eliminar juego",
+       text: "no puede revertir este paso",
+       icon: "warning",
+       showCancelButton: true,
+       confirmButtonColor: "#146c43",
+       cancelButtonColor: "#d33",
+       confirmButtonText: "Eliminar",
+       cancelButtonText: "Cancelar",
+     }).then((result) => {
+       if (result.isConfirmed) {
+         if (borrarJuego(juego.id)) {
+           Swal.fire({
+             title: "Juego eliminado",
+             text: `el juego ${juego.nombreJuego} fue eliminado`,
+             icon: "success",
+           });
+         } else {
+           Swal.fire({
+             title: "ocurrio un error",
+             text: `el producto ${juego.nombreJuego} NO fue eliminado`,
+             icon: "success",
+           });
+         }
+       }
+     });
+   };
+ 
   return (
 
       <tr>
