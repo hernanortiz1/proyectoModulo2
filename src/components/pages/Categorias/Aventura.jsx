@@ -2,7 +2,6 @@ import Carousel from "react-bootstrap/Carousel";
 import zelda from "../../img/imgCarouselAventura/zelda.jpg";
 import uncharted4 from "../../img/imgCarouselAventura/uncharted4.webp";
 import redemption2 from "../../img/imgCarouselAventura/redemption2.jpg";
-import Mapper from "./Cards/Mapper";
 
 const Aventura = () => {
   return (
@@ -59,7 +58,7 @@ const Aventura = () => {
       </section>
       <section className="my-5 container sombraSection rounded py-3">
         {/* Aqui va el mapeador */}
-        <Mapper></Mapper>
+
       </section>
     </>
   );

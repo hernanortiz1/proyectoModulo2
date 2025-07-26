@@ -2,8 +2,6 @@ import Banner from "../../assets/Banner/Banner.avif";
 import { Container, Row } from "react-bootstrap";
 import CardJuegos from "./Juegos/CardJuegos";
 const Inicio = ({ juegos }) => {
-  console.log("🎮 Todos los juegos recibidos:", juegos);
-
   const categorias = ["Shooter", "RPG", "SandBox", "Aventura", "Simulacion"];
   return (
     <section className="mainSection">
