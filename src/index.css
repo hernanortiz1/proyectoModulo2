@@ -62,9 +62,17 @@ main {
 }
 
 .banner {
+  height: 480px;
   object-fit: cover;
-  height: 395px;
   width: 100%;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.banner:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
 }
 
 .img-cover {
