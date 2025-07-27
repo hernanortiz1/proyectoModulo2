@@ -21,7 +21,7 @@ const CardJuegos = ({ juegos }) => {
                   <strong>Categoria:</strong> {juegos.categoria}
                 </li>
                 <li className="mb-1">
-                  <strong>Plataforma:</strong> {juegos.categoriaPlataforma}
+                  <strong>Plataforma:</strong> {juegos.plataforma}
                 </li>
               </ul>
             </div>
