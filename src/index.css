@@ -202,3 +202,66 @@ main {
 .titulo-categoria {
   text-shadow: 4px 4px 4px rgba(214, 142, 142, 0.628);
 }
+
+.maintenance-container {
+  min-height: 70vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.maintenance-title {
+  font-size: 2rem;
+  color: #00fff7;
+  text-shadow: 0 0 5px #00fff7, 0 0 15px #00fff7;
+  margin-bottom: 1.5rem;
+}
+
+.maintenance-text {
+  max-width: 700px;
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+/* Responsive title */
+@media (min-width: 768px) {
+  .maintenance-title {
+    font-size: 2.5rem;
+  }
+
+  .maintenance-text {
+    font-size: 1.1rem;
+  }
+}
+
+.gamerzone-brand {
+  color: #ff2e63;
+  font-weight: bold;
+}
+
+.btn-return {
+  margin-top: 1rem;
+  background-color: #ff2e63;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff2e63, 0 0 20px #ff2e63;
+}
+
+.btn-return:hover {
+  background-color: #ff1744;
+  box-shadow: 0 0 15px #ff1744, 0 0 25px #ff1744;
+  transform: scale(1.05);
+}
