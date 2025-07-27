@@ -15,7 +15,7 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
 
   return (
     <header className="sombraNavbarFooter">
-      <Navbar expand="lg" className="bg-body-tertary" expanded={expanded} >
+      <Navbar expand="lg" className="bg-body-tertary" expanded={expanded}>
         <Container>
           <NavLink to="/" className="navbar-brand orbitron">
             GamerZone
