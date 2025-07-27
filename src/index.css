@@ -50,7 +50,7 @@ main {
 }
 
 /* Inicio SobreNosotros */
-.animate-float{
+.animate-float {
   animation: float 6s ease-in-out infinite;
 }
 /* Fin SobreNosotros */
@@ -62,9 +62,17 @@ main {
 }
 
 .banner {
+  height: 480px;
   object-fit: cover;
-  height: 395px;
   width: 100%;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.banner:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
 }
 
 .img-cover {
@@ -177,11 +185,10 @@ main {
   border-bottom: 5px solid rgba(0, 0, 0, 0.486);
 }
 
-.img-admin{
+.img-admin {
   width: 100px;
   height: 50px;
 }
-
 
 .card-hover {
   transition: transform 0.3s ease;
@@ -189,9 +196,9 @@ main {
 
 .card-hover:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(203, 8, 8, 0.3)
+  box-shadow: 0 10px 20px rgba(203, 8, 8, 0.3);
 }
 
-.titulo-categoria{
-  text-shadow:  4px 4px 4px rgba(214, 142, 142, 0.628);
+.titulo-categoria {
+  text-shadow: 4px 4px 4px rgba(214, 142, 142, 0.628);
 }

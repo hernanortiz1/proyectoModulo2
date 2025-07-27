@@ -1,4 +1,5 @@
-import { Col, Card, Row, Button } from "react-bootstrap";
+import { Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router";
 const CardJuegos = ({ juegos }) => {
   return (
     <>
@@ -27,9 +28,9 @@ const CardJuegos = ({ juegos }) => {
             </div>
           </Card.Body>
           <Card.Footer className="text-end">
-            <Button variant="success" className="me-2">
+            <Link className="btn btn-danger" to={"/detalle"}>
               Ver más
-            </Button>
+            </Link>
           </Card.Footer>
         </Card>
       </Col>
