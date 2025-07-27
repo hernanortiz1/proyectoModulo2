@@ -2,7 +2,6 @@ import Banner from "../../assets/Banner/Banner.avif";
 import { Container, Row } from "react-bootstrap";
 import CardJuegos from "./Juegos/CardJuegos";
 const Inicio = ({ juegos }) => {
-  console.log("🎮 Todos los juegos recibidos:", juegos);
 
   const categorias = ["Shooter", "RPG", "SandBox", "Aventura", "Simulacion"];
   return (
@@ -15,7 +14,7 @@ const Inicio = ({ juegos }) => {
           const juegosCategoria = juegos
             .filter(
               (juego) =>
-                
+
                 juego.categoria.toLowerCase() === categoria.toLowerCase() && juego.destacados === "Juego destacado"
             )
             .slice(0, 4);
