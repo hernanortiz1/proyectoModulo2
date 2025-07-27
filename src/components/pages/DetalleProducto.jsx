@@ -31,8 +31,9 @@ const DetalleProducto = () => {
             <h1 className="orbitron">descripcion:</h1>
             <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis minus voluptates quos? Velit veniam odit sint aliquam illum! Commodi obcaecati dicta, eum laudantium tempora necessitatibus? Recusandae commodi saepe iusto rerum.</h2>
           </article>
-          <article className="cardsDetalle p-3 mb-5 row ">
-            <h2 className="bebasneue">REQUISITOS DEL SISTEMA:</h2>
+          <article className="cardsDetalle p-3 mb-5  ">
+            <div className="row">
+            <h2 className="bebasneue">REQUISITOS RECOMENDADOS DEL SISTEMA:</h2>
             <div className="col-12 col-md-12 col-lg-6">
                <p className="orbitron">RAM: 12gb</p>
             </div>
@@ -50,6 +51,28 @@ const DetalleProducto = () => {
             </div>
             <div className="col-12 col-md-12 col-lg-6">
                <p className="orbitron">PROCESADOR: intel core i5</p>
+            </div>
+            </div>
+            <div className="row">
+                <h2 className="bebasneue">REQUISITOS MINIMOS DEL SISTEMA:</h2>
+                <div className="col-12 col-md-12 col-lg-6">
+               <p className="orbitron">RAM: 12gb</p>
+            </div>
+            <div className="col-12 col-md-12 col-lg-6">
+               <p className="orbitron">TARJETA GRAFICA: rtx6090</p>
+            </div>
+             <div className="col-12 col-md-12 col-lg-6">
+               <p className="orbitron">memoria de almacenamiento: 100gb</p>
+            </div>
+             <div className="col-12 col-md-12 col-lg-6">
+               <p className="orbitron">SO: windows 11</p>
+            </div>
+             <div className="col-12 col-md-12 col-lg-6">
+               <p className="orbitron">Direct X: VERSION 12</p>
+            </div>
+            <div className="col-12 col-md-12 col-lg-6">
+               <p className="orbitron">PROCESADOR: intel core i5</p>
+            </div>
             </div>
           </article>
         </div>
