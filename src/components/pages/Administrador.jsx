@@ -1,4 +1,4 @@
-import { Table, Container, Button, Form } from "react-bootstrap";
+import { Table, Container, Button, Form, Row, Col } from "react-bootstrap";
 import ItemJuegos from "./Juegos/ItemJuegos";
 import { Link } from "react-router";
 import { juegosPrueba } from "../../data/juegosPrueba";
@@ -9,29 +9,37 @@ const Administrador = ({ setJuegos, borrarJuego, busqueda, handleChange, juegosF
   return (
     <>
       <Container className="my-2">
-        <div className="d-flex justify-content-between align-items-center mt-5">
-          <h1 className="display-4">Juegos disponibles</h1>
+        <div className="mt-5">
+          <Row className="gy-3 align-items-center">
+            <Col xs={12} lg={4} className="text-center text-lg-start">
+              <h1 className="display-5">Juegos disponibles</h1>
+            </Col>
 
-          <Form>
-            <Form.Group className="mb-3 d-flex gap-3" controlId="buscador">
-              <Form.Label className="my-auto">Buscador: </Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Ingrese el nombre del juego a buscar."
-                onChange={handleChange}
-                value={busqueda}
-              />
-            </Form.Group>
-          </Form>
+            <Col xs={12} lg={4}>
+              <Form>
+                <Form.Group className="d-flex flex-column flex-sm-row gap-2 align-items-sm-center" controlId="buscador">
+                  <Form.Label className="my-auto">Buscador:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Ingrese el nombre del juego a buscar."
+                    onChange={handleChange}
+                    value={busqueda}
+                  />
+                </Form.Group>
+              </Form>
+            </Col>
 
-          <div>
-            <Link className="btn btn-primary" to={"/administrador/crear"}>
-              <i className="bi bi-file-earmark-plus"></i>
-            </Link>
-            <Button className="ms-2 btn btn-info text-light" onClick={cargarJuegos}>
-              <i className="bg bi bi-database-fill-add"></i>
-            </Button>
-          </div>
+            <Col xs={12} lg={4} className="text-lg-end">
+              <div className="d-flex flex-column flex-md-row gap-2 justify-content-center justify-content-lg-end">
+                <Link className="btn btn-primary" to="/administrador/crear">
+                  <i className="bi bi-file-earmark-plus"></i>
+                </Link>
+                <Button className="btn btn-info text-light" onClick={cargarJuegos}>
+                  <i className="bi bi-database-fill-add"></i>
+                </Button>
+              </div>
+            </Col>
+          </Row>
         </div>
         <hr />
         <Table responsive>
