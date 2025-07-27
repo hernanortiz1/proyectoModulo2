@@ -179,3 +179,17 @@ main {
   width: 100px;
   height: 50px;
 }
+
+
+.card-hover {
+  transition: transform 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(203, 8, 8, 0.3)
+}
+
+.titulo-categoria{
+  text-shadow:  4px 4px 4px rgba(214, 142, 142, 0.628);
+}
