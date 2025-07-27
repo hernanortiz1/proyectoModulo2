@@ -1,4 +1,4 @@
-import { Table, Container, Button } from "react-bootstrap";
+import { Table, Container, Button, Form, Row, Col } from "react-bootstrap";
 import ItemJuegos from "./Juegos/ItemJuegos";
 import { Link } from "react-router";
 import { juegosPrueba } from "../../data/juegosPrueba";
@@ -9,17 +9,30 @@ const Administrador = ({ setJuegos, juegos, borrarJuego }) => {
   return (
     <>
       <Container className="my-2">
-        <div className="d-flex justify-content-between align-items-center mt-5">
-          <h1 className="display-4 ">Juegos disponibles</h1>
+        <div className="mt-5">
+          <Row className="gy-3 align-items-center">
+            <Col xs={12} lg={4} className="text-center text-lg-start">
+              <h1 className="display-5">Juegos disponibles</h1>
+            </Col>
 
-          <div>
-            <Link className="btn btn-primary" to={"/administrador/crear"}>
-              <i className="bi bi-file-earmark-plus"></i>
-            </Link>
-            <Button className="ms-2 btn btn-info text-light" onClick={cargarJuegos}>
-              <i className="bg bi bi-database-fill-add"></i>
-            </Button>
-          </div>
+            <Col xs={12} lg={4}>
+              <Form>
+                <Form.Group className="d-flex flex-column flex-sm-row gap-2" controlId="buscador">
+                  <Form.Label className="my-auto">Buscador:</Form.Label>
+                  <Form.Control type="text" placeholder="Ingrese el nombre del juego que quiere buscar." />
+                </Form.Group>
+              </Form>
+            </Col>
+
+            <Col xs={12} lg={4} className="text-center text-lg-end">
+              <Link className="btn btn-primary me-2" to="/administrador/crear">
+                <i className="bi bi-file-earmark-plus"></i>
+              </Link>
+              <Button className="btn btn-info text-light" onClick={cargarJuegos}>
+                <i className="bi bi-database-fill-add"></i>
+              </Button>
+            </Col>
+          </Row>
         </div>
         <hr />
         <Table responsive>
