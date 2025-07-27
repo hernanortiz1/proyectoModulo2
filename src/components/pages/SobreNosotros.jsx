@@ -18,7 +18,7 @@ const SobreNosotros = () => {
         {/* Inicio presentacion */}
         <div className="container my-5">
           <h2 className="d-flex justify-content-center mb-4">GamerZone</h2>
-          <blockquote class=" mb-0 fst-italic text-center text-secondary">
+          <blockquote className=" mb-0 fst-italic text-center text-secondary">
             "Somos el equipo detrás de GamerZone, desarrolladores apasionados por los videojuegos y la tecnología.
           </blockquote>
           <blockquote className=" mb-0 fst-italic text-center text-secondary">
@@ -43,7 +43,10 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
+                  <a
+                    href="https://www.linkedin.com/in/hernán-ortiz/"
+                    className="text-decoration-none btn btn-primary text-light"
+                  >
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -51,7 +54,7 @@ const SobreNosotros = () => {
             </article>
             {/* Segundo miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div className="card border-0 shadow h-100">
                 <img src={avatar2} alt="Avatar del segundo miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Marcos Joel Tebis</h5>
@@ -69,7 +72,7 @@ const SobreNosotros = () => {
             </article>
             {/* Tercer miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div className="card border-0 shadow h-100">
                 <img src={avatar3} alt="Avatar del tercer miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Jose Benjamin Quiros</h5>
@@ -87,7 +90,7 @@ const SobreNosotros = () => {
             </article>
             {/* Cuarto miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div className="card border-0 shadow h-100">
                 <img src={avatar4} alt="Avatar del cuarto miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Ignacio Joaquin Barrojo</h5>
@@ -105,7 +108,7 @@ const SobreNosotros = () => {
             </article>
             {/* Quinto miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div className="card border-0 shadow h-100">
                 <img src={avatar5} alt="Avatar del quinto miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Luis Martin Diaz</h5>
