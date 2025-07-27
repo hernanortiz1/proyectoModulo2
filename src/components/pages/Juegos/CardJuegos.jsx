@@ -3,7 +3,7 @@ const CardJuegos = ({ juegos }) => {
   return (
     <>
       <Col xs={12} md={4} lg={3} className="mb-3 h-100">
-        <Card className="h-100 d-flex flex-column p-0">
+        <Card className="h-100 d-flex flex-column p-0 card-hover ">
           <Card.Img
             variant="top"
             src={juegos.imagen}
@@ -21,7 +21,7 @@ const CardJuegos = ({ juegos }) => {
                   <strong>Categoria:</strong> {juegos.categoria}
                 </li>
                 <li className="mb-1">
-                  <strong>Plataforma:</strong> {juegos.categoriaPlataforma}
+                  <strong>Plataforma:</strong> {juegos.plataforma}
                 </li>
               </ul>
             </div>
