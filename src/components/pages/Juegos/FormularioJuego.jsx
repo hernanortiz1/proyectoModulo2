@@ -1,29 +1,67 @@
+import { useEffect } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router";
 import Swal from "sweetalert2";
 
-const FormularioJuego = ({ crearJuego }) => {
+const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
+    setValue,
   } = useForm();
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (titulo === "Editar juego") {
+      const juegoBuscado = buscarJuego(id);
+      setValue("nombreJuego", juegoBuscado.nombreJuego);
+      setValue("precio", juegoBuscado.precio);
+      setValue("imagen", juegoBuscado.imagen);
+      setValue("categoria", juegoBuscado.categoria);
+      setValue("plataforma", juegoBuscado.plataforma);
+      setValue("destacados", juegoBuscado.destacados);
+      setValue("reqRecomendadoRam", juegoBuscado.reqRecomendadoRam);
+      setValue("reqRecomendadoSistemaOperativo", juegoBuscado.reqRecomendadoSistemaOperativo);
+      setValue("reqRecomendadoDirectX", juegoBuscado.reqRecomendadoDirectX);
+      setValue("reqRecomendadoProcesador", juegoBuscado.reqRecomendadoProcesador);
+      setValue("reqRecomendadoAlmacenamiento", juegoBuscado.reqRecomendadoAlmacenamiento);
+      setValue("reqRecomendadoTarjetaVideo", juegoBuscado.reqRecomendadoTarjetaVideo);
+      setValue("reqMinimoRam", juegoBuscado.reqMinimoRam);
+      setValue("reqMinimoSistemaOperativo", juegoBuscado.reqMinimoSistemaOperativo);
+      setValue("reqMinimoDirectX", juegoBuscado.reqMinimoDirectX);
+      setValue("reqMinimoProcesador", juegoBuscado.reqMinimoProcesador);
+      setValue("reqMinimoAlmacenamiento", juegoBuscado.reqMinimoAlmacenamiento);
+      setValue("reqMinimoTarjetaVideo", juegoBuscado.reqMinimoTarjetaVideo);
+    }
+  }, []);
 
   const onSubmit = (juego) => {
-    if (crearJuego(juego)) {
-      Swal.fire({
-        title: "Juego creado!",
-        text: `El juego ${juego.nombreJuego} fue creado correctamente.`,
-        icon: "success",
-      });
-      reset();
+    if (titulo === "Crear juegos") {
+      if (crearJuego(juego)) {
+        Swal.fire({
+          title: "Juego creado!",
+          text: `El juego ${juego.nombreJuego} fue creado correctamente.`,
+          icon: "success",
+        });
+        reset();
+      }
+    } else {
+      if (editarJuego(id, juego)) {
+        Swal.fire({
+          title: "Juego editado!",
+          text: `El juego ${juego.nombreJuego} fue editado correctamente.`,
+          icon: "success",
+        });
+      }
     }
   };
 
   return (
     <section className="container my-3">
-      <h1>Nuevo juego</h1>
+      <h1>{titulo}</h1>
       <Form className="py-3" onSubmit={handleSubmit(onSubmit)}>
         <Form.Text className="text-info">Los campos con un (*) son obligatorios.</Form.Text>
         <Form.Group className="mt-2" controlId="nombreJuego">
@@ -189,6 +227,7 @@ const FormularioJuego = ({ crearJuego }) => {
             </Form.Group>
             <Form.Text className="text-danger mb-3">{errors.reqRecomendadoRam?.message}</Form.Text>
           </Col>
+
           <Col xs={12} md={4}>
             <Form.Group controlId="so">
               <Form.Label>Sistema operativo*</Form.Label>

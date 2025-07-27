@@ -2,13 +2,12 @@ import Carousel from "react-bootstrap/Carousel";
 import citiesSkyLines from "../../img/imgCarouselSimulacion/citiesSkyLines.jpg";
 import farmingSimulator22 from "../../img/imgCarouselSimulacion/farmingSimulator22.jpg";
 import planetZoo from "../../img/imgCarouselSimulacion/planetZoo.jpg";
-import Mapper from "./Cards/Mapper";
 
 const Simulacion = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloSimulacion text-dark letras-espaciadas">SIMULACIÓN</h1>
+        <h1 className="text-center my-4 sombraTituloSimulacion text-dark letras-espaciadas fw-bold orbitron">SIMULACIÓN</h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg" src={citiesSkyLines} alt="Cities: Skylines" />
@@ -52,7 +51,7 @@ const Simulacion = () => {
       </section>
       <section className="my-5 container sombraSection rounded py-3">
         {/* Aqui va el mapeador */}
-        <Mapper></Mapper>
+
       </section>
     </>
   );

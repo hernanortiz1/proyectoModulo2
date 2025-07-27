@@ -2,13 +2,12 @@ import Carousel from "react-bootstrap/Carousel";
 import minecraft from "../../img/imgCarouselSandbox/minecraft.webp";
 import garrysMod from "../../img/imgCarouselSandbox/garrysMod.jpg";
 import terraria from "../../img/imgCarouselSandbox/terraria.jpg";
-import Mapper from "./Cards/Mapper";
 
 const Sandbox = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloSandbox text-dark letras-espaciadas">SANDBOX</h1>
+        <h1 className="text-center my-4 sombraTituloSandbox text-dark letras-espaciadas fw-bold orbitron">SANDBOX</h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg object-position-top" src={minecraft} alt="Minecraft" />
@@ -59,7 +58,7 @@ const Sandbox = () => {
       </section>
       <section className="my-5 container sombraSection rounded py-3">
         {/* Aqui va el mapeador */}
-        <Mapper></Mapper>
+
       </section>
     </>
   );

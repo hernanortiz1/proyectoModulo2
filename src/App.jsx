@@ -19,12 +19,14 @@ import DetalleProducto from "./components/pages/detalleProducto";
 import PreguntasFrecuentes from "./components/pages/PreguntasFrecuentes";
 import SobreNosotros from "./components/pages/SobreNosotros";
 import { v4 as uuidv4 } from "uuid";
+import BotonComprar from "./components/pages/BotonComprar";
 
 function App() {
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
   const juegosLocalstorage = JSON.parse(localStorage.getItem("listaJuegos")) || [];
   const [juegos, setJuegos] = useState(juegosLocalstorage);
   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
+  const [busqueda, setBusqueda] = useState("");
 
   useEffect(() => {
     localStorage.setItem("listaJuegos", JSON.stringify(juegos));
@@ -42,6 +44,34 @@ function App() {
     return true;
   };
 
+  const buscarJuego = (idJuego) => {
+    const juegoBuscado = juegos.find((itemJuego) => itemJuego.id === idJuego);
+    return juegoBuscado;
+  };
+
+  const editarJuego = (idJuego, juegoActualizado) => {
+    const juegoEditados = juegos.map((itemJuego) => {
+      if (itemJuego.id === idJuego) {
+        return {
+          ...itemJuego,
+          ...juegoActualizado,
+        };
+      } else {
+        return itemJuego;
+      }
+    });
+    setJuegos(juegoEditados);
+    return true;
+  };
+
+  const handleChange = (e) => {
+    setBusqueda(e.target.value);
+  };
+
+  const juegosFiltados = juegos.filter((juegoBuscado) =>
+    juegoBuscado.nombreJuego.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
   return (
     <>
       <BrowserRouter>
@@ -58,16 +88,35 @@ function App() {
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
             <Route path="/sobreNosotros" element={<SobreNosotros></SobreNosotros>}></Route>
             <Route path="/preguntasFrecuentes" element={<PreguntasFrecuentes></PreguntasFrecuentes>}></Route>
+            <Route path="/comprar" element={<BotonComprar></BotonComprar>}></Route>
 
             <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
               <Route
                 index
                 element={
-                  <Administrador juegos={juegos} setJuegos={setJuegos} borrarJuego={borrarJuego}></Administrador>
+                  <Administrador
+                    setJuegos={setJuegos}
+                    borrarJuego={borrarJuego}
+                    busqueda={busqueda}
+                    handleChange={handleChange}
+                    juegosFiltados={juegosFiltados}
+                  ></Administrador>
                 }
               ></Route>
-              <Route path="crear" element={<FormularioJuego crearJuego={crearJuego}></FormularioJuego>}></Route>
-              <Route path="editar/:id" element={<FormularioJuego></FormularioJuego>}></Route>
+              <Route
+                path="crear"
+                element={<FormularioJuego titulo={"Crear juegos"} crearJuego={crearJuego}></FormularioJuego>}
+              ></Route>
+              <Route
+                path="editar/:id"
+                element={
+                  <FormularioJuego
+                    titulo={"Editar juego"}
+                    buscarJuego={buscarJuego}
+                    editarJuego={editarJuego}
+                  ></FormularioJuego>
+                }
+              ></Route>
             </Route>
 
             <Route path="*" element={<Error404></Error404>}></Route>
