@@ -9,6 +9,7 @@ main {
   flex-grow: 1;
 }
 
+/*Fuentes */
 .orbitron {
   font-family: "Orbitron", sans-serif;
 }
@@ -16,6 +17,7 @@ main {
 .bebasneue {
   font-family: "Bebas Neue", sans-serif;
 }
+/*fin fuentes */
 
 .sombraNavbarFooter {
   box-shadow: 0 0px 50px 10px rgba(128, 0, 255, 0.4);
@@ -84,7 +86,7 @@ main {
 }
 
 .alturaImg {
-  height: 250px; /* o 300px según prefieras */
+  height: 250px;
   object-fit: cover;
   width: 100%;
 }
