@@ -10,13 +10,13 @@ const Administrador = ({ setJuegos, juegos, borrarJuego }) => {
     <>
       <Container className="my-2">
         <div className="d-flex justify-content-between align-items-center mt-5">
-          <h1 className="display-4 ">Juegos disponibles</h1>
+          <h1 className="display-4">Juegos disponibles</h1>
 
-          <div>
+          <div className="d-flex flex-md-row flex-column gap-1 ms-1">
             <Link className="btn btn-primary" to={"/administrador/crear"}>
               <i className="bi bi-file-earmark-plus"></i>
             </Link>
-            <Button className="ms-2 btn btn-info text-light" onClick={cargarJuegos}>
+            <Button className="ms-md-2 btn btn-info text-light" onClick={cargarJuegos}>
               <i className="bg bi bi-database-fill-add"></i>
             </Button>
           </div>
