@@ -2,7 +2,6 @@ import Carousel from "react-bootstrap/Carousel";
 import cs2 from "../../img/imgCarouselShooter/cs2.jpg";
 import battlefield1 from "../../img/imgCarouselShooter/battlefield1.webp";
 import blackOps2 from "../../img/imgCarouselShooter/blackOps2.jpg";
-import Mapper from "./Cards/Mapper";
 
 const Shooter = () => {
   return (
@@ -50,7 +49,7 @@ const Shooter = () => {
       </section>
       <section className="my-5 container sombraSection rounded py-3">
         {/* Aqui va el mapeador */}
-        <Mapper></Mapper>
+       
       </section>
     </>
   );

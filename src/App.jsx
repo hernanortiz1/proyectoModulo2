@@ -42,6 +42,26 @@ function App() {
     return true;
   };
 
+  const buscarJuego = (idJuego) => {
+    const juegoBuscado = juegos.find((itemJuego) => itemJuego.id === idJuego);
+    return juegoBuscado;
+  };
+
+  const editarJuego = (idJuego, juegoActualizado) => {
+    const juegoEditados = juegos.map((itemJuego) => {
+      if (itemJuego.id === idJuego) {
+        return {
+          ...itemJuego,
+          ...juegoActualizado,
+        };
+      } else {
+        return itemJuego;
+      }
+    });
+    setJuegos(juegoEditados);
+    return true;
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -66,8 +86,20 @@ function App() {
                   <Administrador juegos={juegos} setJuegos={setJuegos} borrarJuego={borrarJuego}></Administrador>
                 }
               ></Route>
-              <Route path="crear" element={<FormularioJuego crearJuego={crearJuego}></FormularioJuego>}></Route>
-              <Route path="editar/:id" element={<FormularioJuego></FormularioJuego>}></Route>
+              <Route
+                path="crear"
+                element={<FormularioJuego titulo={"Crear juegos"} crearJuego={crearJuego}></FormularioJuego>}
+              ></Route>
+              <Route
+                path="editar/:id"
+                element={
+                  <FormularioJuego
+                    titulo={"Editar juego"}
+                    buscarJuego={buscarJuego}
+                    editarJuego={editarJuego}
+                  ></FormularioJuego>
+                }
+              ></Route>
             </Route>
 
             <Route path="*" element={<Error404></Error404>}></Route>
