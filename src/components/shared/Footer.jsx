@@ -13,27 +13,27 @@ const Footer = () => {
             <h4 className="mb-2 bebasneue">Juegos</h4>
             <ul className="list-unstyled">
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Minecraft
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Terraria
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Sims 4
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Cities
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   The Legend of Zelda
                 </Link>
               </li>
@@ -43,27 +43,27 @@ const Footer = () => {
             <h4 className="bebasneue">Categorias</h4>
             <ul className="list-unstyled">
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/sandbox"} className="link-light link-underline-opacity-0">
                   Sandbox
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/simulacion"} className="link-light link-underline-opacity-0">
                   Simulación
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
-                  Fabricación
+                <Link to={"/shooter"} className="link-light link-underline-opacity-0">
+                  Shooter
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
-                  Construcción
+                <Link to={"/rpg"} className="link-light link-underline-opacity-0">
+                  RPG
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/aventura"} className="link-light link-underline-opacity-0">
                   Aventura
                 </Link>
               </li>
@@ -73,17 +73,17 @@ const Footer = () => {
             <h4 className="bebasneue">Soporte</h4>
             <ul className="list-unstyled">
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Contacto
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Chat online
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Comunidad
                 </Link>
               </li>
@@ -93,17 +93,17 @@ const Footer = () => {
             <h4 className="bebasneue">Quiénes Somos</h4>
             <ul className="list-unstyled">
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Acerca de Nosotros
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Preguntas Frecuentes
                 </Link>
               </li>
               <li>
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   Trabaja con Nosotros
                 </Link>
               </li>
