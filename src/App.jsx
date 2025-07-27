@@ -19,6 +19,7 @@ import DetalleProducto from "./components/pages/detalleProducto";
 import PreguntasFrecuentes from "./components/pages/PreguntasFrecuentes";
 import SobreNosotros from "./components/pages/SobreNosotros";
 import { v4 as uuidv4 } from "uuid";
+import BotonComprar from "./components/pages/BotonComprar";
 
 function App() {
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
@@ -87,6 +88,7 @@ function App() {
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
             <Route path="/sobreNosotros" element={<SobreNosotros></SobreNosotros>}></Route>
             <Route path="/preguntasFrecuentes" element={<PreguntasFrecuentes></PreguntasFrecuentes>}></Route>
+            <Route path="/comprar" element={<BotonComprar></BotonComprar>}></Route>
 
             <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
               <Route
