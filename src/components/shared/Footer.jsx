@@ -4,9 +4,7 @@ const Footer = () => {
     <footer className="py-3 sombraNavbarFooter">
       <div className="container">
         <Link to={"/"} className="text-decoration-none">
-          <h2 className="text-center text-lg-start text-light mb-4 orbitron">
-            GamerZone
-          </h2>
+          <h2 className="text-center text-lg-start text-light mb-4 orbitron">GamerZone</h2>
         </Link>
         <div className="row text-center text-lg-start">
           <div className="col-12 col-lg-3 col-md-6">
@@ -93,12 +91,12 @@ const Footer = () => {
             <h4 className="bebasneue">Quiénes Somos</h4>
             <ul className="list-unstyled">
               <li>
-                <Link to={"/error404"} className="link-light link-underline-opacity-0">
-                  Acerca de Nosotros
+                <Link to={"/sobreNosotros"} className="link-light link-underline-opacity-0">
+                  ¿Sobre nosotros?
                 </Link>
               </li>
               <li>
-                <Link to={"/error404"} className="link-light link-underline-opacity-0">
+                <Link to={"/preguntasFrecuentes"} className="link-light link-underline-opacity-0">
                   Preguntas Frecuentes
                 </Link>
               </li>
@@ -112,19 +110,19 @@ const Footer = () => {
                 <p className="text-light">¡Mantente informado!</p>
               </li>
               <li className="d-flex justify-content-center justify-content-lg-start gap-3">
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   <i className="text-light bi bi-facebook fs-3"></i>
                 </Link>
 
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   <i className="text-light bi bi-twitter-x fs-3"></i>
                 </Link>
 
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   <i className="text-light bi bi-instagram fs-3"></i>
                 </Link>
 
-                <Link to={"#"} className="link-light link-underline-opacity-0">
+                <Link to={"/error404"} className="link-light link-underline-opacity-0">
                   <i className="text-light bi bi-tiktok fs-3"></i>
                 </Link>
               </li>
