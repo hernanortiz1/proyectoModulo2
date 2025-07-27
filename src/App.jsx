@@ -25,6 +25,7 @@ function App() {
   const juegosLocalstorage = JSON.parse(localStorage.getItem("listaJuegos")) || [];
   const [juegos, setJuegos] = useState(juegosLocalstorage);
   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
+  const [busqueda, setBusqueda] = useState("");
 
   useEffect(() => {
     localStorage.setItem("listaJuegos", JSON.stringify(juegos));
@@ -62,6 +63,14 @@ function App() {
     return true;
   };
 
+  const handleChange = (e) => {
+    setBusqueda(e.target.value);
+  };
+
+  const juegosFiltados = juegos.filter((juegoBuscado) =>
+    juegoBuscado.nombreJuego.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
   return (
     <>
       <BrowserRouter>
@@ -83,7 +92,13 @@ function App() {
               <Route
                 index
                 element={
-                  <Administrador juegos={juegos} setJuegos={setJuegos} borrarJuego={borrarJuego}></Administrador>
+                  <Administrador
+                    setJuegos={setJuegos}
+                    borrarJuego={borrarJuego}
+                    busqueda={busqueda}
+                    handleChange={handleChange}
+                    juegosFiltados={juegosFiltados}
+                  ></Administrador>
                 }
               ></Route>
               <Route
