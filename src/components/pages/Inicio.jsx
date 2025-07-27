@@ -13,7 +13,7 @@ const Inicio = ({ juegos }) => {
           const juegosCategoria = juegos
             .filter(
               (juego) =>
-                
+
                 juego.categoria.toLowerCase() === categoria.toLowerCase() && juego.destacados === "Juego destacado"
             )
             .slice(0, 4);
@@ -21,7 +21,7 @@ const Inicio = ({ juegos }) => {
           if (juegosCategoria.length === 0) return null;
           return (
             <div key={categoria}>
-              <h2>{categoria}</h2>
+              <h2 className="titulo-categoria">{categoria}</h2>
               <Row className="mb-3 d-flex justify-content-center">
                 {juegosCategoria.map((juego) => (
                   <CardJuegos key={juego.id} juegos={juego}></CardJuegos>
