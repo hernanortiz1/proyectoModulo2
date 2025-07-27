@@ -1,6 +1,7 @@
-import { Row, Col, Form, Button, Container } from "react-bootstrap";
+import { Row, Col, Form, Button, Alert } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
+import { useState } from "react";
 
 const Login = ({ setUsuarioAdmin }) => {
   const {
@@ -8,6 +9,8 @@ const Login = ({ setUsuarioAdmin }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const [errorLogin, setErrorLogin] = useState(""); //
   const navegacion = useNavigate();
 
   const iniciarSesion = (usuario) => {
@@ -16,7 +19,7 @@ const Login = ({ setUsuarioAdmin }) => {
       sessionStorage.setItem("userKeyJuego", true);
       navegacion("/administrador");
     } else {
-      console.log("Email o contraseña incorrecto.");
+      setErrorLogin("Email o contraseña incorrectos.");
     }
   };
 
@@ -73,9 +76,11 @@ const Login = ({ setUsuarioAdmin }) => {
                 />
                 <Form.Text className="text-danger">{errors.password?.message}</Form.Text>
               </Form.Group>
+
               <Button variant="primary" type="submit" className="mb-5">
                 Iniciar sesión
               </Button>
+              {errorLogin && <Alert variant="danger">{errorLogin}</Alert>}
             </Form>
           </Col>
         </Row>
