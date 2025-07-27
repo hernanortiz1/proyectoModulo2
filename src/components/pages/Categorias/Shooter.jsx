@@ -7,7 +7,7 @@ const Shooter = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloShooter text-dark letras-espaciadas">SHOOTERS</h1>
+        <h1 className="text-center my-4 sombraTituloShooter text-dark letras-espaciadas fw-bold orbitron">SHOOTERS</h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg" src={cs2} alt="Counter-Strike 2" />
