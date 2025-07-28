@@ -136,7 +136,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
               },
               maxLength: {
                 value:300,
-                message: "La descripcion solo debe tener 50 caracteres",
+                message: "La descripcion solo debe tener 300 caracteres",
               },
             })}
           ></Form.Control>
@@ -152,8 +152,8 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
             {...register("desarrollador", {
               required: "Por favor añada el nombre del la persona o empresa del juego",
               minLength: {
-                value: 10,
-                message: "El nombre debe tener al menos 10 caracteres",
+                value: 2,
+                message: "El nombre debe tener al menos 2 caracteres",
               },
               maxLength: {
                 value: 50,
