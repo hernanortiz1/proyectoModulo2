@@ -13,7 +13,7 @@ const PreguntasFrecuentes = () => {
         <h1 className="text-center my-4 orbitron">PREGUNTAS FRECUENTES!</h1>
 
         <div className="col-12 col-md-6 col-lg-8">
-          <h3 className="my-2">🎮 Preguntas sobre los juegos</h3>
+          <h3 className="my-2 text-center text-md-start">🎮 Preguntas sobre los juegos</h3>
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">
               <Accordion.Header>¿Qué requisitos necesita mi PC o consola para jugar?</Accordion.Header>
@@ -37,7 +37,7 @@ const PreguntasFrecuentes = () => {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-          <h3 className="my-2">👤 Preguntas sobre la cuenta</h3>
+          <h3 className="my-2 text-center text-md-start">👤 Preguntas sobre la cuenta</h3>
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">
               <Accordion.Header>¿Cómo entro a una cuenta en el sitio?</Accordion.Header>
