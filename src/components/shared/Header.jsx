@@ -1,50 +1,53 @@
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router";
+import { useState } from "react";
 
 const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
   const navegacion = useNavigate();
+  const [expanded, setExpanded] = useState(false);
 
   const logout = () => {
     setUsuarioAdmin(false);
     sessionStorage.removeItem("userKeyJuego");
     navegacion("/");
+    setExpanded(false);
   };
 
   return (
     <header className="sombraNavbarFooter">
-      <Navbar expand="lg" className="bg-body-tertary">
+      <Navbar expand="lg" className="bg-body-tertary" expanded={expanded}>
         <Container>
           <NavLink to="/" className="navbar-brand orbitron">
             GamerZone
           </NavLink>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink className="nav-link" to={"/"}>
+              <NavLink className="nav-link" to={"/"} onClick={() => setExpanded(false)}>
                 Inicio
               </NavLink>
               <NavDropdown title="Categorias">
-                <NavDropdown.Item as={NavLink} to="/shooter">
+                <NavDropdown.Item as={NavLink} to="/shooter" onClick={() => setExpanded(false)}>
                   Shooter
                 </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/simulacion">
+                <NavDropdown.Item as={NavLink} to="/simulacion" onClick={() => setExpanded(false)}>
                   Simulación
                 </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/aventura">
+                <NavDropdown.Item as={NavLink} to="/aventura" onClick={() => setExpanded(false)}>
                   Aventura
                 </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/sandbox">
+                <NavDropdown.Item as={NavLink} to="/sandbox" onClick={() => setExpanded(false)}>
                   Sandbox
                 </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/rpg">
+                <NavDropdown.Item as={NavLink} to="/rpg" onClick={() => setExpanded(false)}>
                   RPG
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Acerca de">
-                <NavDropdown.Item as={NavLink} to={"/sobreNosotros"}>
+                <NavDropdown.Item as={NavLink} to={"/sobreNosotros"} onClick={() => setExpanded(false)}>
                   ¿Sobre nosotros?
                 </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to={"/preguntasFrecuentes"}>
+                <NavDropdown.Item as={NavLink} to={"/preguntasFrecuentes"} onClick={() => setExpanded(false)}>
                   Preguntas Frecuentes
                 </NavDropdown.Item>
               </NavDropdown>
@@ -52,12 +55,12 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
             <Nav className="ms-auto">
               {usuarioAdmin ? (
                 <>
-                  <Nav className="align-items-center">
+                  <Nav className="align-items-cente ms-autor">
                     <div className="nav-link disabled">
                       <span className="sombraADMIN">ADMIN</span> <small className="text-success">(activo)</small>
                     </div>
                   </Nav>
-                  <NavLink className="nav-link" to={"/administrador"}>
+                  <NavLink className="nav-link" to={"/administrador"} onClick={() => setExpanded(false)}>
                     Administración
                   </NavLink>
                   <Button className="nav-link" onClick={logout}>
@@ -65,7 +68,7 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
                   </Button>
                 </>
               ) : (
-                <NavLink className="nav-link" to={"/login"}>
+                <NavLink className="nav-link" to={"/login"} onClick={() => setExpanded(false)}>
                   Iniciar sesión
                 </NavLink>
               )}

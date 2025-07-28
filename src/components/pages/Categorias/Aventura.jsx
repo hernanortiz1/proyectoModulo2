@@ -2,13 +2,12 @@ import Carousel from "react-bootstrap/Carousel";
 import zelda from "../../img/imgCarouselAventura/zelda.jpg";
 import uncharted4 from "../../img/imgCarouselAventura/uncharted4.webp";
 import redemption2 from "../../img/imgCarouselAventura/redemption2.jpg";
-import Mapper from "./Cards/Mapper";
 
 const Aventura = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloAventura text-dark letras-espaciadas">AVENTURA</h1>
+        <h1 className="text-center my-4 sombraTituloAventura text-dark letras-espaciadas fw-bold orbitron">AVENTURA</h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg" src={zelda} alt="The Legend of Zelda: Breath of the Wild" />
@@ -59,7 +58,7 @@ const Aventura = () => {
       </section>
       <section className="my-5 container sombraSection rounded py-3">
         {/* Aqui va el mapeador */}
-        <Mapper></Mapper>
+
       </section>
     </>
   );

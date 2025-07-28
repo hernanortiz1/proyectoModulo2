@@ -2,13 +2,12 @@ import Carousel from "react-bootstrap/Carousel";
 import cs2 from "../../img/imgCarouselShooter/cs2.jpg";
 import battlefield1 from "../../img/imgCarouselShooter/battlefield1.webp";
 import blackOps2 from "../../img/imgCarouselShooter/blackOps2.jpg";
-import Mapper from "./Cards/Mapper";
 
 const Shooter = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloShooter text-dark letras-espaciadas">SHOOTERS</h1>
+        <h1 className="text-center my-4 sombraTituloShooter text-dark letras-espaciadas fw-bold orbitron">SHOOTERS</h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg" src={cs2} alt="Counter-Strike 2" />
@@ -50,7 +49,7 @@ const Shooter = () => {
       </section>
       <section className="my-5 container sombraSection rounded py-3">
         {/* Aqui va el mapeador */}
-        <Mapper></Mapper>
+       
       </section>
     </>
   );
