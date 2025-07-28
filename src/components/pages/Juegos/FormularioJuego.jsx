@@ -23,6 +23,10 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
       setValue("categoria", juegoBuscado.categoria);
       setValue("plataforma", juegoBuscado.plataforma);
       setValue("destacados", juegoBuscado.destacados);
+
+      setValue("descripcion",juegoBuscado.descripcion)
+      setValue("desarrollador",juegoBuscado.desarrollador)
+
       setValue("reqRecomendadoRam", juegoBuscado.reqRecomendadoRam);
       setValue("reqRecomendadoSistemaOperativo", juegoBuscado.reqRecomendadoSistemaOperativo);
       setValue("reqRecomendadoDirectX", juegoBuscado.reqRecomendadoDirectX);
@@ -140,7 +144,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
             <Form.Text className="text-danger mb-3">{errors.descripcion?.message}</Form.Text>
 
         <Form.Text className="text-danger mb-3">{errors.descripcion?.message}</Form.Text>
-        <Form.Group className="mt-2" controlId="desarrolador">
+        <Form.Group className="mt-2" controlId="desarrollador">
           <Form.Label>Desarrollador/Empresa *</Form.Label>
           <Form.Control
             type="text"

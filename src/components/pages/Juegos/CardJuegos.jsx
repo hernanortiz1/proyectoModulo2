@@ -28,7 +28,7 @@ const CardJuegos = ({ juegos }) => {
             </div>
           </Card.Body>
           <Card.Footer className="text-end">
-            <Link className="btn btn-danger" to={"/detalle"}>
+            <Link className="btn btn-danger" to={"/detalle/"+juegos.id}>
               Ver más
             </Link>
           </Card.Footer>
