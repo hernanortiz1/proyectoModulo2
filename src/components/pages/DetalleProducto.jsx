@@ -9,7 +9,6 @@ const DetalleProducto = ({buscarJuego}) => {
     useEffect(()=>{
      const juegoBuscado =buscarJuego(id)
      setinfojuego(juegoBuscado)
-     console.log(juegoBuscado)
     },[])
   return (
     <>
@@ -17,18 +16,18 @@ const DetalleProducto = ({buscarJuego}) => {
         <div className="row container py-2 justify-content-center">
           <div className="col-12 col-md-12 col-lg-7 mx-lg-3 py-3">
             <img
-              src="https://www.vice.com/wp-content/uploads/sites/2/2024/12/elden-ring-night-reign-feature-waypoint.jpg"
-              alt="imagen juego"
+              src={infojuego.imagen}
+              alt={infojuego.nombreJuego}
               className="imgDetalle"
             />
           </div>
           <div className="cardsDetalle col-12 col-md-12 col-lg-4 py-3 px-4 my-3">
-            <h1 className="text-light orbitron ">ELDEN RING</h1>
-            <h3 className="text-light orbitron">arg$5000</h3>
+            <h1 className="text-light orbitron ">{infojuego.nombreJuego} </h1>
+            <h3 className="text-light orbitron">arg${infojuego.precio} </h3>
             <br />
-            <h2 className="text-light bebasneue">categoria: "ROL,COMBATE"</h2>
+            <h2 className="text-light bebasneue">categoria:"{infojuego.categoria}" </h2>
             <h2 className="text-light bebasneue">
-              desarrolladora: "FROM SOFTWARE"
+              desarrolladora: "{infojuego.desarrollador}"
             </h2>
             <div>
               <h3 className="text-light orbitron">
@@ -44,49 +43,49 @@ const DetalleProducto = ({buscarJuego}) => {
           </div>
           <article className="mt-3 mb-5 bordeDetalle py-3">
             <h1 className="orbitron">descripcion:</h1>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis minus voluptates quos? Velit veniam odit sint aliquam illum! Commodi obcaecati dicta, eum laudantium tempora necessitatibus? Recusandae commodi saepe iusto rerum.</h2>
+            <h2>{infojuego.descripcion} </h2>
           </article>
           <article className="cardsDetalle p-3 mb-5  ">
             <div className="row">
             <h2 className="bebasneue">REQUISITOS RECOMENDADOS DEL SISTEMA:</h2>
             <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">RAM: 12gb</p>
+               <p className="orbitron">RAM: {infojuego.reqRecomendadoRam} </p>
             </div>
             <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">TARJETA GRAFICA: rtx6090</p>
+               <p className="orbitron">TARJETA GRAFICA: {infojuego.reqRecomendadoTarjetaVideo} </p>
             </div>
              <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">memoria de almacenamiento: 100gb</p>
+               <p className="orbitron">memoria de almacenamiento: {infojuego.reqRecomendadoAlmacenamiento} </p>
             </div>
              <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">SO: windows 11</p>
+               <p className="orbitron">SO: {infojuego.reqRecomendadoSistemaOperativo} </p>
             </div>
              <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">Direct X: VERSION 12</p>
+               <p className="orbitron">Direct X: VERSION {infojuego.reqRecomendadoDirectX} </p>
             </div>
             <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">PROCESADOR: intel core i5</p>
+               <p className="orbitron">PROCESADOR: {infojuego.reqRecomendadoProcesador} </p>
             </div>
             </div>
             <div className="row">
                 <h2 className="bebasneue">REQUISITOS MINIMOS DEL SISTEMA:</h2>
                 <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">RAM: 12gb</p>
+               <p className="orbitron">RAM: {infojuego.reqMinimoRam} </p>
             </div>
             <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">TARJETA GRAFICA: rtx6090</p>
+               <p className="orbitron">TARJETA GRAFICA: {infojuego.reqMinimoTarjetaVideo} </p>
             </div>
              <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">memoria de almacenamiento: 100gb</p>
+               <p className="orbitron">memoria de almacenamiento: {infojuego.reqMinimoAlmacenamiento} </p>
             </div>
              <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">SO: windows 11</p>
+               <p className="orbitron">SO: {infojuego.reqMinimoSistemaOperativo} </p>
             </div>
              <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">Direct X: VERSION 12</p>
+               <p className="orbitron">Direct X: VERSION {infojuego.reqMinimoDirectX} </p>
             </div>
             <div className="col-12 col-md-12 col-lg-6">
-               <p className="orbitron">PROCESADOR: intel core i5</p>
+               <p className="orbitron">PROCESADOR: {infojuego.reqMinimoProcesador} </p>
             </div>
             </div>
           </article>
