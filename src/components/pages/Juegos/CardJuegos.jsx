@@ -18,11 +18,17 @@ const CardJuegos = ({ juegos }) => {
                 <li className="mb-1">
                   <strong>Plataforma:</strong> {juegos.plataforma}
                 </li>
+                <li className="mb-1">
+                  <strong>
+                    Descripción: <br></br>
+                  </strong>{" "}
+                  <small>{juegos.decripcion.substring(0, 50) + "..."}</small>
+                </li>
               </ul>
             </div>
           </Card.Body>
           <Card.Footer className="text-end">
-            <Link className="btn btn-danger" to={"/detalle/"+juegos.id}>
+            <Link className="btn btn-danger" to={"/detalle/" + juegos.id}>
               Ver más
             </Link>
           </Card.Footer>
