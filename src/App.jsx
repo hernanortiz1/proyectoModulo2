@@ -79,7 +79,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Inicio juegos={juegos}></Inicio>}></Route>
-            <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
+            <Route path="/detalle/:id" element={<DetalleProducto buscarJuego={buscarJuego} ></DetalleProducto>}></Route>
             <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
             <Route path="/shooter" element={<Shooter></Shooter>}></Route>
             <Route path="/simulacion" element={<Simulacion></Simulacion>}></Route>

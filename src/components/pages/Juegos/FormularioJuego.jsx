@@ -23,6 +23,10 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
       setValue("categoria", juegoBuscado.categoria);
       setValue("plataforma", juegoBuscado.plataforma);
       setValue("destacados", juegoBuscado.destacados);
+
+      setValue("descripcion",juegoBuscado.descripcion)
+      setValue("desarrollador",juegoBuscado.desarrollador)
+
       setValue("reqRecomendadoRam", juegoBuscado.reqRecomendadoRam);
       setValue("reqRecomendadoSistemaOperativo", juegoBuscado.reqRecomendadoSistemaOperativo);
       setValue("reqRecomendadoDirectX", juegoBuscado.reqRecomendadoDirectX);
@@ -138,12 +142,12 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
           ></Form.Control>
         </Form.Group>
         <Form.Text className="text-danger mb-3">{errors.descripcion?.message}</Form.Text>
-        <Form.Group className="mt-2" controlId="desarrolador">
+        <Form.Group className="mt-2" controlId="desarrollador">
           <Form.Label>Desarrollador/Empresa *</Form.Label>
           <Form.Control
             type="text"
             placeholder="Añada el nombre de la empresa o desarrolador del videojuego"
-            {...register("desarrolador", {
+            {...register("desarrollador", {
               required: "Por favor añada el nombre del la persona o empresa del juego",
               minLength: {
                 value: 10,
