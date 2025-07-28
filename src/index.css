@@ -9,6 +9,7 @@ main {
   flex-grow: 1;
 }
 
+/*Fuentes */
 .orbitron {
   font-family: "Orbitron", sans-serif;
 }
@@ -16,6 +17,7 @@ main {
 .bebasneue {
   font-family: "Bebas Neue", sans-serif;
 }
+/*fin fuentes */
 
 .sombraNavbarFooter {
   box-shadow: 0 0px 50px 10px rgba(128, 0, 255, 0.4);
@@ -48,7 +50,7 @@ main {
 }
 
 /* Inicio SobreNosotros */
-.animate-float{
+.animate-float {
   animation: float 6s ease-in-out infinite;
 }
 /* Fin SobreNosotros */
@@ -60,9 +62,17 @@ main {
 }
 
 .banner {
+  height: 480px;
   object-fit: cover;
-  height: 395px;
   width: 100%;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.banner:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
 }
 
 .img-cover {
@@ -84,7 +94,7 @@ main {
 }
 
 .alturaImg {
-  height: 250px; /* o 300px según prefieras */
+  height: 250px;
   object-fit: cover;
   width: 100%;
 }
@@ -175,11 +185,10 @@ main {
   border-bottom: 5px solid rgba(0, 0, 0, 0.486);
 }
 
-.img-admin{
+.img-admin {
   width: 100px;
   height: 50px;
 }
-
 
 .card-hover {
   transition: transform 0.3s ease;
@@ -187,9 +196,72 @@ main {
 
 .card-hover:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(203, 8, 8, 0.3)
+  box-shadow: 0 10px 20px rgba(203, 8, 8, 0.3);
 }
 
-.titulo-categoria{
-  text-shadow:  4px 4px 4px rgba(214, 142, 142, 0.628);
+.titulo-categoria {
+  text-shadow: 4px 4px 4px rgba(214, 142, 142, 0.628);
+}
+
+.maintenance-container {
+  min-height: 70vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.maintenance-title {
+  font-size: 2rem;
+  color: #00fff7;
+  text-shadow: 0 0 5px #00fff7, 0 0 15px #00fff7;
+  margin-bottom: 1.5rem;
+}
+
+.maintenance-text {
+  max-width: 700px;
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+/* Responsive title */
+@media (min-width: 768px) {
+  .maintenance-title {
+    font-size: 2.5rem;
+  }
+
+  .maintenance-text {
+    font-size: 1.1rem;
+  }
+}
+
+.gamerzone-brand {
+  color: #ff2e63;
+  font-weight: bold;
+}
+
+.btn-return {
+  margin-top: 1rem;
+  background-color: #ff2e63;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff2e63, 0 0 20px #ff2e63;
+}
+
+.btn-return:hover {
+  background-color: #ff1744;
+  box-shadow: 0 0 15px #ff1744, 0 0 25px #ff1744;
+  transform: scale(1.05);
 }

@@ -7,7 +7,7 @@ const Sandbox = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloSandbox text-dark letras-espaciadas">SANDBOX</h1>
+        <h1 className="text-center my-4 sombraTituloSandbox text-dark letras-espaciadas fw-bold orbitron">SANDBOX</h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg object-position-top" src={minecraft} alt="Minecraft" />

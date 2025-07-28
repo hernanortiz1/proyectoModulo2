@@ -7,7 +7,7 @@ const Simulacion = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloSimulacion text-dark letras-espaciadas">SIMULACIÓN</h1>
+        <h1 className="text-center my-4 sombraTituloSimulacion text-dark letras-espaciadas fw-bold orbitron">SIMULACIÓN</h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg" src={citiesSkyLines} alt="Cities: Skylines" />

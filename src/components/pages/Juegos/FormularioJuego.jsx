@@ -119,6 +119,43 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
           />
         </Form.Group>
         <Form.Text className="text-danger mb-3">{errors.imagen?.message}</Form.Text>
+        <Form.Group className="mt-2" controlId="descripcion">
+          <Form.Label>Descripcion *</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Añadir una descripcion del juego"
+            {...register("descripcion", {
+              required: "Por favor añada una descripcion del juego",
+              minLength: {
+                value: 10,
+                message: "La descripcion debe tener al menos 10 caracteres",
+              },
+              maxLength: {
+                value: 50,
+                message: "La descripcion solo debe tener 50 caracteres",
+              },
+            })}
+          ></Form.Control>
+        </Form.Group>
+        <Form.Text className="text-danger mb-3">{errors.descripcion?.message}</Form.Text>
+        <Form.Group className="mt-2" controlId="desarrolador">
+          <Form.Label>Desarrollador/Empresa *</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Añada el nombre de la empresa o desarrolador del videojuego"
+            {...register("desarrolador", {
+              required: "Por favor añada el nombre del la persona o empresa del juego",
+              minLength: {
+                value: 10,
+                message: "El nombre debe tener al menos 10 caracteres",
+              },
+              maxLength: {
+                value: 50,
+                message: "El nombre solo debe tener 50 caracteres",
+              },
+            })}
+          ></Form.Control>
+        </Form.Group>
 
         <Form.Group className="mt-2" controlId="categoria">
           <Form.Label>Categoria *</Form.Label>

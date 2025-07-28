@@ -7,7 +7,7 @@ const Aventura = () => {
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloAventura text-dark letras-espaciadas">AVENTURA</h1>
+        <h1 className="text-center my-4 sombraTituloAventura text-dark letras-espaciadas fw-bold orbitron">AVENTURA</h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg" src={zelda} alt="The Legend of Zelda: Breath of the Wild" />

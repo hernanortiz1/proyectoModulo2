@@ -45,8 +45,8 @@ const ItemJuegos = ({ fila, juego, borrarJuego }) => {
       <td>
         <img src={juego.imagen} alt={juego.nombreJuego} className="img-admin" />
       </td>
-      <td>
-        <Link className="me-lg-2 btn btn-warning" to={"/administrador/editar/" + juego.id}>
+      <td className="text-center">
+        <Link className="btn btn-warning mb-2 mb-lg-0 me-0 me-lg-2" to={"/administrador/editar/" + juego.id}>
           <i className="bi bi-pencil-square"></i>
         </Link>
         <Button variant="danger" onClick={eliminarJuego}>

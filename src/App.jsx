@@ -19,12 +19,14 @@ import DetalleProducto from "./components/pages/detalleProducto";
 import PreguntasFrecuentes from "./components/pages/PreguntasFrecuentes";
 import SobreNosotros from "./components/pages/SobreNosotros";
 import { v4 as uuidv4 } from "uuid";
+import BotonComprar from "./components/pages/BotonComprar";
 
 function App() {
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
   const juegosLocalstorage = JSON.parse(localStorage.getItem("listaJuegos")) || [];
   const [juegos, setJuegos] = useState(juegosLocalstorage);
   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
+  const [busqueda, setBusqueda] = useState("");
 
   useEffect(() => {
     localStorage.setItem("listaJuegos", JSON.stringify(juegos));
@@ -62,6 +64,14 @@ function App() {
     return true;
   };
 
+  const handleChange = (e) => {
+    setBusqueda(e.target.value);
+  };
+
+  const juegosFiltados = juegos.filter((juegoBuscado) =>
+    juegoBuscado.nombreJuego.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
   return (
     <>
       <BrowserRouter>
@@ -78,12 +88,19 @@ function App() {
             <Route path="/rpg" element={<Rpg></Rpg>}></Route>
             <Route path="/sobreNosotros" element={<SobreNosotros></SobreNosotros>}></Route>
             <Route path="/preguntasFrecuentes" element={<PreguntasFrecuentes></PreguntasFrecuentes>}></Route>
+            <Route path="/comprar" element={<BotonComprar></BotonComprar>}></Route>
 
             <Route path="/administrador" element={<ProtectorAdmin isAdmin={usuarioAdmin}></ProtectorAdmin>}>
               <Route
                 index
                 element={
-                  <Administrador juegos={juegos} setJuegos={setJuegos} borrarJuego={borrarJuego}></Administrador>
+                  <Administrador
+                    setJuegos={setJuegos}
+                    borrarJuego={borrarJuego}
+                    busqueda={busqueda}
+                    handleChange={handleChange}
+                    juegosFiltados={juegosFiltados}
+                  ></Administrador>
                 }
               ></Route>
               <Route
