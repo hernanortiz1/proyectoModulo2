@@ -128,10 +128,10 @@ const SobreNosotros = () => {
         </div>
         {/* Fin galeria del equipo */}
         {/* Inicio Tecnologia que dominamos */}
-        <div className="container my-5">
-          <h2 className="bebasneue text-center mb-4">Tecnologías que dominamos</h2>
-          <div className="card border-0 shadow p-4">
-            <div className="row text-center justify-content-center align-items-center">
+        <div className="container my-5 tecnologiasQueDominamos">
+          <h2 className="bebasneue text-center mb-4 titleTecnologia">Tecnologías que dominamos</h2>
+          <div className="card border-0 p-4 techItem">
+            <div className="row text-center justify-content-center align-items-center techItem">
               {/* HTML */}
               <div className="col-6 col-md-2 mb-0">
                 <img src={htmlologo} alt="Logo de HTML" className="img-fluid mb-2" />
