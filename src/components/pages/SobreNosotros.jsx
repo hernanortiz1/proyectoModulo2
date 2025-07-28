@@ -16,8 +16,7 @@ const SobreNosotros = () => {
     <>
       <section>
         {/* Inicio presentacion */}
-        <div className="container my-5 shadow">
-          <h2 className="d-flex justify-content-center mb-4">GamerZone</h2>
+        <div className="container my-5">
           <div className="mb-3">
             <blockquote className="fst-italic text-center text-secondary">
               Somos el equipo detrás de <b>GamerZone</b>, un grupo de desarrolladores apasionados por los videojuegos,
