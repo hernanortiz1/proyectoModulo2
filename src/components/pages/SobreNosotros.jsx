@@ -17,14 +17,33 @@ const SobreNosotros = () => {
       <section>
         {/* Inicio presentacion */}
         <div className="container my-5">
-          <h2 className="d-flex justify-content-center mb-4">GamerZone</h2>
-          <blockquote class=" mb-0 fst-italic text-center text-secondary">
-            "Somos el equipo detrás de GamerZone, desarrolladores apasionados por los videojuegos y la tecnología.
-          </blockquote>
-          <blockquote className=" mb-0 fst-italic text-center text-secondary">
-            Nos especializamos en crear el mejor catálogo de juegos con categorías únicas, ofreciendo experiencias
-            gaming inolvidables."
-          </blockquote>
+          <div className="mb-3">
+            <blockquote className="fst-italic text-center text-secondary">
+              Somos el equipo detrás de <b>GamerZone</b>, un grupo de desarrolladores apasionados por los videojuegos,
+              la tecnología y la innovación. Nos especializamos en crear un catálogo de juegos cuidadosamente
+              estructurado, con categorías únicas y una experiencia de usuario fluida e intuitiva.
+            </blockquote>
+          </div>
+          <div className="mb-3">
+            <blockquote className="fst-italic text-center text-secondary">
+              Esta plataforma fue desarrollada utilizando tecnologías modernas como <b>React</b> para el <b>frontend</b>
+              , junto con <b>Bootstrap</b> y <b>CSS</b> para el diseño responsivo. Implementamos buenas prácticas de
+              desarrollo como el enrutamiento con <b>React Router</b>.
+            </blockquote>
+          </div>
+          <div className="mb-3">
+            <blockquote className="fst-italic text-center text-secondary">
+              Nuestra <b>misión</b> es ofrecer una experiencia de navegación rápida, visualmente atractiva y centrada en
+              el usuario. Creemos en el poder del gaming para conectar personas, contar historias y transformar el
+              entretenimiento digital.
+            </blockquote>
+          </div>
+          <div>
+            <blockquote className="fst-italic text-center text-secondary">
+              Seguimos aprendiendo y creciendo como equipo, comprometidos con el desarrollo de soluciones innovadoras y
+              funcionales dentro del mundo del software y los videojuegos.
+            </blockquote>
+          </div>
         </div>
         {/* Fin presentacion */}
         {/* Inicio galeria del equipo */}
@@ -33,7 +52,7 @@ const SobreNosotros = () => {
           <div class="row justify-content-center row-gap-3">
             {/* Pimer miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div class="card border-0 shadow h-100 teamCard">
                 <img src={avatar1} alt="Avatar del primer miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Hernán Ortiz</h5>
@@ -43,7 +62,10 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
+                  <a
+                    href="https://www.linkedin.com/in/hernán-ortiz/" target="_blank"
+                    className="text-decoration-none btn btn-primary text-light"
+                  >
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -51,7 +73,7 @@ const SobreNosotros = () => {
             </article>
             {/* Segundo miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div className="card border-0 shadow h-100 teamCard">
                 <img src={avatar2} alt="Avatar del segundo miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Marcos Joel Tebis</h5>
@@ -61,7 +83,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" target="_blank" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -69,7 +91,7 @@ const SobreNosotros = () => {
             </article>
             {/* Tercer miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div className="card border-0 shadow h-100 teamCard">
                 <img src={avatar3} alt="Avatar del tercer miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Jose Benjamin Quiros</h5>
@@ -79,7 +101,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" target="_blank" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -87,7 +109,7 @@ const SobreNosotros = () => {
             </article>
             {/* Cuarto miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div className="card border-0 shadow h-100 teamCard">
                 <img src={avatar4} alt="Avatar del cuarto miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Ignacio Joaquin Barrojo</h5>
@@ -97,7 +119,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" target="_blank" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -105,7 +127,7 @@ const SobreNosotros = () => {
             </article>
             {/* Quinto miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100">
+              <div className="card border-0 shadow h-100 teamCard">
                 <img src={avatar5} alt="Avatar del quinto miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Luis Martin Diaz</h5>
@@ -115,7 +137,7 @@ const SobreNosotros = () => {
                   </p>
                 </div>
                 <div className="card-footer text-center bg-primary">
-                  <a href="https://www.linkedin.com/" className="text-decoration-none btn btn-primary text-light">
+                  <a href="https://www.linkedin.com/" target="_blank" className="text-decoration-none btn btn-primary text-light">
                     <i className="bi bi-linkedin fs-3"></i>
                   </a>
                 </div>
@@ -125,10 +147,10 @@ const SobreNosotros = () => {
         </div>
         {/* Fin galeria del equipo */}
         {/* Inicio Tecnologia que dominamos */}
-        <div className="container my-5">
-          <h2 className="bebasneue text-center mb-4">Tecnologías que dominamos</h2>
-          <div className="card border-0 shadow p-4">
-            <div className="row text-center justify-content-center align-items-center">
+        <div className="container my-5 tecnologiasQueDominamos">
+          <h2 className="bebasneue text-center mb-4 titleTecnologia">Tecnologías que dominamos</h2>
+          <div className="card border-0 p-4 techItem">
+            <div className="row text-center justify-content-center align-items-center techItem">
               {/* HTML */}
               <div className="col-6 col-md-2 mb-0">
                 <img src={htmlologo} alt="Logo de HTML" className="img-fluid mb-2" />
