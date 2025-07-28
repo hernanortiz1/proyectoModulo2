@@ -1,4 +1,16 @@
-const DetalleProducto = () => {
+import { useEffect,useState } from "react";
+import { useParams } from "react-router";
+import { Link } from "react-router";
+
+const DetalleProducto = ({buscarJuego}) => {
+    const {id}=useParams()
+    const [infojuego,setinfojuego]=useState({})
+
+    useEffect(()=>{
+     const juegoBuscado =buscarJuego(id)
+     setinfojuego(juegoBuscado)
+     console.log(juegoBuscado)
+    },[])
   return (
     <>
       <div className="d-flex bg-dark justify-content-center mt-5">
@@ -20,11 +32,14 @@ const DetalleProducto = () => {
             </h2>
             <div>
               <h3 className="text-light orbitron">
-                likes: 2 <i class="bi bi-hand-thumbs-up"></i>
+                likes: 2 <i className="bi bi-hand-thumbs-up"></i>
               </h3>
               <h3 className="text-light orbitron">
-                dislikes: 3 <i class="bi bi-hand-thumbs-down"></i>
+                dislikes: 3 <i className="bi bi-hand-thumbs-down"></i>
               </h3>
+            </div>
+            <div>
+                <Link className="btn btn-success orbitron w-100 mt-2" to={"/comprar"}>agregar al carrito!</Link>
             </div>
           </div>
           <article className="mt-3 mb-5 bordeDetalle py-3">
