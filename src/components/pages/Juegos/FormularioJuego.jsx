@@ -131,19 +131,21 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
                 message: "La descripcion debe tener al menos 10 caracteres",
               },
               maxLength: {
-                value: 50,
+                value:300,
                 message: "La descripcion solo debe tener 50 caracteres",
               },
             })}
           ></Form.Control>
         </Form.Group>
+            <Form.Text className="text-danger mb-3">{errors.descripcion?.message}</Form.Text>
+
         <Form.Text className="text-danger mb-3">{errors.descripcion?.message}</Form.Text>
         <Form.Group className="mt-2" controlId="desarrolador">
           <Form.Label>Desarrollador/Empresa *</Form.Label>
           <Form.Control
             type="text"
             placeholder="Añada el nombre de la empresa o desarrolador del videojuego"
-            {...register("desarrolador", {
+            {...register("desarrollador", {
               required: "Por favor añada el nombre del la persona o empresa del juego",
               minLength: {
                 value: 10,
@@ -156,6 +158,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
             })}
           ></Form.Control>
         </Form.Group>
+            <Form.Text className="text-danger mb-3">{errors.desarrollador?.message}</Form.Text>
 
         <Form.Group className="mt-2" controlId="categoria">
           <Form.Label>Categoria *</Form.Label>
@@ -305,7 +308,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
                     message: "Debe tener solo 15 caracteres",
                   },
                   pattern: {
-                    value: /^[0-9]+ ?(GB|TB|gb|tb)$/,
+                    value: /^[0-9]+\s?(GB|TB|gb|tb)(\s.+)?$/,
                     message: "Debe indicar un número seguido de GB o TB",
                   },
                 })}
@@ -437,7 +440,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
                     message: "Debe tener solo 15 caracteres",
                   },
                   pattern: {
-                    value: /^[0-9]+ ?(GB|TB|gb|tb)$/,
+                    value: /^[0-9]+\s?(GB|TB|gb|tb)(\s.+)?$/,
                     message: "Debe indicar un número seguido de GB o TB",
                   },
                 })}
