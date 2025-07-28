@@ -81,11 +81,11 @@ function App() {
             <Route path="/" element={<Inicio juegos={juegos}></Inicio>}></Route>
             <Route path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
             <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
-            <Route path="/shooter" element={<Shooter></Shooter>}></Route>
-            <Route path="/simulacion" element={<Simulacion></Simulacion>}></Route>
-            <Route path="/aventura" element={<Aventura></Aventura>}></Route>
-            <Route path="/sandbox" element={<Sandbox></Sandbox>}></Route>
-            <Route path="/rpg" element={<Rpg></Rpg>}></Route>
+            <Route path="/shooter" element={<Shooter juegos={juegos}></Shooter>}></Route>
+            <Route path="/simulacion" element={<Simulacion juegos={juegos}></Simulacion>}></Route>
+            <Route path="/aventura" element={<Aventura juegos={juegos}></Aventura>}></Route>
+            <Route path="/sandbox" element={<Sandbox juegos={juegos}></Sandbox>}></Route>
+            <Route path="/rpg" element={<Rpg juegos={juegos}></Rpg>}></Route>
             <Route path="/sobreNosotros" element={<SobreNosotros></SobreNosotros>}></Route>
             <Route path="/preguntasFrecuentes" element={<PreguntasFrecuentes></PreguntasFrecuentes>}></Route>
             <Route path="/comprar" element={<BotonComprar></BotonComprar>}></Route>

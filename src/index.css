@@ -50,7 +50,7 @@ main {
 }
 
 /* Inicio SobreNosotros */
-.teamCard:hover{
+.teamCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
@@ -61,10 +61,10 @@ main {
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-.titleTecnologia{
+.titleTecnologia {
   font-size: 1.75rem;
 }
-.techItem{
+.techItem {
   animation: float 3s ease-in-out infinite;
 }
 /* Fin SobreNosotros */
@@ -184,8 +184,9 @@ main {
   }
 }
 
-@keyframes float{
-  0%, 100% {
+@keyframes float {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -212,6 +213,10 @@ main {
 .img-admin {
   width: 100px;
   height: 50px;
+}
+.tamaño {
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-hover {
