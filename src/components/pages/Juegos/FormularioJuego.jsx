@@ -135,12 +135,14 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
                 message: "La descripcion debe tener al menos 10 caracteres",
               },
               maxLength: {
-                value: 50,
-                message: "La descripcion solo debe tener 50 caracteres",
+                value:300,
+                message: "La descripcion solo debe tener 300 caracteres",
               },
             })}
           ></Form.Control>
         </Form.Group>
+            <Form.Text className="text-danger mb-3">{errors.descripcion?.message}</Form.Text>
+
         <Form.Text className="text-danger mb-3">{errors.descripcion?.message}</Form.Text>
         <Form.Group className="mt-2" controlId="desarrollador">
           <Form.Label>Desarrollador/Empresa *</Form.Label>
@@ -150,8 +152,8 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
             {...register("desarrollador", {
               required: "Por favor añada el nombre del la persona o empresa del juego",
               minLength: {
-                value: 10,
-                message: "El nombre debe tener al menos 10 caracteres",
+                value: 2,
+                message: "El nombre debe tener al menos 2 caracteres",
               },
               maxLength: {
                 value: 50,
@@ -160,6 +162,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
             })}
           ></Form.Control>
         </Form.Group>
+            <Form.Text className="text-danger mb-3">{errors.desarrollador?.message}</Form.Text>
 
         <Form.Group className="mt-2" controlId="categoria">
           <Form.Label>Categoria *</Form.Label>
@@ -309,7 +312,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
                     message: "Debe tener solo 15 caracteres",
                   },
                   pattern: {
-                    value: /^[0-9]+ ?(GB|TB|gb|tb)$/,
+                    value: /^[0-9]+\s?(GB|TB|gb|tb)(\s.+)?$/,
                     message: "Debe indicar un número seguido de GB o TB",
                   },
                 })}
@@ -441,7 +444,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
                     message: "Debe tener solo 15 caracteres",
                   },
                   pattern: {
-                    value: /^[0-9]+ ?(GB|TB|gb|tb)$/,
+                    value: /^[0-9]+\s?(GB|TB|gb|tb)(\s.+)?$/,
                     message: "Debe indicar un número seguido de GB o TB",
                   },
                 })}
