@@ -1,17 +1,31 @@
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
   const navegacion = useNavigate();
   const [expanded, setExpanded] = useState(false);
 
-  const logout = () => {
-    setUsuarioAdmin(false);
-    sessionStorage.removeItem("userKeyJuego");
-    navegacion("/");
-    setExpanded(false);
-  };
+const logout = () => {
+  Swal.fire({
+    title: "¿Seguro que deseas cerrar tu sesión?",
+    showDenyButton: true,
+    confirmButtonText: "Cerrar",
+    denyButtonText: `No cerrar`
+  }).then((result) => {
+    if (result.isConfirmed) {
+      sessionStorage.removeItem("userKeyJuego");
+      setUsuarioAdmin(false); // <- ¡IMPORTANTE!
+      setExpanded(false);
+      Swal.fire("¡La sesión se ha cerrado!", "", "success").then(() => {
+        navegacion("/");
+      });
+    } else if (result.isDenied) {
+      Swal.fire("La sesión se mantiene", "", "info");
+    }
+  });
+};
 
   return (
     <header className="sombraNavbarFooter">
