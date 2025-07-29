@@ -1,7 +1,8 @@
 import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
-const Registro = () => {
+const Registro = ({ registrarCuenta }) => {
   const {
     register,
     handleSubmit,
@@ -13,8 +14,13 @@ const Registro = () => {
   const password = watch("password");
 
   const onSubmit = (data) => {
-    console.log("Datos enviados:", data);
-    reset();
+    const resultado = registrarCuenta(data);
+    if (resultado) {
+      Swal.fire("Cuenta creada", "Registro exitoso", "success");
+      reset();
+    } else {
+      Swal.fire("Error", "El correo ya está registrado", "error");
+    }
   };
 
   return (
@@ -66,9 +72,10 @@ const Registro = () => {
                     placeholder="••••••"
                     {...register("password", {
                       required: "La contraseña es obligatoria",
-                      minLength: {
-                        value: 6,
-                        message: "Debe tener al menos 6 caracteres",
+                      pattern: {
+                        value: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
+                        message:
+                          "La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter no alfanumérico.",
                       },
                     })}
                   />

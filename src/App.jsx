@@ -25,13 +25,16 @@ import Registro from "./components/pages/Registro";
 function App() {
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
   const juegosLocalstorage = JSON.parse(localStorage.getItem("listaJuegos")) || [];
+  const cuentasLocalStorage = JSON.parse(localStorage.getItem("cuentasUsuarios")) || [];
   const [juegos, setJuegos] = useState(juegosLocalstorage);
   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
   const [busqueda, setBusqueda] = useState("");
+  const [cuentas, setCuentas] = useState(cuentasLocalStorage);
 
   useEffect(() => {
     localStorage.setItem("listaJuegos", JSON.stringify(juegos));
-  }, [juegos]);
+    localStorage.setItem("cuentasUsuarios", JSON.stringify(cuentas));
+  }, [juegos, cuentas]);
 
   const crearJuego = (juegoNuevo) => {
     juegoNuevo.id = uuidv4();
@@ -73,6 +76,15 @@ function App() {
     juegoBuscado.nombreJuego.toLowerCase().includes(busqueda.toLowerCase())
   );
 
+  const registrarCuenta = (nuevaCuenta) => {
+    const existe = cuentas.some((cuenta) => cuenta.email === nuevaCuenta.email);
+    if (existe) {
+      return false; // Ya existe ese email
+    }
+    setCuentas([...cuentas, nuevaCuenta]);
+    return true;
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -81,8 +93,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio juegos={juegos}></Inicio>}></Route>
             <Route path="/detalle/:id" element={<DetalleProducto buscarJuego={buscarJuego}></DetalleProducto>}></Route>
-            <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
-            <Route path="/registro" element={<Registro></Registro>}></Route>
+            <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin} cuentas={cuentas}></Login>}></Route>
+            <Route path="/registro" element={<Registro registrarCuenta={registrarCuenta}></Registro>}></Route>
             <Route path="/shooter" element={<Shooter juegos={juegos}></Shooter>}></Route>
             <Route path="/simulacion" element={<Simulacion juegos={juegos}></Simulacion>}></Route>
             <Route path="/aventura" element={<Aventura juegos={juegos}></Aventura>}></Route>
