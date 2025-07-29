@@ -20,6 +20,7 @@ import PreguntasFrecuentes from "./components/pages/PreguntasFrecuentes";
 import SobreNosotros from "./components/pages/SobreNosotros";
 import { v4 as uuidv4 } from "uuid";
 import BotonComprar from "./components/pages/BotonComprar";
+import Registro from "./components/pages/Registro";
 
 function App() {
   const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
@@ -79,8 +80,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Inicio juegos={juegos}></Inicio>}></Route>
-            <Route path="/detalle/:id" element={<DetalleProducto buscarJuego={buscarJuego} ></DetalleProducto>}></Route>
+            <Route path="/detalle/:id" element={<DetalleProducto buscarJuego={buscarJuego}></DetalleProducto>}></Route>
             <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin}></Login>}></Route>
+            <Route path="/registro" element={<Registro></Registro>}></Route>
             <Route path="/shooter" element={<Shooter juegos={juegos}></Shooter>}></Route>
             <Route path="/simulacion" element={<Simulacion juegos={juegos}></Simulacion>}></Route>
             <Route path="/aventura" element={<Aventura juegos={juegos}></Aventura>}></Route>

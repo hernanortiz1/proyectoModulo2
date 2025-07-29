@@ -68,9 +68,14 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
                   </Button>
                 </>
               ) : (
-                <NavLink className="nav-link" to={"/login"} onClick={() => setExpanded(false)}>
-                  Iniciar sesión
-                </NavLink>
+                <>
+                  <NavLink className="nav-link" to={"/login"} onClick={() => setExpanded(false)}>
+                    Iniciar sesión
+                  </NavLink>
+                  <NavLink className="nav-link" to={"/registro"}>
+                    Registro
+                  </NavLink>
+                </>
               )}
             </Nav>
           </Navbar.Collapse>
