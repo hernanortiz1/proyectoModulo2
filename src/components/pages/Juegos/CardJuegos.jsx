@@ -22,7 +22,7 @@ const CardJuegos = ({ juegos }) => {
                   <strong>
                     Descripción: <br></br>
                   </strong>{" "}
-                  <small>{juegos.decripcion.substring(0, 50) + "..."}</small>
+                  <small>{juegos.descripcion.substring(0, 50) + "..."}</small>
                 </li>
               </ul>
             </div>
