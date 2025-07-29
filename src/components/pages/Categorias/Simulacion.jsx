@@ -2,12 +2,17 @@ import Carousel from "react-bootstrap/Carousel";
 import citiesSkyLines from "../../img/imgCarouselSimulacion/citiesSkyLines.jpg";
 import farmingSimulator22 from "../../img/imgCarouselSimulacion/farmingSimulator22.jpg";
 import planetZoo from "../../img/imgCarouselSimulacion/planetZoo.jpg";
+import CardJuegos from "../Juegos/CardJuegos";
+import { Row } from "react-bootstrap";
 
-const Simulacion = () => {
+const Simulacion = ({ juegos }) => {
+  const juegosSimulacion = juegos.filter((juego) => juego.categoria === "Simulacion");
   return (
     <>
       <section>
-        <h1 className="text-center my-4 sombraTituloSimulacion text-dark letras-espaciadas fw-bold orbitron">SIMULACIÓN</h1>
+        <h1 className="text-center my-4 sombraTituloSimulacion text-dark letras-espaciadas fw-bold orbitron">
+          SIMULACIÓN
+        </h1>
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100 alturaImg" src={citiesSkyLines} alt="Cities: Skylines" />
@@ -24,7 +29,11 @@ const Simulacion = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100 alturaImg object-position-top" src={farmingSimulator22} alt="Farming Simulator 22" />
+            <img
+              className="d-block w-100 alturaImg object-position-top"
+              src={farmingSimulator22}
+              alt="Farming Simulator 22"
+            />
             <Carousel.Caption className="bg-dark bg-opacity-50 p-2 rounded text-white text-center">
               <h3>Farming Simulator 22</h3>
               <p>Conviértete en un agricultor moderno con maquinaria realista y cultivos detallados.</p>
@@ -50,8 +59,11 @@ const Simulacion = () => {
         </Carousel>
       </section>
       <section className="my-5 container sombraSection rounded py-3">
-        {/* Aqui va el mapeador */}
-
+        <Row>
+          {juegosSimulacion.map((juego) => (
+            <CardJuegos key={juego.id} juegos={juego}></CardJuegos>
+          ))}
+        </Row>
       </section>
     </>
   );

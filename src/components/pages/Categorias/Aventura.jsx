@@ -2,8 +2,11 @@ import Carousel from "react-bootstrap/Carousel";
 import zelda from "../../img/imgCarouselAventura/zelda.jpg";
 import uncharted4 from "../../img/imgCarouselAventura/uncharted4.webp";
 import redemption2 from "../../img/imgCarouselAventura/redemption2.jpg";
+import { Row } from "react-bootstrap";
+import CardJuegos from "../Juegos/CardJuegos";
 
-const Aventura = () => {
+const Aventura = ({ juegos }) => {
+  const juegosAventura = juegos.filter((juego) => juego.categoria === "Aventura");
   return (
     <>
       <section>
@@ -57,8 +60,11 @@ const Aventura = () => {
         </Carousel>
       </section>
       <section className="my-5 container sombraSection rounded py-3">
-        {/* Aqui va el mapeador */}
-
+        <Row>
+          {juegosAventura.map((juego) => (
+            <CardJuegos key={juego.id} juegos={juego}></CardJuegos>
+          ))}
+        </Row>
       </section>
     </>
   );
