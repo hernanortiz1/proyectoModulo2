@@ -2,8 +2,11 @@ import Carousel from "react-bootstrap/Carousel";
 import minecraft from "../../img/imgCarouselSandbox/minecraft.webp";
 import garrysMod from "../../img/imgCarouselSandbox/garrysMod.jpg";
 import terraria from "../../img/imgCarouselSandbox/terraria.jpg";
+import { Row } from "react-bootstrap";
+import CardJuegos from "../Juegos/CardJuegos";
 
-const Sandbox = () => {
+const Sandbox = ({ juegos }) => {
+  const juegosSandoBox = juegos.filter((juegos) => juegos.categoria === "SandBox");
   return (
     <>
       <section>
@@ -57,8 +60,11 @@ const Sandbox = () => {
         </Carousel>
       </section>
       <section className="my-5 container sombraSection rounded py-3">
-        {/* Aqui va el mapeador */}
-
+        <Row>
+          {juegosSandoBox.map((juego) => (
+            <CardJuegos key={juego.id} juegos={juego}></CardJuegos>
+          ))}
+        </Row>
       </section>
     </>
   );

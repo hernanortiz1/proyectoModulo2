@@ -57,7 +57,7 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
                 <>
                   <Nav className="align-items-cente ms-autor">
                     <div className="nav-link disabled">
-                      <span className="sombraADMIN">ADMIN</span> <small className="text-success">(activo)</small>
+                      <span className="sombraADMIN">ADMIN</span>
                     </div>
                   </Nav>
                   <NavLink className="nav-link" to={"/administrador"} onClick={() => setExpanded(false)}>

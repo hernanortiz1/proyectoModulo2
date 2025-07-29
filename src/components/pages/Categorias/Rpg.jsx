@@ -2,8 +2,11 @@ import Carousel from "react-bootstrap/Carousel";
 import witcher from "../../img/imgCarouselRpg/witcher.webp";
 import eldenRIng from "../../img/imgCarouselRpg/eldenRIng.jpg";
 import divinity2 from "../../img/imgCarouselRpg/divinity2.jpg";
+import { Row } from "react-bootstrap";
+import CardJuegos from "../Juegos/CardJuegos";
 
-const Rpg = () => {
+const Rpg = ({ juegos }) => {
+  const juegosRPG = juegos.filter((juego) => juego.categoria === "RPG");
   return (
     <>
       <section>
@@ -61,8 +64,11 @@ const Rpg = () => {
         </Carousel>
       </section>
       <section className="my-5 container sombraSection rounded py-3">
-        {/* Aqui va el mapeador */}
-
+        <Row>
+          {juegosRPG.map((juego) => (
+            <CardJuegos key={juego.id} juegos={juego}></CardJuegos>
+          ))}
+        </Row>
       </section>
     </>
   );
