@@ -58,35 +58,34 @@ src/
 |   └── imgGamerZone/    # Imágen del logo de la pagina
 |   └── juegos/          # Imágenes de los juegos
 ├── components/
-│   ├── img/
+│   └── img/
 |   └── pages/
 │   |   └── Categorias/
-|   |       └── Aventura.jsx
-|   |       └── Rpg.jsx
-|   |       └── Sandbox.jsx
-|   |       └── Shooter.jsx
-|   |       └── Simulacion.jsx
-│       └── Juegos/
-|   |       └── CardJuegos.jsx
-|   |       └── FormularioJuego.jsx
-|   |       └── ItemJuegos.jsx
-│   │   ├── Administracior.jsx
-│   │   ├── BotonComprar.jsx
-│   │   ├── DetalleProducto.jsx
-│   │   ├── Error404.jsx
-│   │   ├── Inicio.jsx
+|   |   |    └── Aventura.jsx
+|   |   |    └── Rpg.jsx
+|   |   |    └── Sandbox.jsx
+|   |   |    └── Shooter.jsx
+|   |   |    └── Simulacion.jsx
+│   |   └── Juegos/
+|   |   |    └── CardJuegos.jsx
+|   |   |    └── FormularioJuego.jsx
+|   |   |    └── ItemJuegos.jsx
+│   │   └── Administrador.jsx
+│   │   └── BotonComprar.jsx
+│   │   └── DetalleProducto.jsx
+│   │   └── Error404.jsx
+│   │   └── Inicio.jsx
 │   │   └── Login.jsx
 │   │   └── PreguntasFrecuentes.jsx
 │   │   └── SobreNosotros.jsx
 │   ├── routes/
 │   │   └── ProtectorAdmin.jsx
 │   └── shared/
-│       ├── Footer.jsx
-│       └── Header.jsx
-└── data/
-│       ├── App.jsx
-│       └── index.css
-│       ├── main.jsx
+│   |   └── Footer.jsx
+│   |   └── Header.jsx
+│   └── App.jsx
+│   └── index.css
+│   └── main.jsx
 ```
 
 ---
@@ -98,7 +97,7 @@ src/
 - **Marcos Joel Tebis:** *Desarrollador*
   [GitHub](https://github.com/KR3RULIE)
 - **José Benjamín Quirós:** *Desarrollador*
-  [GitHub]()
+  [GitHub](https://github.com/benjamin1323233)
 - **Ignacio Joaquín Barrojo:** *Desarrollador*
   [GitHub](https://github.com/TucuNacho)
 - **Luis Martín Díaz:** *Desarrollador*
