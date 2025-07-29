@@ -30,6 +30,7 @@ function App() {
   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
   const [busqueda, setBusqueda] = useState("");
   const [cuentas, setCuentas] = useState(cuentasLocalStorage);
+  const [nombreUsuario, setNombreUsuario] = useState(sessionStorage.getItem("userNombre") || "");
 
   useEffect(() => {
     localStorage.setItem("listaJuegos", JSON.stringify(juegos));
@@ -88,12 +89,22 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header usuarioAdmin={usuarioAdmin} setUsuarioAdmin={setUsuarioAdmin}></Header>
+        <Header
+          usuarioAdmin={usuarioAdmin}
+          setUsuarioAdmin={setUsuarioAdmin}
+          setNombreUsuario={setNombreUsuario}
+          nombreUsuario={nombreUsuario}
+        ></Header>
         <main>
           <Routes>
             <Route path="/" element={<Inicio juegos={juegos}></Inicio>}></Route>
             <Route path="/detalle/:id" element={<DetalleProducto buscarJuego={buscarJuego}></DetalleProducto>}></Route>
-            <Route path="/login" element={<Login setUsuarioAdmin={setUsuarioAdmin} cuentas={cuentas}></Login>}></Route>
+            <Route
+              path="/login"
+              element={
+                <Login setUsuarioAdmin={setUsuarioAdmin} setNombreUsuario={setNombreUsuario} cuentas={cuentas}></Login>
+              }
+            ></Route>
             <Route path="/registro" element={<Registro registrarCuenta={registrarCuenta}></Registro>}></Route>
             <Route path="/shooter" element={<Shooter juegos={juegos}></Shooter>}></Route>
             <Route path="/simulacion" element={<Simulacion juegos={juegos}></Simulacion>}></Route>

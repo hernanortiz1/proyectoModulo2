@@ -2,13 +2,15 @@ import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router";
 import { useState } from "react";
 
-const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
+const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario }) => {
   const navegacion = useNavigate();
   const [expanded, setExpanded] = useState(false);
 
   const logout = () => {
-    setUsuarioAdmin(false);
+    setUsuarioAdmin(null);
+    setNombreUsuario("");
     sessionStorage.removeItem("userKeyJuego");
+    sessionStorage.removeItem("userNombre");
     navegacion("/");
     setExpanded(false);
   };
@@ -53,26 +55,40 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
               </NavDropdown>
             </Nav>
             <Nav className="ms-auto">
-              {usuarioAdmin ? (
+              {usuarioAdmin === true ? (
+                // Admin
                 <>
-                  <Nav className="align-items-cente ms-autor">
+                  <Nav className="align-items-center ms-auto">
                     <div className="nav-link disabled">
                       <span className="sombraADMIN">ADMIN</span>
                     </div>
                   </Nav>
-                  <NavLink className="nav-link" to={"/administrador"} onClick={() => setExpanded(false)}>
+                  <NavLink className="nav-link" to="/administrador" onClick={() => setExpanded(false)}>
                     Administración
                   </NavLink>
                   <Button className="nav-link" onClick={logout}>
                     Cerrar sesión
                   </Button>
                 </>
-              ) : (
+              ) : usuarioAdmin === false ? (
+                // Usuario común
                 <>
-                  <NavLink className="nav-link" to={"/login"} onClick={() => setExpanded(false)}>
+                  <Nav className="align-items-center ms-auto">
+                    <div className="nav-link disabled">
+                      <span className="sombraADMIN">Usuario: {nombreUsuario}</span>
+                    </div>
+                  </Nav>
+                  <Button className="nav-link" onClick={logout}>
+                    Cerrar sesión
+                  </Button>
+                </>
+              ) : (
+                // Visitante (no logueado)
+                <>
+                  <NavLink className="nav-link" to="/login" onClick={() => setExpanded(false)}>
                     Iniciar sesión
                   </NavLink>
-                  <NavLink className="nav-link" to={"/registro"}>
+                  <NavLink className="nav-link" to="/registro" onClick={() => setExpanded(false)}>
                     Registro
                   </NavLink>
                 </>
