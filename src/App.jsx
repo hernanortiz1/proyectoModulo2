@@ -23,14 +23,14 @@ import BotonComprar from "./components/pages/BotonComprar";
 import Registro from "./components/pages/Registro";
 
 function App() {
-  const usuarioLogueado = JSON.parse(sessionStorage.getItem("userKeyJuego")) || false;
+  const usuarioLogueado = JSON.parse(localStorage.getItem("userKeyJuego")) || false;
   const juegosLocalstorage = JSON.parse(localStorage.getItem("listaJuegos")) || [];
   const cuentasLocalStorage = JSON.parse(localStorage.getItem("cuentasUsuarios")) || [];
   const [juegos, setJuegos] = useState(juegosLocalstorage);
   const [usuarioAdmin, setUsuarioAdmin] = useState(usuarioLogueado);
   const [busqueda, setBusqueda] = useState("");
   const [cuentas, setCuentas] = useState(cuentasLocalStorage);
-  const [nombreUsuario, setNombreUsuario] = useState(sessionStorage.getItem("userNombre") || "");
+  const [nombreUsuario, setNombreUsuario] = useState(localStorage.getItem("userNombre") || "");
 
   useEffect(() => {
     localStorage.setItem("listaJuegos", JSON.stringify(juegos));

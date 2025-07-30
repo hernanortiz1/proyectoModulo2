@@ -9,8 +9,8 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario
   const logout = () => {
     setUsuarioAdmin(null);
     setNombreUsuario("");
-    sessionStorage.removeItem("userKeyJuego");
-    sessionStorage.removeItem("userNombre");
+    localStorage.removeItem("userKeyJuego");
+    localStorage.removeItem("userNombre");
     navegacion("/");
     setExpanded(false);
   };
