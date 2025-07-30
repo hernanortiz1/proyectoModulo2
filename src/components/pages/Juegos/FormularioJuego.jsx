@@ -96,8 +96,8 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
             {...register("precio", {
               required: "El precio es obligatorio",
               min: {
-                value: 100,
-                message: "El precion minimo debe ser $500",
+                value: 0,
+                message: "El precion minimo debe ser $0",
               },
               max: {
                 value: 100000,
