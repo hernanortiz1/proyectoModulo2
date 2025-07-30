@@ -15,7 +15,7 @@ import Aventura from "./components/pages/Categorias/Aventura";
 import Sandbox from "./components/pages/Categorias/Sandbox";
 import Rpg from "./components/pages/Categorias/Rpg";
 import { useEffect, useState } from "react";
-import DetalleProducto from "./components/pages/detalleProducto";
+import DetalleProducto from "./components/pages/DetalleProducto";
 import PreguntasFrecuentes from "./components/pages/PreguntasFrecuentes";
 import SobreNosotros from "./components/pages/SobreNosotros";
 import { v4 as uuidv4 } from "uuid";

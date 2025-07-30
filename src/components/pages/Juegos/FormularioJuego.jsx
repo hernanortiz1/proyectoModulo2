@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import Swal from "sweetalert2";
+
 
 const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
   const {
@@ -42,6 +43,8 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
     }
   }, []);
 
+  const navegar =useNavigate()
+
   const onSubmit = (juego) => {
     if (titulo === "Crear juegos") {
       if (crearJuego(juego)) {
@@ -50,6 +53,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
           text: `El juego ${juego.nombreJuego} fue creado correctamente.`,
           icon: "success",
         });
+        navegar("/administrador")
         reset();
       }
     } else {
@@ -59,6 +63,7 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
           text: `El juego ${juego.nombreJuego} fue editado correctamente.`,
           icon: "success",
         });
+        navegar("/administrador")
       }
     }
   };
@@ -96,8 +101,8 @@ const FormularioJuego = ({ crearJuego, buscarJuego, titulo, editarJuego }) => {
             {...register("precio", {
               required: "El precio es obligatorio",
               min: {
-                value: 100,
-                message: "El precion minimo debe ser $500",
+                value: 0,
+                message: "El precion minimo debe ser $0",
               },
               max: {
                 value: 100000,
