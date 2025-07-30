@@ -49,10 +49,10 @@ const SobreNosotros = () => {
         {/* Inicio galeria del equipo */}
         <div className="container my-5">
           <h2 className="bebasneue display-6 text-center mb-4">Conoce a nuestro equipo</h2>
-          <div class="row justify-content-center row-gap-3">
+          <div className="row justify-content-center row-gap-3">
             {/* Pimer miembro del equipo */}
             <article className="col-6 col-md-4 col-lg-2 equipoCard">
-              <div class="card border-0 shadow h-100 teamCard">
+              <div className="card border-0 shadow h-100 teamCard">
                 <img src={avatar1} alt="Avatar del primer miembro del equipo" />
                 <div className="card-main bg-white text-dark h-100 py-2">
                   <h5 className="card-title bebasneue text-center fs-4 mt-3">Hernán Ortiz</h5>

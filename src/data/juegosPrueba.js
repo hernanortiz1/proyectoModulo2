@@ -171,7 +171,7 @@ export const juegosPrueba = [
     categoria: "RPG",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Elden Ring es un juego de rol y acción en un mundo abierto lleno de secretos, desafíos y una historia envolvente escrita en parte por George R.R. Martin.",
     resenia1: "Una obra maestra. Difícil, pero cada victoria es épica.",
     resenia2: "Visualmente impresionante y con una atmósfera única.",
@@ -198,7 +198,7 @@ export const juegosPrueba = [
     categoria: "RPG",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Cyberpunk 2077 es un RPG de mundo abierto ambientado en Night City, una megalópolis obsesionada con el poder, el glamour y la modificación corporal.",
     resenia1: "La historia y los personajes son espectaculares.",
     resenia2: "Tuvo un mal lanzamiento, pero ahora está muy pulido.",
@@ -226,7 +226,7 @@ export const juegosPrueba = [
     categoria: "RPG",
     plataforma: "PlayStation 4/5",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Final Fantasy XV cuenta la historia del príncipe Noctis y sus amigos mientras luchan contra fuerzas oscuras en un vasto y hermoso mundo de fantasía.",
     resenia1: "Gráficamente hermoso y con excelente banda sonora.",
     resenia2: "La relación entre los personajes es lo mejor.",
@@ -254,7 +254,7 @@ export const juegosPrueba = [
     categoria: "RPG",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Skyrim es un RPG de mundo abierto donde puedes explorar libremente, combatir dragones, unirte a facciones y forjar tu destino como el Sangre de Dragón.",
     resenia1: "Uno de los mejores RPG de todos los tiempos.",
     resenia2: "Las posibilidades de juego son casi infinitas.",
@@ -282,7 +282,7 @@ export const juegosPrueba = [
     categoria: "RPG",
     plataforma: "PlayStation 4/5",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Persona 5 Royal mezcla combate por turnos, simulador social y una historia profunda donde tomas el rol de un estudiante con una doble vida como ladrón fantasma.",
     resenia1: "Una obra maestra del JRPG moderno.",
     resenia2: "Arte y música simplemente espectaculares.",
@@ -309,7 +309,7 @@ export const juegosPrueba = [
     categoria: "RPG",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Dragon Age: Inquisition es un RPG de fantasía donde lideras la Inquisición para cerrar grietas mágicas y restaurar el orden en un mundo en guerra.",
     resenia1: "Una historia épica con decisiones que importan.",
     resenia2: "El sistema de combate y personalización es profundo.",
@@ -336,7 +336,7 @@ export const juegosPrueba = [
     categoria: "SandBox",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Minecraft es un juego de construcción y aventura donde podés explorar mundos infinitos y construir desde simples casas hasta enormes castillos, solo o con amigos.",
     resenia1: "Un clásico que nunca pasa de moda.",
     resenia2: "La creatividad no tiene límites en este juego.",
@@ -364,7 +364,7 @@ export const juegosPrueba = [
     categoria: "SandBox",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Terraria es un juego de aventura en 2D donde explorás, excavás, combatís y construís en un mundo pixelado lleno de enemigos y secretos.",
     resenia1: "La cantidad de contenido es impresionante.",
     resenia2: "Perfecto para jugar en cooperativo.",
@@ -391,7 +391,7 @@ export const juegosPrueba = [
     categoria: "SandBox",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "ARK es un juego de supervivencia en un mundo salvaje lleno de dinosaurios y peligros, donde debés recolectar recursos, domesticar criaturas y construir tu base.",
     resenia1: "Los dinosaurios son impresionantes.",
     resenia2: "Muy divertido con amigos, aunque algo exigente.",
@@ -419,7 +419,7 @@ export const juegosPrueba = [
     categoria: "SandBox",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "GTA V te pone en la piel de tres criminales en una historia intensa en el mundo abierto de Los Santos, con libertad total para explorar, conducir y causar caos.",
     resenia1: "Una historia increíble con personajes memorables.",
     resenia2: "El modo online ofrece cientos de horas.",
@@ -446,7 +446,7 @@ export const juegosPrueba = [
     categoria: "SandBox",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Rust es un juego de supervivencia multijugador donde comenzás sin nada y debés craftear, explorar y luchar contra otros jugadores en un mundo hostil.",
     resenia1: "El PVP es brutal y emocionante.",
     resenia2: "Alta rejugabilidad y adrenalina constante.",
@@ -473,7 +473,7 @@ export const juegosPrueba = [
     categoria: "SandBox",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "No Man's Sky es un juego de exploración espacial con un universo prácticamente infinito, donde podés viajar entre planetas, comerciar, luchar y descubrir especies alienígenas.",
     resenia1: "Un universo inmenso y visualmente hermoso.",
     resenia2: "Gran evolución desde su lanzamiento inicial.",
@@ -500,7 +500,7 @@ export const juegosPrueba = [
     categoria: "Shooter",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Modern Warfare II te sumerge en una campaña intensa y realista con combate táctico, multijugador frenético y un arsenal moderno con gráficos de última generación.",
     resenia1: "Los tiroteos se sienten muy realistas.",
     resenia2: "El modo multijugador es adictivo.",
@@ -528,7 +528,7 @@ export const juegosPrueba = [
     categoria: "Shooter",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "La nueva versión del clásico shooter competitivo por excelencia. Jugabilidad refinada, físicas mejoradas y el regreso de la adrenalina en cada ronda.",
     resenia1: "Ideal para los fans del competitivo.",
     resenia2: "Fluidez y precisión en cada disparo.",
@@ -555,7 +555,7 @@ export const juegosPrueba = [
     categoria: "Shooter",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Una frenética experiencia de acción y combate contra hordas demoníacas. Enfrentá el infierno con un arsenal brutal y un ritmo que no da respiro.",
     resenia1: "La banda sonora es una locura.",
     resenia2: "Combate visceral y desafiante.",
@@ -582,7 +582,7 @@ export const juegosPrueba = [
     categoria: "Shooter",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Shooter táctico por equipos que premia la estrategia, la comunicación y el uso de operadores únicos con habilidades especiales en mapas destructibles.",
     resenia1: "Alta estrategia y tensión en cada ronda.",
     resenia2: "Gran variedad de operadores.",
@@ -610,7 +610,7 @@ export const juegosPrueba = [
     categoria: "Shooter",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Una colección épica con toda la saga principal de Halo, remasterizada para PC. Viví la historia del Jefe Maestro desde sus inicios hasta el futuro de la humanidad.",
     resenia1: "Ideal para fans de la ciencia ficción.",
     resenia2: "Multijugador clásico y sólido.",
@@ -637,7 +637,7 @@ export const juegosPrueba = [
     categoria: "Shooter",
     plataforma: "PC",
     destacados: "Juego no destacado",
-    decripcion:
+    descripcion:
       "Battle royale gratuito de ritmo veloz y personajes con habilidades únicas. Combina estrategia, movimiento ágil y tiroteos intensos en cada partida.",
     resenia1: "Uno de los mejores battle royale del mercado.",
     resenia2: "El movimiento es muy fluido y dinámico.",

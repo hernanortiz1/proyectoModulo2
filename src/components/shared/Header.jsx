@@ -1,16 +1,33 @@
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router";
 import { useState } from "react";
+import Swal from "sweetalert2"; 
 
-const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
+const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario }) => {
   const navegacion = useNavigate();
   const [expanded, setExpanded] = useState(false);
 
   const logout = () => {
-    setUsuarioAdmin(false);
-    sessionStorage.removeItem("userKeyJuego");
-    navegacion("/");
-    setExpanded(false);
+    Swal.fire({
+      title: "¿Seguro que deseas cerrar sesión?",
+      text: "Tu sesión se cerrará y volverás al inicio.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Sí, cerrar sesión",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setUsuarioAdmin(null);
+        setNombreUsuario("");
+        sessionStorage.removeItem("userKeyJuego");
+        sessionStorage.removeItem("userNombre");
+        navegacion("/");
+        setExpanded(false);
+        Swal.fire("Sesión cerrada", "Has cerrado sesión correctamente.", "success");
+      }
+    });
   };
 
   return (
@@ -53,24 +70,40 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin }) => {
               </NavDropdown>
             </Nav>
             <Nav className="ms-auto">
-              {usuarioAdmin ? (
+              {usuarioAdmin === true ? (
                 <>
-                  <Nav className="align-items-cente ms-autor">
+                  <Nav className="align-items-center ms-auto">
                     <div className="nav-link disabled">
-                      <span className="sombraADMIN">ADMIN</span> <small className="text-success">(activo)</small>
+                      <span className="sombraADMIN">ADMIN</span>
                     </div>
                   </Nav>
-                  <NavLink className="nav-link" to={"/administrador"} onClick={() => setExpanded(false)}>
+                  <NavLink className="nav-link" to="/administrador" onClick={() => setExpanded(false)}>
                     Administración
                   </NavLink>
                   <Button className="nav-link" onClick={logout}>
                     Cerrar sesión
                   </Button>
                 </>
+              ) : usuarioAdmin === false ? (
+                <>
+                  <Nav className="align-items-center ms-auto">
+                    <div className="nav-link disabled">
+                      <span className="sombraADMIN">Usuario: {nombreUsuario}</span>
+                    </div>
+                  </Nav>
+                  <Button className="nav-link" onClick={logout}>
+                    Cerrar sesión
+                  </Button>
+                </>
               ) : (
-                <NavLink className="nav-link" to={"/login"} onClick={() => setExpanded(false)}>
-                  Iniciar sesión
-                </NavLink>
+                <>
+                  <NavLink className="nav-link" to="/login" onClick={() => setExpanded(false)}>
+                    Iniciar sesión
+                  </NavLink>
+                  <NavLink className="nav-link" to="/registro" onClick={() => setExpanded(false)}>
+                    Registro
+                  </NavLink>
+                </>
               )}
             </Nav>
           </Navbar.Collapse>

@@ -2,8 +2,11 @@ import Carousel from "react-bootstrap/Carousel";
 import cs2 from "../../img/imgCarouselShooter/cs2.jpg";
 import battlefield1 from "../../img/imgCarouselShooter/battlefield1.webp";
 import blackOps2 from "../../img/imgCarouselShooter/blackOps2.jpg";
+import CardJuegos from "../Juegos/CardJuegos";
+import { Row } from "react-bootstrap";
 
-const Shooter = () => {
+const Shooter = ({ juegos }) => {
+  const juegosShooter = juegos.filter((juego) => juego.categoria === "Shooter");
   return (
     <>
       <section>
@@ -48,8 +51,11 @@ const Shooter = () => {
         </Carousel>
       </section>
       <section className="my-5 container sombraSection rounded py-3">
-        {/* Aqui va el mapeador */}
-       
+        <Row>
+          {juegosShooter.map((juego) => (
+            <CardJuegos key={juego.id} juegos={juego}></CardJuegos>
+          ))}
+        </Row>
       </section>
     </>
   );

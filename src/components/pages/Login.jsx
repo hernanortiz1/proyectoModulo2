@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 
-const Login = ({ setUsuarioAdmin }) => {
+const Login = ({ setUsuarioAdmin, setNombreUsuario, cuentas }) => {
   const {
     register,
     handleSubmit,
@@ -18,6 +18,21 @@ const Login = ({ setUsuarioAdmin }) => {
       setUsuarioAdmin(true);
       sessionStorage.setItem("userKeyJuego", true);
       navegacion("/administrador");
+      return;
+    } else {
+      setErrorLogin("Email o contraseña incorrectos.");
+    }
+
+    const usuarioEncontrado = cuentas.find(
+      (cuenta) => cuenta.email === usuario.email && cuenta.password === usuario.password
+    );
+
+    if (usuarioEncontrado) {
+      setUsuarioAdmin(false);
+      setNombreUsuario(usuarioEncontrado.nombre);
+      sessionStorage.setItem("userKeyJuego", false);
+      sessionStorage.setItem("userNombre", usuarioEncontrado.nombre);
+      navegacion("/");
     } else {
       setErrorLogin("Email o contraseña incorrectos.");
     }
