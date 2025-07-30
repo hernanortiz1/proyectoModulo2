@@ -40,7 +40,7 @@ const ItemJuegos = ({ fila, juego, borrarJuego }) => {
 
       <td className="text-center">{juego.categoria}</td>
 
-      <td className="text-center">{juego.precio}</td>
+      <td className="text-center">${juego.precio}</td>
       <td>{juego.plataforma}</td>
       <td>
         <img src={juego.imagen} alt={juego.nombreJuego} className="img-admin" />

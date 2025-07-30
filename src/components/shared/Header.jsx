@@ -1,18 +1,33 @@
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router";
 import { useState } from "react";
+import Swal from "sweetalert2"; 
 
 const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario }) => {
   const navegacion = useNavigate();
   const [expanded, setExpanded] = useState(false);
 
   const logout = () => {
-    setUsuarioAdmin(null);
-    setNombreUsuario("");
-    sessionStorage.removeItem("userKeyJuego");
-    sessionStorage.removeItem("userNombre");
-    navegacion("/");
-    setExpanded(false);
+    Swal.fire({
+      title: "¿Seguro que deseas cerrar sesión?",
+      text: "Tu sesión se cerrará y volverás al inicio.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Sí, cerrar sesión",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setUsuarioAdmin(null);
+        setNombreUsuario("");
+        sessionStorage.removeItem("userKeyJuego");
+        sessionStorage.removeItem("userNombre");
+        navegacion("/");
+        setExpanded(false);
+        Swal.fire("Sesión cerrada", "Has cerrado sesión correctamente.", "success");
+      }
+    });
   };
 
   return (
@@ -56,7 +71,6 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario
             </Nav>
             <Nav className="ms-auto">
               {usuarioAdmin === true ? (
-                // Admin
                 <>
                   <Nav className="align-items-center ms-auto">
                     <div className="nav-link disabled">
@@ -71,7 +85,6 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario
                   </Button>
                 </>
               ) : usuarioAdmin === false ? (
-                // Usuario común
                 <>
                   <Nav className="align-items-center ms-auto">
                     <div className="nav-link disabled">
@@ -83,7 +96,6 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario
                   </Button>
                 </>
               ) : (
-                // Visitante (no logueado)
                 <>
                   <NavLink className="nav-link" to="/login" onClick={() => setExpanded(false)}>
                     Iniciar sesión
