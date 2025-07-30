@@ -1,7 +1,7 @@
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router";
 import { useState } from "react";
-import Swal from "sweetalert2"; 
+import Swal from "sweetalert2";
 
 const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario }) => {
   const navegacion = useNavigate();
@@ -21,8 +21,8 @@ const Header = ({ usuarioAdmin, setUsuarioAdmin, setNombreUsuario, nombreUsuario
       if (result.isConfirmed) {
         setUsuarioAdmin(null);
         setNombreUsuario("");
-        sessionStorage.removeItem("userKeyJuego");
-        sessionStorage.removeItem("userNombre");
+        localStorage.removeItem("userKeyJuego");
+        localStorage.removeItem("userNombre");
         navegacion("/");
         setExpanded(false);
         Swal.fire("Sesión cerrada", "Has cerrado sesión correctamente.", "success");

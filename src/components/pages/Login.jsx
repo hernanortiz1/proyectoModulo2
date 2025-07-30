@@ -16,7 +16,7 @@ const Login = ({ setUsuarioAdmin, setNombreUsuario, cuentas }) => {
   const iniciarSesion = (usuario) => {
     if (usuario.email === import.meta.env.VITE_API_EMAIL && usuario.password === import.meta.env.VITE_API_PASSWORD) {
       setUsuarioAdmin(true);
-      sessionStorage.setItem("userKeyJuego", true);
+      localStorage.setItem("userKeyJuego", true);
       navegacion("/administrador");
       return;
     } else {
@@ -30,8 +30,8 @@ const Login = ({ setUsuarioAdmin, setNombreUsuario, cuentas }) => {
     if (usuarioEncontrado) {
       setUsuarioAdmin(false);
       setNombreUsuario(usuarioEncontrado.nombre);
-      sessionStorage.setItem("userKeyJuego", false);
-      sessionStorage.setItem("userNombre", usuarioEncontrado.nombre);
+      localStorage.setItem("userKeyJuego", false);
+      localStorage.setItem("userNombre", usuarioEncontrado.nombre);
       navegacion("/");
     } else {
       setErrorLogin("Email o contraseña incorrectos.");
